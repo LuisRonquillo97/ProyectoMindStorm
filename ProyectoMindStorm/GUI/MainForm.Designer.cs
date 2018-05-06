@@ -34,10 +34,7 @@
             this.mindStormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
-            this.LBLowGammaValue = new System.Windows.Forms.Label();
-            this.LBHighGammaValue = new System.Windows.Forms.Label();
-            this.LBLowBetaValue = new System.Windows.Forms.Label();
-            this.LBHighBetaValue = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.LBLowAlphaValue = new System.Windows.Forms.Label();
             this.LBHighAlphaValue = new System.Windows.Forms.Label();
             this.LBThetaValue = new System.Windows.Forms.Label();
@@ -60,7 +57,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -119,10 +119,10 @@
             // 
             // MainContainer.Panel2
             // 
-            this.MainContainer.Panel2.Controls.Add(this.LBLowGammaValue);
-            this.MainContainer.Panel2.Controls.Add(this.LBHighGammaValue);
-            this.MainContainer.Panel2.Controls.Add(this.LBLowBetaValue);
-            this.MainContainer.Panel2.Controls.Add(this.LBHighBetaValue);
+            this.MainContainer.Panel2.Controls.Add(this.label19);
+            this.MainContainer.Panel2.Controls.Add(this.label18);
+            this.MainContainer.Panel2.Controls.Add(this.label17);
+            this.MainContainer.Panel2.Controls.Add(this.label16);
             this.MainContainer.Panel2.Controls.Add(this.LBLowAlphaValue);
             this.MainContainer.Panel2.Controls.Add(this.LBHighAlphaValue);
             this.MainContainer.Panel2.Controls.Add(this.LBThetaValue);
@@ -149,41 +149,15 @@
             this.MainContainer.SplitterDistance = 586;
             this.MainContainer.TabIndex = 1;
             // 
-            // LBLowGammaValue
+            // label24
             // 
-            this.LBLowGammaValue.AutoSize = true;
-            this.LBLowGammaValue.Location = new System.Drawing.Point(184, 459);
-            this.LBLowGammaValue.Name = "LBLowGammaValue";
-            this.LBLowGammaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBLowGammaValue.TabIndex = 25;
-            this.LBLowGammaValue.Text = "Value";
-            // 
-            // LBHighGammaValue
-            // 
-            this.LBHighGammaValue.AutoSize = true;
-            this.LBHighGammaValue.Location = new System.Drawing.Point(184, 430);
-            this.LBHighGammaValue.Name = "LBHighGammaValue";
-            this.LBHighGammaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBHighGammaValue.TabIndex = 24;
-            this.LBHighGammaValue.Text = "Value";
-            // 
-            // LBLowBetaValue
-            // 
-            this.LBLowBetaValue.AutoSize = true;
-            this.LBLowBetaValue.Location = new System.Drawing.Point(184, 401);
-            this.LBLowBetaValue.Name = "LBLowBetaValue";
-            this.LBLowBetaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBLowBetaValue.TabIndex = 23;
-            this.LBLowBetaValue.Text = "Value";
-            // 
-            // LBHighBetaValue
-            // 
-            this.LBHighBetaValue.AutoSize = true;
-            this.LBHighBetaValue.Location = new System.Drawing.Point(184, 370);
-            this.LBHighBetaValue.Name = "LBHighBetaValue";
-            this.LBHighBetaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBHighBetaValue.TabIndex = 22;
-            this.LBHighBetaValue.Text = "Value";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(213, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(108, 25);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Simulador";
             // 
             // LBLowAlphaValue
             // 
@@ -398,15 +372,41 @@
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
             // 
-            // label24
+            // label16
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(213, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(108, 25);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Simulador";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(191, 370);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 22;
+            this.label16.Text = " Value";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(191, 401);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 13);
+            this.label17.TabIndex = 22;
+            this.label17.Text = " Value";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(191, 430);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(37, 13);
+            this.label18.TabIndex = 22;
+            this.label18.Text = " Value";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(191, 459);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(37, 13);
+            this.label19.TabIndex = 22;
+            this.label19.Text = " Value";
             // 
             // MainForm
             // 
@@ -450,10 +450,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label LBLowGammaValue;
-        private System.Windows.Forms.Label LBHighGammaValue;
-        private System.Windows.Forms.Label LBLowBetaValue;
-        private System.Windows.Forms.Label LBHighBetaValue;
         private System.Windows.Forms.Label LBLowAlphaValue;
         private System.Windows.Forms.Label LBHighAlphaValue;
         private System.Windows.Forms.Label LBThetaValue;
@@ -467,5 +463,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }

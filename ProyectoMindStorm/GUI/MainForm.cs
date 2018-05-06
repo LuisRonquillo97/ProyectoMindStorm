@@ -16,5 +16,10 @@ namespace ProyectoMindStorm.GUI
         {
             InitializeComponent();
         }
+
+        private void LBLowGammaValue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
