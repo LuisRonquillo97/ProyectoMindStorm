@@ -9,4 +9,6 @@ namespace ProyectoMindStorm.MindWave.BO
     class values
     {
     }
+
+    //prueba de git Carlos Estrella
 }
