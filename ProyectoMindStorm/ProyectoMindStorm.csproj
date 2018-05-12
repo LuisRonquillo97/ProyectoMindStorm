@@ -52,6 +52,10 @@
     <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MindStorm\BluetoothCommunication.cs" />
+    <Compile Include="MindStorm\HidImports.cs" />
+    <Compile Include="MindStorm\NetworkCommunication.cs" />
+    <Compile Include="MindStorm\UsbCommunication.cs" />
     <Compile Include="MindWave\BO\values.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,7 +86,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MindStorm\" />
+    <Folder Include="MindStorm\Core\" />
     <Folder Include="MindWave\DAO\" />
   </ItemGroup>
   <ItemGroup>
