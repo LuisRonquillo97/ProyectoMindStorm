@@ -112,8 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MindSetUWP.sln" />
+    <Content Include="Resources\closed_eye.png" />
     <Content Include="Resources\Images\closed_eye.png" />
     <Content Include="Resources\Images\open_eye.png" />
+    <Content Include="Resources\open_eye.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
