@@ -34,21 +34,33 @@
             this.mindStormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
-            this.label24 = new System.Windows.Forms.Label();
-            this.LBLowAlphaValue = new System.Windows.Forms.Label();
-            this.LBHighAlphaValue = new System.Windows.Forms.Label();
-            this.LBThetaValue = new System.Windows.Forms.Label();
-            this.LBDeltaValue = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblRelaxation = new System.Windows.Forms.Label();
+            this.lblConcentration = new System.Windows.Forms.Label();
+            this.btnStopDemo = new System.Windows.Forms.Button();
+            this.btnStartDemo = new System.Windows.Forms.Button();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblSimulador = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblLowGammaValue = new System.Windows.Forms.Label();
+            this.lblHighGammaValue = new System.Windows.Forms.Label();
+            this.lblLowBetaValue = new System.Windows.Forms.Label();
+            this.lblHighBetaValue = new System.Windows.Forms.Label();
+            this.lblLowAlphaValue = new System.Windows.Forms.Label();
+            this.lblHighAlphaValue = new System.Windows.Forms.Label();
+            this.lblThetaValue = new System.Windows.Forms.Label();
+            this.lblDeltaValue = new System.Windows.Forms.Label();
+            this.lblLowGamma = new System.Windows.Forms.Label();
+            this.lblHighGamma = new System.Windows.Forms.Label();
+            this.lblHighBeta = new System.Windows.Forms.Label();
+            this.lblHighAlpha = new System.Windows.Forms.Label();
+            this.lblLowBeta = new System.Windows.Forms.Label();
+            this.lblLowAlpha = new System.Windows.Forms.Label();
+            this.lblTheta = new System.Windows.Forms.Label();
+            this.lblDelta = new System.Windows.Forms.Label();
+            this.lblIntensity = new System.Windows.Forms.Label();
+            this.lblSenial = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.PBEye = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,10 +69,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblPacketsRead = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -115,28 +124,37 @@
             // 
             // MainContainer.Panel1
             // 
-            this.MainContainer.Panel1.Controls.Add(this.label24);
+            this.MainContainer.Panel1.Controls.Add(this.lblPacketsRead);
+            this.MainContainer.Panel1.Controls.Add(this.lblRelaxation);
+            this.MainContainer.Panel1.Controls.Add(this.lblConcentration);
+            this.MainContainer.Panel1.Controls.Add(this.btnStopDemo);
+            this.MainContainer.Panel1.Controls.Add(this.btnStartDemo);
+            this.MainContainer.Panel1.Controls.Add(this.lblVersion);
+            this.MainContainer.Panel1.Controls.Add(this.label17);
+            this.MainContainer.Panel1.Controls.Add(this.lblSimulador);
             // 
             // MainContainer.Panel2
             // 
-            this.MainContainer.Panel2.Controls.Add(this.label19);
-            this.MainContainer.Panel2.Controls.Add(this.label18);
-            this.MainContainer.Panel2.Controls.Add(this.label17);
-            this.MainContainer.Panel2.Controls.Add(this.label16);
-            this.MainContainer.Panel2.Controls.Add(this.LBLowAlphaValue);
-            this.MainContainer.Panel2.Controls.Add(this.LBHighAlphaValue);
-            this.MainContainer.Panel2.Controls.Add(this.LBThetaValue);
-            this.MainContainer.Panel2.Controls.Add(this.LBDeltaValue);
-            this.MainContainer.Panel2.Controls.Add(this.label15);
-            this.MainContainer.Panel2.Controls.Add(this.label14);
-            this.MainContainer.Panel2.Controls.Add(this.label13);
-            this.MainContainer.Panel2.Controls.Add(this.label12);
-            this.MainContainer.Panel2.Controls.Add(this.label11);
-            this.MainContainer.Panel2.Controls.Add(this.label10);
-            this.MainContainer.Panel2.Controls.Add(this.label9);
-            this.MainContainer.Panel2.Controls.Add(this.label8);
-            this.MainContainer.Panel2.Controls.Add(this.label7);
-            this.MainContainer.Panel2.Controls.Add(this.label6);
+            this.MainContainer.Panel2.Controls.Add(this.lblStatus);
+            this.MainContainer.Panel2.Controls.Add(this.lblEstado);
+            this.MainContainer.Panel2.Controls.Add(this.lblLowGammaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblHighGammaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblLowBetaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblHighBetaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblLowAlphaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblHighAlphaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblThetaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblDeltaValue);
+            this.MainContainer.Panel2.Controls.Add(this.lblLowGamma);
+            this.MainContainer.Panel2.Controls.Add(this.lblHighGamma);
+            this.MainContainer.Panel2.Controls.Add(this.lblHighBeta);
+            this.MainContainer.Panel2.Controls.Add(this.lblHighAlpha);
+            this.MainContainer.Panel2.Controls.Add(this.lblLowBeta);
+            this.MainContainer.Panel2.Controls.Add(this.lblLowAlpha);
+            this.MainContainer.Panel2.Controls.Add(this.lblTheta);
+            this.MainContainer.Panel2.Controls.Add(this.lblDelta);
+            this.MainContainer.Panel2.Controls.Add(this.lblIntensity);
+            this.MainContainer.Panel2.Controls.Add(this.lblSenial);
             this.MainContainer.Panel2.Controls.Add(this.label5);
             this.MainContainer.Panel2.Controls.Add(this.PBEye);
             this.MainContainer.Panel2.Controls.Add(this.label4);
@@ -149,142 +167,252 @@
             this.MainContainer.SplitterDistance = 586;
             this.MainContainer.TabIndex = 1;
             // 
-            // label24
+            // lblRelaxation
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(213, 22);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(108, 25);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Simulador";
+            this.lblRelaxation.AutoSize = true;
+            this.lblRelaxation.Location = new System.Drawing.Point(414, 74);
+            this.lblRelaxation.Name = "lblRelaxation";
+            this.lblRelaxation.Size = new System.Drawing.Size(105, 13);
+            this.lblRelaxation.TabIndex = 6;
+            this.lblRelaxation.Text = "Valor relajación: N/A";
             // 
-            // LBLowAlphaValue
+            // lblConcentration
             // 
-            this.LBLowAlphaValue.AutoSize = true;
-            this.LBLowAlphaValue.Location = new System.Drawing.Point(66, 459);
-            this.LBLowAlphaValue.Name = "LBLowAlphaValue";
-            this.LBLowAlphaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBLowAlphaValue.TabIndex = 21;
-            this.LBLowAlphaValue.Text = "Value";
+            this.lblConcentration.AutoSize = true;
+            this.lblConcentration.Location = new System.Drawing.Point(414, 61);
+            this.lblConcentration.Name = "lblConcentration";
+            this.lblConcentration.Size = new System.Drawing.Size(128, 13);
+            this.lblConcentration.TabIndex = 5;
+            this.lblConcentration.Text = "Valor concentración: N/A";
             // 
-            // LBHighAlphaValue
+            // btnStopDemo
             // 
-            this.LBHighAlphaValue.AutoSize = true;
-            this.LBHighAlphaValue.Location = new System.Drawing.Point(66, 430);
-            this.LBHighAlphaValue.Name = "LBHighAlphaValue";
-            this.LBHighAlphaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBHighAlphaValue.TabIndex = 20;
-            this.LBHighAlphaValue.Text = "Value";
+            this.btnStopDemo.Location = new System.Drawing.Point(218, 61);
+            this.btnStopDemo.Name = "btnStopDemo";
+            this.btnStopDemo.Size = new System.Drawing.Size(103, 23);
+            this.btnStopDemo.TabIndex = 4;
+            this.btnStopDemo.Text = "Detener demo";
+            this.btnStopDemo.UseVisualStyleBackColor = true;
+            this.btnStopDemo.Click += new System.EventHandler(this.btnStopDemo_Click);
             // 
-            // LBThetaValue
+            // btnStartDemo
             // 
-            this.LBThetaValue.AutoSize = true;
-            this.LBThetaValue.Location = new System.Drawing.Point(66, 401);
-            this.LBThetaValue.Name = "LBThetaValue";
-            this.LBThetaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBThetaValue.TabIndex = 19;
-            this.LBThetaValue.Text = "Value";
+            this.btnStartDemo.Location = new System.Drawing.Point(13, 61);
+            this.btnStartDemo.Name = "btnStartDemo";
+            this.btnStartDemo.Size = new System.Drawing.Size(75, 23);
+            this.btnStartDemo.TabIndex = 3;
+            this.btnStartDemo.Text = "Iniciar Demo";
+            this.btnStartDemo.UseVisualStyleBackColor = true;
+            this.btnStartDemo.Click += new System.EventHandler(this.btnStartDemo_Click);
             // 
-            // LBDeltaValue
+            // lblVersion
             // 
-            this.LBDeltaValue.AutoSize = true;
-            this.LBDeltaValue.Location = new System.Drawing.Point(66, 370);
-            this.LBDeltaValue.Name = "LBDeltaValue";
-            this.LBDeltaValue.Size = new System.Drawing.Size(34, 13);
-            this.LBDeltaValue.TabIndex = 18;
-            this.LBDeltaValue.Text = "Value";
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(459, 4);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(42, 13);
+            this.lblVersion.TabIndex = 2;
+            this.lblVersion.Text = "Version";
             // 
-            // label15
+            // label17
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(101, 459);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(84, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Gamma baja (γ):";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(361, 4);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(91, 13);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Versión del driver:";
             // 
-            // label14
+            // lblSimulador
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(104, 430);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Gamma alta (Γ):";
+            this.lblSimulador.AutoSize = true;
+            this.lblSimulador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSimulador.Location = new System.Drawing.Point(213, 22);
+            this.lblSimulador.Name = "lblSimulador";
+            this.lblSimulador.Size = new System.Drawing.Size(108, 25);
+            this.lblSimulador.TabIndex = 0;
+            this.lblSimulador.Text = "Simulador";
             // 
-            // label13
+            // lblStatus
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(118, 370);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Beta alta (Β):";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(49, 4);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(77, 13);
+            this.lblStatus.TabIndex = 24;
+            this.lblStatus.Text = "Desconectado";
             // 
-            // label12
+            // lblEstado
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 430);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 13);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Alfa alta (Α):";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(7, 4);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(43, 13);
+            this.lblEstado.TabIndex = 23;
+            this.lblEstado.Text = "Estado:";
             // 
-            // label11
+            // lblLowGammaValue
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(115, 401);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Beta baja (β):";
+            this.lblLowGammaValue.AutoSize = true;
+            this.lblLowGammaValue.Location = new System.Drawing.Point(191, 459);
+            this.lblLowGammaValue.Name = "lblLowGammaValue";
+            this.lblLowGammaValue.Size = new System.Drawing.Size(37, 13);
+            this.lblLowGammaValue.TabIndex = 22;
+            this.lblLowGammaValue.Text = " Value";
             // 
-            // label10
+            // lblHighGammaValue
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(0, 459);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Alfa baja (α):";
+            this.lblHighGammaValue.AutoSize = true;
+            this.lblHighGammaValue.Location = new System.Drawing.Point(191, 430);
+            this.lblHighGammaValue.Name = "lblHighGammaValue";
+            this.lblHighGammaValue.Size = new System.Drawing.Size(37, 13);
+            this.lblHighGammaValue.TabIndex = 22;
+            this.lblHighGammaValue.Text = " Value";
             // 
-            // label9
+            // lblLowBetaValue
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 401);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Theta (θ):";
+            this.lblLowBetaValue.AutoSize = true;
+            this.lblLowBetaValue.Location = new System.Drawing.Point(191, 401);
+            this.lblLowBetaValue.Name = "lblLowBetaValue";
+            this.lblLowBetaValue.Size = new System.Drawing.Size(37, 13);
+            this.lblLowBetaValue.TabIndex = 22;
+            this.lblLowBetaValue.Text = " Value";
             // 
-            // label8
+            // lblHighBetaValue
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 370);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Delta (Δ):";
+            this.lblHighBetaValue.AutoSize = true;
+            this.lblHighBetaValue.Location = new System.Drawing.Point(191, 370);
+            this.lblHighBetaValue.Name = "lblHighBetaValue";
+            this.lblHighBetaValue.Size = new System.Drawing.Size(37, 13);
+            this.lblHighBetaValue.TabIndex = 22;
+            this.lblHighBetaValue.Text = " Value";
             // 
-            // label7
+            // lblLowAlphaValue
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(215, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "100%";
+            this.lblLowAlphaValue.AutoSize = true;
+            this.lblLowAlphaValue.Location = new System.Drawing.Point(66, 459);
+            this.lblLowAlphaValue.Name = "lblLowAlphaValue";
+            this.lblLowAlphaValue.Size = new System.Drawing.Size(34, 13);
+            this.lblLowAlphaValue.TabIndex = 21;
+            this.lblLowAlphaValue.Text = "Value";
             // 
-            // label6
+            // lblHighAlphaValue
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(107, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Intensidad de señal:";
+            this.lblHighAlphaValue.AutoSize = true;
+            this.lblHighAlphaValue.Location = new System.Drawing.Point(66, 430);
+            this.lblHighAlphaValue.Name = "lblHighAlphaValue";
+            this.lblHighAlphaValue.Size = new System.Drawing.Size(34, 13);
+            this.lblHighAlphaValue.TabIndex = 20;
+            this.lblHighAlphaValue.Text = "Value";
+            // 
+            // lblThetaValue
+            // 
+            this.lblThetaValue.AutoSize = true;
+            this.lblThetaValue.Location = new System.Drawing.Point(66, 401);
+            this.lblThetaValue.Name = "lblThetaValue";
+            this.lblThetaValue.Size = new System.Drawing.Size(34, 13);
+            this.lblThetaValue.TabIndex = 19;
+            this.lblThetaValue.Text = "Value";
+            // 
+            // lblDeltaValue
+            // 
+            this.lblDeltaValue.AutoSize = true;
+            this.lblDeltaValue.Location = new System.Drawing.Point(66, 370);
+            this.lblDeltaValue.Name = "lblDeltaValue";
+            this.lblDeltaValue.Size = new System.Drawing.Size(34, 13);
+            this.lblDeltaValue.TabIndex = 18;
+            this.lblDeltaValue.Text = "Value";
+            // 
+            // lblLowGamma
+            // 
+            this.lblLowGamma.AutoSize = true;
+            this.lblLowGamma.Location = new System.Drawing.Point(101, 459);
+            this.lblLowGamma.Name = "lblLowGamma";
+            this.lblLowGamma.Size = new System.Drawing.Size(84, 13);
+            this.lblLowGamma.TabIndex = 17;
+            this.lblLowGamma.Text = "Gamma baja (γ):";
+            // 
+            // lblHighGamma
+            // 
+            this.lblHighGamma.AutoSize = true;
+            this.lblHighGamma.Location = new System.Drawing.Point(104, 430);
+            this.lblHighGamma.Name = "lblHighGamma";
+            this.lblHighGamma.Size = new System.Drawing.Size(81, 13);
+            this.lblHighGamma.TabIndex = 16;
+            this.lblHighGamma.Text = "Gamma alta (Γ):";
+            // 
+            // lblHighBeta
+            // 
+            this.lblHighBeta.AutoSize = true;
+            this.lblHighBeta.Location = new System.Drawing.Point(118, 370);
+            this.lblHighBeta.Name = "lblHighBeta";
+            this.lblHighBeta.Size = new System.Drawing.Size(67, 13);
+            this.lblHighBeta.TabIndex = 15;
+            this.lblHighBeta.Text = "Beta alta (Β):";
+            // 
+            // lblHighAlpha
+            // 
+            this.lblHighAlpha.AutoSize = true;
+            this.lblHighAlpha.Location = new System.Drawing.Point(2, 430);
+            this.lblHighAlpha.Name = "lblHighAlpha";
+            this.lblHighAlpha.Size = new System.Drawing.Size(64, 13);
+            this.lblHighAlpha.TabIndex = 14;
+            this.lblHighAlpha.Text = "Alfa alta (Α):";
+            // 
+            // lblLowBeta
+            // 
+            this.lblLowBeta.AutoSize = true;
+            this.lblLowBeta.Location = new System.Drawing.Point(115, 401);
+            this.lblLowBeta.Name = "lblLowBeta";
+            this.lblLowBeta.Size = new System.Drawing.Size(70, 13);
+            this.lblLowBeta.TabIndex = 13;
+            this.lblLowBeta.Text = "Beta baja (β):";
+            // 
+            // lblLowAlpha
+            // 
+            this.lblLowAlpha.AutoSize = true;
+            this.lblLowAlpha.Location = new System.Drawing.Point(0, 459);
+            this.lblLowAlpha.Name = "lblLowAlpha";
+            this.lblLowAlpha.Size = new System.Drawing.Size(67, 13);
+            this.lblLowAlpha.TabIndex = 12;
+            this.lblLowAlpha.Text = "Alfa baja (α):";
+            // 
+            // lblTheta
+            // 
+            this.lblTheta.AutoSize = true;
+            this.lblTheta.Location = new System.Drawing.Point(3, 401);
+            this.lblTheta.Name = "lblTheta";
+            this.lblTheta.Size = new System.Drawing.Size(53, 13);
+            this.lblTheta.TabIndex = 11;
+            this.lblTheta.Text = "Theta (θ):";
+            // 
+            // lblDelta
+            // 
+            this.lblDelta.AutoSize = true;
+            this.lblDelta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDelta.Location = new System.Drawing.Point(3, 370);
+            this.lblDelta.Name = "lblDelta";
+            this.lblDelta.Size = new System.Drawing.Size(51, 13);
+            this.lblDelta.TabIndex = 10;
+            this.lblDelta.Text = "Delta (Δ):";
+            // 
+            // lblIntensity
+            // 
+            this.lblIntensity.AutoSize = true;
+            this.lblIntensity.Location = new System.Drawing.Point(195, 4);
+            this.lblIntensity.Name = "lblIntensity";
+            this.lblIntensity.Size = new System.Drawing.Size(33, 13);
+            this.lblIntensity.TabIndex = 9;
+            this.lblIntensity.Text = "100%";
+            // 
+            // lblSenial
+            // 
+            this.lblSenial.AutoSize = true;
+            this.lblSenial.Location = new System.Drawing.Point(149, 4);
+            this.lblSenial.Name = "lblSenial";
+            this.lblSenial.Size = new System.Drawing.Size(37, 13);
+            this.lblSenial.TabIndex = 8;
+            this.lblSenial.Text = "Señal:";
             // 
             // label5
             // 
@@ -372,41 +500,14 @@
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
             // 
-            // label16
+            // lblPacketsRead
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(191, 370);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 13);
-            this.label16.TabIndex = 22;
-            this.label16.Text = " Value";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(191, 401);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 13);
-            this.label17.TabIndex = 22;
-            this.label17.Text = " Value";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(191, 430);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(37, 13);
-            this.label18.TabIndex = 22;
-            this.label18.Text = " Value";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(191, 459);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 13);
-            this.label19.TabIndex = 22;
-            this.label19.Text = " Value";
+            this.lblPacketsRead.AutoSize = true;
+            this.lblPacketsRead.Location = new System.Drawing.Point(414, 45);
+            this.lblPacketsRead.Name = "lblPacketsRead";
+            this.lblPacketsRead.Size = new System.Drawing.Size(110, 13);
+            this.lblPacketsRead.TabIndex = 7;
+            this.lblPacketsRead.Text = "Paquetes leídos: N/A";
             // 
             // MainForm
             // 
@@ -448,24 +549,33 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar PBConcentration;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label LBLowAlphaValue;
-        private System.Windows.Forms.Label LBHighAlphaValue;
-        private System.Windows.Forms.Label LBThetaValue;
-        private System.Windows.Forms.Label LBDeltaValue;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblIntensity;
+        private System.Windows.Forms.Label lblSenial;
+        private System.Windows.Forms.Label lblLowAlphaValue;
+        private System.Windows.Forms.Label lblHighAlphaValue;
+        private System.Windows.Forms.Label lblThetaValue;
+        private System.Windows.Forms.Label lblDeltaValue;
+        private System.Windows.Forms.Label lblLowGamma;
+        private System.Windows.Forms.Label lblHighGamma;
+        private System.Windows.Forms.Label lblHighBeta;
+        private System.Windows.Forms.Label lblHighAlpha;
+        private System.Windows.Forms.Label lblLowBeta;
+        private System.Windows.Forms.Label lblLowAlpha;
+        private System.Windows.Forms.Label lblTheta;
+        private System.Windows.Forms.Label lblDelta;
+        private System.Windows.Forms.Label lblSimulador;
+        private System.Windows.Forms.Label lblLowGammaValue;
+        private System.Windows.Forms.Label lblHighGammaValue;
+        private System.Windows.Forms.Label lblLowBetaValue;
+        private System.Windows.Forms.Label lblHighBetaValue;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnStopDemo;
+        private System.Windows.Forms.Button btnStartDemo;
+        private System.Windows.Forms.Label lblConcentration;
+        private System.Windows.Forms.Label lblRelaxation;
+        private System.Windows.Forms.Label lblPacketsRead;
     }
 }
