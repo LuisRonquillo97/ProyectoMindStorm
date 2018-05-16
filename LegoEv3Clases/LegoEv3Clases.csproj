@@ -53,6 +53,7 @@
     <Compile Include="Core\ResponseManager.cs" />
     <Compile Include="Core\SystemCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsbConexion\HidImports.cs" />
     <Compile Include="UsbConexion\UsbCommunication.cs" />
   </ItemGroup>
   <ItemGroup />
