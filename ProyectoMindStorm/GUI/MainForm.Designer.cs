@@ -436,7 +436,7 @@
             // 
             // PBEye
             // 
-
+            this.PBEye.Image = global::ProyectoMindStorm.Properties.Resources.closed_eye;
             this.PBEye.Location = new System.Drawing.Point(41, 209);
             this.PBEye.Name = "PBEye";
             this.PBEye.Size = new System.Drawing.Size(128, 128);
