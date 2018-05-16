@@ -79,5 +79,11 @@ namespace ProyectoMindStorm.GUI
             lblRelaxation.Text = "Valor relajación: N/A";
             lblPacketsRead.Text = "Paquetes leídos: N/A";
         }
+
+        private void simuladorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LegoForm lego = new LegoForm();
+            lego.Show();
+        }
     }
 }
