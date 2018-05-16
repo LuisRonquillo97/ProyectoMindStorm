@@ -34,6 +34,7 @@
             this.mindStormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
+            this.lblPacketsRead = new System.Windows.Forms.Label();
             this.lblRelaxation = new System.Windows.Forms.Label();
             this.lblConcentration = new System.Windows.Forms.Label();
             this.btnStopDemo = new System.Windows.Forms.Button();
@@ -69,7 +70,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.lblPacketsRead = new System.Windows.Forms.Label();
+            this.simuladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -105,6 +106,8 @@
             // 
             // mindStormToolStripMenuItem
             // 
+            this.mindStormToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.simuladorToolStripMenuItem});
             this.mindStormToolStripMenuItem.Name = "mindStormToolStripMenuItem";
             this.mindStormToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.mindStormToolStripMenuItem.Text = "MindStorm";
@@ -167,6 +170,15 @@
             this.MainContainer.SplitterDistance = 586;
             this.MainContainer.TabIndex = 1;
             // 
+            // lblPacketsRead
+            // 
+            this.lblPacketsRead.AutoSize = true;
+            this.lblPacketsRead.Location = new System.Drawing.Point(414, 45);
+            this.lblPacketsRead.Name = "lblPacketsRead";
+            this.lblPacketsRead.Size = new System.Drawing.Size(110, 13);
+            this.lblPacketsRead.TabIndex = 7;
+            this.lblPacketsRead.Text = "Paquetes leídos: N/A";
+            // 
             // lblRelaxation
             // 
             this.lblRelaxation.AutoSize = true;
@@ -197,7 +209,7 @@
             // 
             // btnStartDemo
             // 
-            this.btnStartDemo.Location = new System.Drawing.Point(13, 61);
+            this.btnStartDemo.Location = new System.Drawing.Point(41, 61);
             this.btnStartDemo.Name = "btnStartDemo";
             this.btnStartDemo.Size = new System.Drawing.Size(75, 23);
             this.btnStartDemo.TabIndex = 3;
@@ -462,7 +474,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PBRelaxation.Location = new System.Drawing.Point(7, 149);
             this.PBRelaxation.Name = "PBRelaxation";
-            this.PBRelaxation.Size = new System.Drawing.Size(238, 34);
+            this.PBRelaxation.Size = new System.Drawing.Size(238, 37);
             this.PBRelaxation.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBRelaxation.TabIndex = 3;
             this.PBRelaxation.Value = 90;
@@ -495,19 +507,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PBConcentration.Location = new System.Drawing.Point(7, 84);
             this.PBConcentration.Name = "PBConcentration";
-            this.PBConcentration.Size = new System.Drawing.Size(238, 31);
+            this.PBConcentration.Size = new System.Drawing.Size(238, 34);
             this.PBConcentration.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
             // 
-            // lblPacketsRead
+            // simuladorToolStripMenuItem
             // 
-            this.lblPacketsRead.AutoSize = true;
-            this.lblPacketsRead.Location = new System.Drawing.Point(414, 45);
-            this.lblPacketsRead.Name = "lblPacketsRead";
-            this.lblPacketsRead.Size = new System.Drawing.Size(110, 13);
-            this.lblPacketsRead.TabIndex = 7;
-            this.lblPacketsRead.Text = "Paquetes leídos: N/A";
+            this.simuladorToolStripMenuItem.Name = "simuladorToolStripMenuItem";
+            this.simuladorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.simuladorToolStripMenuItem.Text = "Simulador";
+            this.simuladorToolStripMenuItem.Click += new System.EventHandler(this.simuladorToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -577,5 +587,6 @@
         private System.Windows.Forms.Label lblConcentration;
         private System.Windows.Forms.Label lblRelaxation;
         private System.Windows.Forms.Label lblPacketsRead;
+        private System.Windows.Forms.ToolStripMenuItem simuladorToolStripMenuItem;
     }
 }

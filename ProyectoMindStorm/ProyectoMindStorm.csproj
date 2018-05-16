@@ -66,35 +66,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\LegoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LegoForm.Designer.cs">
+      <DependentUpon>LegoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MindStorm\HidImports.cs" />
     <Compile Include="MindWave\BO\NativeThinkgear64.cs" />
     <Compile Include="MindWave\BO\Neurosky.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\LegoForm.resx">
+      <DependentUpon>LegoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -105,13 +113,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MindStorm\Core\" />
+    <Folder Include="MindStorm\" />
     <Folder Include="MindWave\DAO\" />
+    <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MindSetUWP.sln" />
-    <Content Include="Resources\Images\closed_eye.png" />
-    <Content Include="Resources\Images\open_eye.png" />
+    <None Include="Resources\abajo.png" />
+    <None Include="Resources\arriba.png" />
+    <Content Include="Resources\closed_eye.png" />
+    <None Include="Resources\Derecha.png" />
+    <None Include="Resources\garra.png" />
+    <None Include="Resources\izquierda.png" />
+    <Content Include="Resources\open_eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LegoEv3Clases\LegoEv3Clases.csproj">
+      <Project>{6064eb37-806c-4f25-9298-de45cc324745}</Project>
+      <Name>LegoEv3Clases</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
