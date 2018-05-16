@@ -34,6 +34,7 @@
             this.mindStormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
+            this.lblPacketsRead = new System.Windows.Forms.Label();
             this.lblRelaxation = new System.Windows.Forms.Label();
             this.lblConcentration = new System.Windows.Forms.Label();
             this.btnStopDemo = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.lblPacketsRead = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -166,6 +166,15 @@
             this.MainContainer.Size = new System.Drawing.Size(843, 494);
             this.MainContainer.SplitterDistance = 586;
             this.MainContainer.TabIndex = 1;
+            // 
+            // lblPacketsRead
+            // 
+            this.lblPacketsRead.AutoSize = true;
+            this.lblPacketsRead.Location = new System.Drawing.Point(414, 45);
+            this.lblPacketsRead.Name = "lblPacketsRead";
+            this.lblPacketsRead.Size = new System.Drawing.Size(110, 13);
+            this.lblPacketsRead.TabIndex = 7;
+            this.lblPacketsRead.Text = "Paquetes leídos: N/A";
             // 
             // lblRelaxation
             // 
@@ -427,7 +436,7 @@
             // 
             // PBEye
             // 
-            this.PBEye.Image = global::ProyectoMindStorm.Properties.Resources.closed_eye;
+
             this.PBEye.Location = new System.Drawing.Point(41, 209);
             this.PBEye.Name = "PBEye";
             this.PBEye.Size = new System.Drawing.Size(128, 128);
@@ -499,15 +508,6 @@
             this.PBConcentration.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
-            // 
-            // lblPacketsRead
-            // 
-            this.lblPacketsRead.AutoSize = true;
-            this.lblPacketsRead.Location = new System.Drawing.Point(414, 45);
-            this.lblPacketsRead.Name = "lblPacketsRead";
-            this.lblPacketsRead.Size = new System.Drawing.Size(110, 13);
-            this.lblPacketsRead.TabIndex = 7;
-            this.lblPacketsRead.Text = "Paquetes leídos: N/A";
             // 
             // MainForm
             // 
