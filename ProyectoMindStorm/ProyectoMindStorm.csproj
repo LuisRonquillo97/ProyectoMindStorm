@@ -72,7 +72,6 @@
     <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MindStorm\HidImports.cs" />
     <Compile Include="MindWave\BO\NativeThinkgear64.cs" />
     <Compile Include="MindWave\BO\Neurosky.cs" />
     <Compile Include="Program.cs" />
@@ -105,7 +104,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MindStorm\Core\" />
+    <Folder Include="MindStorm\" />
     <Folder Include="MindWave\DAO\" />
   </ItemGroup>
   <ItemGroup>
