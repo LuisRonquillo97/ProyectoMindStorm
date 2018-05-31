@@ -26,17 +26,34 @@ namespace ProyectoMindStorm.GUI
             //_brick = new Brick(new BluetoothCommunication("COM5"));
             //_brick = new Brick(new NetworkCommunication("192.168.2.237"));
 
-            //_brick.BrickChanged += _brick_BrickChanged;
+            _brick.BrickChanged += _brick_BrickChanged;
 
+
+            MessageBox.Show("Conectando");
             await _brick.ConnectAsync();
-           
-            await _brick.DirectCommand.TurnMotorAtSpeedForTimeAsync(OutputPort.B, 50, 100, false);
 
-            await _brick.DirectCommand.PlayToneAsync(0x50, 100, 1000);
-
-            System.Console.WriteLine("Beeped...done!");
+            MessageBox.Show("conectando con el motor");
+            await _brick.DirectCommand.TurnMotorAtSpeedForTimeAsync(OutputPort.B, -30, 1000, false);
         }
+
+        public void _brick_BrickChanged(object sender, BrickChangedEventArgs e)
+        {
+            MessageBox.Show(""+ e.Ports[InputPort.B].SIValue);
+        }
+
         private void btnArriba_Click(object sender, EventArgs e)
+        {
+            Task t = Test();
+            t.Wait();
+            
+        }
+
+        private void LegoForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
