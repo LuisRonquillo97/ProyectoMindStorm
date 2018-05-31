@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MindSetUWP.sln" />
+    <None Include="Resources\Usblogo.png" />
     <None Include="Resources\abajo.png" />
     <None Include="Resources\arriba.png" />
     <Content Include="Resources\closed_eye.png" />
