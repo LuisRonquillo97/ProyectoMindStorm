@@ -25,6 +25,7 @@ namespace ProyectoMindStorm.GUI
             btnIzquierda.Visible = false;
             btnDerecha.Visible = false;
             btnGarra.Visible = false;
+            btnDesconectar.Visible = false;
             btnConectar.Visible = true;
 
         }
@@ -45,6 +46,7 @@ namespace ProyectoMindStorm.GUI
                 btnDerecha.Visible = true;
                 btnGarra.Visible = true;
                 btnConectar.Visible = false;
+                btnDesconectar.Visible = true;
             }
             else
             {

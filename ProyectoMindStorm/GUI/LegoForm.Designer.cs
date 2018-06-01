@@ -35,6 +35,7 @@
             this.btnAbajo = new System.Windows.Forms.Button();
             this.btnArriba = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDesconectar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConectar
@@ -119,11 +120,21 @@
             this.label1.Text = " Simulador Lego";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btnDesconectar
+            // 
+            this.btnDesconectar.Location = new System.Drawing.Point(92, 80);
+            this.btnDesconectar.Name = "btnDesconectar";
+            this.btnDesconectar.Size = new System.Drawing.Size(347, 37);
+            this.btnDesconectar.TabIndex = 8;
+            this.btnDesconectar.Text = "Desconectar";
+            this.btnDesconectar.UseVisualStyleBackColor = true;
+            // 
             // LegoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 465);
+            this.Controls.Add(this.btnDesconectar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.btnDerecha);
@@ -151,5 +162,6 @@
         private System.Windows.Forms.Button btnDerecha;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDesconectar;
     }
 }
