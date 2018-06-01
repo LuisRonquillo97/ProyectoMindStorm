@@ -16,7 +16,7 @@ namespace ProyectoMindStorm.GUI
     {
         public Brick _brick;
         public ColorSensorColor sensorcolor;
-        int contador = 0;
+        bool contador = false;
         public LegoForm()
         {
             InitializeComponent();
@@ -61,9 +61,8 @@ namespace ProyectoMindStorm.GUI
 
         private void btnArriba_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -35, 800, true);
-            
-            
+            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -100, 100, true);
+          
         }
 
         private void LegoForm_Load(object sender, EventArgs e)
@@ -84,17 +83,21 @@ namespace ProyectoMindStorm.GUI
 
         private void btnAbajo_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 35, 800, true);
+            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 100, 100, true);
+
+
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 50, 1500, true);
+            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 100, 100, true);
         }
 
         private void btnDerecha_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -50, 1500, true);
+            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -100, 100, true);
+            
+
         }
 
         private void LegoForm_KeyPress(object sender, KeyPressEventArgs e)
@@ -143,6 +146,30 @@ namespace ProyectoMindStorm.GUI
                 case (char)Keys.Right:
                     _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -50, 1500, true);
                     break;*/
+        }
+
+        private void btnDesconectar_Click(object sender, EventArgs e)
+        {
+            _brick.Disconnect();
+            btnConectar.Visible = true;
+            btnDesconectar.Visible = false;
+        }
+
+        private void btnGarra_Click(object sender, EventArgs e)
+        {
+            if (contador) {
+                _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -30, 100, true);
+                contador = false;
+
+            }
+            else
+            {
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 30, 100, true);
+                    contador = true;   
+            }
+            
+
+
         }
     }
 }

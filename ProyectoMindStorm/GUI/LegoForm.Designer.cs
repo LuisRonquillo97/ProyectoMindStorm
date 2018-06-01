@@ -83,6 +83,7 @@
             this.btnGarra.TabIndex = 2;
             this.btnGarra.Text = " ";
             this.btnGarra.UseVisualStyleBackColor = true;
+            this.btnGarra.Click += new System.EventHandler(this.btnGarra_Click);
             // 
             // btnAbajo
             // 
@@ -128,6 +129,7 @@
             this.btnDesconectar.TabIndex = 8;
             this.btnDesconectar.Text = "Desconectar";
             this.btnDesconectar.UseVisualStyleBackColor = true;
+            this.btnDesconectar.Click += new System.EventHandler(this.btnDesconectar_Click);
             // 
             // LegoForm
             // 
