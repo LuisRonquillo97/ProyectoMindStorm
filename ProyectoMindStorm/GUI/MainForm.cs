@@ -18,7 +18,7 @@ namespace ProyectoMindStorm.GUI
         public MainForm()
         {
             InitializeComponent();
-            lblVersion.Text = NativeThinkgear.TG_GetVersion().ToString();
+            lblVersion.Text = NativeThinkgear.TG_GetVersion().ToString();//muestra la versión del driver
             t.Interval = 100; // especifica el tiempo en milisegundos para el timer
             t.Tick += new EventHandler(timer_Tick); //establece el método del timer
         }
@@ -39,6 +39,7 @@ namespace ProyectoMindStorm.GUI
         }
         void timer_Tick(object sender, EventArgs e)//método dónde se llaman las lecturas del neurosky
         {
+            //Obtener datos de los métodos de neurosky
             int concentración = Nsky.ObtenerConcentración();
             int relajación = Nsky.ObtenerRelajación();
             int Delta = Nsky.ObtenerDelta();
@@ -50,6 +51,7 @@ namespace ProyectoMindStorm.GUI
             int gammaBaja = Nsky.ObtenergGammaBaja();
             int gammaAlta = Nsky.ObtenerGammaAlta();
             int raw = Nsky.ObtenerIntensidad();
+            //Asigación de los valores obtenidos a los componentes del form
             lblPacketsRead.Text = "Paquetes leídos: " + Nsky.LeerPaquetes().ToString();
             PBConcentration.Value = concentración;
             lblConcentration.Text = "Valor concentración: " + concentración.ToString();
@@ -70,8 +72,9 @@ namespace ProyectoMindStorm.GUI
         {
             t.Stop();
             Nsky.Desconectar();
+            limpiarValores();
         }
-        private void limpiarValores()
+        private void limpiarValores()//método que limpia los campos del formulario al parar la demo.
         {
             lblStatus.Text = "Desconectado";
             lblIntensity.Text = "N/A";
@@ -80,7 +83,7 @@ namespace ProyectoMindStorm.GUI
             lblPacketsRead.Text = "Paquetes leídos: N/A";
         }
 
-        private void simuladorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void simuladorToolStripMenuItem_Click(object sender, EventArgs e)//botón para el menú lego
         {
             LegoForm lego = new LegoForm();
             lego.Show();

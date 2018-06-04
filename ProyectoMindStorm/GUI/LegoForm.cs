@@ -17,6 +17,7 @@ namespace ProyectoMindStorm.GUI
         public Brick _brick;
         public ColorSensorColor sensorcolor;
         bool contador = false;
+        double mitad = 2;
         public LegoForm()
         {
             InitializeComponent();
@@ -35,8 +36,6 @@ namespace ProyectoMindStorm.GUI
             //_brick = new Brick(new BluetoothCommunication("COM5"));
             //_brick = new Brick(new NetworkCommunication("192.168.2.237"));
             _brick.BrickChanged += _brick_BrickChanged;
-
-            _brick.ConnectAsync();
             if (_brick.ConnectAsync() != null)
             {
                 MessageBox.Show("La conexión fue exitosa");
@@ -90,12 +89,12 @@ namespace ProyectoMindStorm.GUI
 
         private void btnIzquierda_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 100, 100, true);
+            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 100, 150, true);
         }
 
         private void btnDerecha_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -100, 100, true);
+            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -100, 150, true);
             
 
         }
@@ -154,22 +153,34 @@ namespace ProyectoMindStorm.GUI
             btnConectar.Visible = true;
             btnDesconectar.Visible = false;
         }
+        void revertir()
+        {
+            
+                double valor = 0;
+                valor = mitad % 2;
+                if (valor == 0)
+                {
+                    contador = true;
+                    mitad++;
+                }else {
+                    contador = false;
+                    mitad++;
+                }
+                
+        }
 
         private void btnGarra_Click(object sender, EventArgs e)
         {
-            if (contador) {
-                _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -30, 100, true);
-                contador = false;
-
-            }
-            else
+            switch (contador)
             {
+                case false:
                     _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 30, 100, true);
-                    contador = true;   
+                    break;
+                case true:
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -30, 100, true);
+                    break;
             }
-            
-
-
+            revertir();            
         }
     }
 }
