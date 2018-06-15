@@ -7,72 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LegoEv3Clases.UsbConexion;
-using LegoEv3Clases.Core;
+using ProyectoMindStorm.MindStorm;
+
 
 namespace ProyectoMindStorm.GUI
 {
     public partial class LegoForm : Form
     {
-        public Brick _brick;
-        public ColorSensorColor sensorcolor;
-        bool contador = false;
-        double mitad = 2;
+
+        Movimientos oMovimientos = new Movimientos();
         public LegoForm()
         {
             InitializeComponent();
-            btnAbajo.Visible = false;
-            btnArriba.Visible = false;
-            btnIzquierda.Visible = false;
-            btnDerecha.Visible = false;
-            btnGarra.Visible = false;
-            btnDesconectar.Visible = false;
-            btnConectar.Visible = true;
-
-        }
-        public void Conexion()
-        {
-            _brick = new Brick(new UsbCommunication());
-            //_brick = new Brick(new BluetoothCommunication("COM5"));
-            //_brick = new Brick(new NetworkCommunication("192.168.2.237"));
-            _brick.BrickChanged += _brick_BrickChanged;
-            if (_brick.ConnectAsync() != null)
-            {
-                MessageBox.Show("La conexión fue exitosa");
-                btnAbajo.Visible = true;
-                btnArriba.Visible = true;
-                btnIzquierda.Visible = true;
-                btnDerecha.Visible = true;
-                btnGarra.Visible = true;
-                btnConectar.Visible = false;
-                btnDesconectar.Visible = true;
-            }
-            else
-            {
-                MessageBox.Show("Verificar conexión");
-            }
-        }
-
-        public void _brick_BrickChanged(object sender, BrickChangedEventArgs e)
-        {
-           
+            oMovimientos.establecerConexion();
+            
         }
 
         private void btnArriba_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -100, 100, true);
-          
+            oMovimientos.moverArriba();
         }
 
         private void LegoForm_Load(object sender, EventArgs e)
         {
             
-            
+           
         }
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            Conexion();
+            oMovimientos.establecerConexion();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -82,20 +46,18 @@ namespace ProyectoMindStorm.GUI
 
         private void btnAbajo_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 100, 100, true);
 
-
+            oMovimientos.moverAbajo();
         }
 
         private void btnIzquierda_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 100, 150, true);
+            oMovimientos.moverIzquierda();
         }
 
         private void btnDerecha_Click(object sender, EventArgs e)
         {
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -100, 150, true);
-            
+            oMovimientos.moverDerecha();
 
         }
 
@@ -149,38 +111,12 @@ namespace ProyectoMindStorm.GUI
 
         private void btnDesconectar_Click(object sender, EventArgs e)
         {
-            _brick.Disconnect();
-            btnConectar.Visible = true;
-            btnDesconectar.Visible = false;
-        }
-        void revertir()
-        {
             
-                double valor = 0;
-                valor = mitad % 2;
-                if (valor == 0)
-                {
-                    contador = true;
-                    mitad++;
-                }else {
-                    contador = false;
-                    mitad++;
-                }
-                
         }
-
+ 
         private void btnGarra_Click(object sender, EventArgs e)
         {
-            switch (contador)
-            {
-                case false:
-                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 30, 100, true);
-                    break;
-                case true:
-                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -30, 100, true);
-                    break;
-            }
-            revertir();            
+            oMovimientos.abrirPinza();
         }
     }
 }
