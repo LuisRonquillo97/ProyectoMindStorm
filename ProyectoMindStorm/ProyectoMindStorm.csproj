@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MindSetUWP.sln" />
+    <Content Include="thinkgear.dll" />
     <None Include="Resources\Usblogo.png" />
     <None Include="Resources\abajo.png" />
     <None Include="Resources\arriba.png" />
@@ -132,6 +133,10 @@
     <ProjectReference Include="..\LegoEv3Clases\LegoEv3Clases.csproj">
       <Project>{6064eb37-806c-4f25-9298-de45cc324745}</Project>
       <Name>LegoEv3Clases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThinkGearNET\ThinkGearNET.csproj">
+      <Project>{c68936bb-3413-4350-972b-fd3160ad92ed}</Project>
+      <Name>ThinkGearNET</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

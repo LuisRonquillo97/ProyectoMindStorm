@@ -1,77 +1,75 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
-using ProyectoMindStorm.MindWave.BO;
-
+using ThinkGearNET;
 namespace ProyectoMindStorm.GUI
 {
     public partial class MainForm : Form
     {
-        Timer t = new Timer(); //inicializamos un timer
-        Neurosky Nsky = new Neurosky(); //llamamos a los métodos del neurosky
+        private ThinkGearWrapper _thinkGearWrapper = new ThinkGearWrapper();
+        
         public MainForm()
         {
             InitializeComponent();
-            lblVersion.Text = NativeThinkgear.TG_GetVersion().ToString();//muestra la versión del driver
-            t.Interval = 100; // especifica el tiempo en milisegundos para el timer
-            t.Tick += new EventHandler(timer_Tick); //establece el método del timer
+        }
+        void _thinkGearWrapper_ThinkGearChanged(object sender, ThinkGearChangedEventArgs e)
+        {
+            // update the textbox and sleep for a tiny bit
+            BeginInvoke(new MethodInvoker(delegate
+            {
+                lblConcentration.Text = "Valor concentración: " + e.ThinkGearState.Attention;
+                lblRelaxation.Text = "Valor meditación: " + e.ThinkGearState.Meditation;
+                lblPacketsRead.Text = "Paquetes leídos: " + e.ThinkGearState.PacketsRead;
+                PBConcentration.Value = Convert.ToInt32(e.ThinkGearState.Attention);
+                lblConcentration.Text = "Valor concentración: " + e.ThinkGearState.Attention;
+                PBRelaxation.Value = Convert.ToInt32(e.ThinkGearState.Meditation);
+                lblRelaxation.Text = "Valor relajación: " + e.ThinkGearState.Meditation;
+                lblDeltaValue.Text = e.ThinkGearState.Delta.ToString();
+                lblThetaValue.Text = e.ThinkGearState.Theta.ToString();
+                lblLowAlphaValue.Text = e.ThinkGearState.Alpha1.ToString();
+                lblHighAlphaValue.Text = e.ThinkGearState.Alpha2.ToString();
+                lblLowBetaValue.Text = e.ThinkGearState.Beta1.ToString();
+                lblHighBetaValue.Text = e.ThinkGearState.Beta2.ToString();
+                lblLowGammaValue.Text = e.ThinkGearState.Gamma1.ToString();
+                lblHighGammaValue.Text = e.ThinkGearState.Gamma2.ToString();
+                lblIntensity.Text = e.ThinkGearState.Raw.ToString();
+                lblBlink.Text = "Valor parpadeo: "+ e.ThinkGearState.BlinkStrength.ToString();
+                if (e.ThinkGearState.BlinkStrength > 100)
+                {
+                    PBEye.Image = ProyectoMindStorm.Properties.Resources.open_eye;
+                }else
+                {
+                    PBEye.Image = ProyectoMindStorm.Properties.Resources.closed_eye;
+                }
+
+            }));
+            Thread.Sleep(10);
         }
 
         private void btnStartDemo_Click(object sender, EventArgs e)//acción al pulsar el botón de iniciar demo
         {
-            string conexion = Nsky.Conectar();//llamado al método de conexión del neurosky, recibimos el string que devuelve el método, debe devolver "OK"
-            if (conexion == "OK")//si se realiza una conexión correctamente al neurosky...
+            _thinkGearWrapper = new ThinkGearWrapper();
+
+            // setup the event
+            _thinkGearWrapper.ThinkGearChanged += _thinkGearWrapper_ThinkGearChanged;
+            string comPortName = "\\\\.\\COM4";
+
+            // connect to the device on the specified COM port at 57600 baud
+            if (!_thinkGearWrapper.Connect(comPortName, 57600, true))
             {
-                lblStatus.Text = "Conectado";
-                t.Start();//arrancamos el método del timer, aquí se llamarán a todas las lecturas del neurosky
-            }
-            else
+                MessageBox.Show("No se pudo conectar al neurosky.");
+            }else
             {
-                //si ocurrió algún error, el método conectar devuelve el error, entonces, lo imprimimos con un MessageBox
-                MessageBox.Show(conexion);
+                _thinkGearWrapper.EnableBlinkDetection(true);
+
             }
-        }
-        void timer_Tick(object sender, EventArgs e)//método dónde se llaman las lecturas del neurosky
-        {
-            //Obtener datos de los métodos de neurosky
-            int concentración = Nsky.ObtenerConcentración();
-            int relajación = Nsky.ObtenerRelajación();
-            int Delta = Nsky.ObtenerDelta();
-            int theta = Nsky.ObtenerTheta();
-            int alfaBaja = Nsky.ObtenerAlfaBaja();
-            int alfaAlta = Nsky.ObtenerAlfaAlta();
-            int betaBaja = Nsky.ObtenerBetaBaja();
-            int betaAlta = Nsky.ObtenerBetaAlta();
-            int gammaBaja = Nsky.ObtenergGammaBaja();
-            int gammaAlta = Nsky.ObtenerGammaAlta();
-            int raw = Nsky.ObtenerIntensidad();
-            //Asigación de los valores obtenidos a los componentes del form
-            lblPacketsRead.Text = "Paquetes leídos: " + Nsky.LeerPaquetes().ToString();
-            PBConcentration.Value = concentración;
-            lblConcentration.Text = "Valor concentración: " + concentración.ToString();
-            PBRelaxation.Value = relajación;
-            lblRelaxation.Text = "Valor relajación: " + relajación.ToString();
-            lblDeltaValue.Text = Delta.ToString();
-            lblThetaValue.Text = theta.ToString();
-            lblLowAlphaValue.Text = alfaBaja.ToString();
-            lblHighAlphaValue.Text = alfaAlta.ToString();
-            lblLowBetaValue.Text = betaBaja.ToString();
-            lblHighBetaValue.Text = betaAlta.ToString();
-            lblLowGammaValue.Text = gammaBaja.ToString();
-            lblHighGammaValue.Text = gammaAlta.ToString();
-            lblIntensity.Text = raw.ToString();
+                
+            
         }
 
         private void btnStopDemo_Click(object sender, EventArgs e)//método que para la demo, detiene el timer y desconecta al neurosky
         {
-            t.Stop();
-            Nsky.Desconectar();
+            _thinkGearWrapper.Disconnect();
             limpiarValores();
         }
         private void limpiarValores()//método que limpia los campos del formulario al parar la demo.

@@ -32,6 +32,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mindwaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mindStormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.simuladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
             this.lblPacketsRead = new System.Windows.Forms.Label();
@@ -70,7 +71,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.simuladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblBlink = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -112,6 +113,13 @@
             this.mindStormToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.mindStormToolStripMenuItem.Text = "MindStorm";
             // 
+            // simuladorToolStripMenuItem
+            // 
+            this.simuladorToolStripMenuItem.Name = "simuladorToolStripMenuItem";
+            this.simuladorToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.simuladorToolStripMenuItem.Text = "Simulador";
+            this.simuladorToolStripMenuItem.Click += new System.EventHandler(this.simuladorToolStripMenuItem_Click);
+            // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
@@ -127,6 +135,7 @@
             // 
             // MainContainer.Panel1
             // 
+            this.MainContainer.Panel1.Controls.Add(this.lblBlink);
             this.MainContainer.Panel1.Controls.Add(this.lblPacketsRead);
             this.MainContainer.Panel1.Controls.Add(this.lblRelaxation);
             this.MainContainer.Panel1.Controls.Add(this.lblConcentration);
@@ -512,12 +521,14 @@
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
             // 
-            // simuladorToolStripMenuItem
+            // lblBlink
             // 
-            this.simuladorToolStripMenuItem.Name = "simuladorToolStripMenuItem";
-            this.simuladorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.simuladorToolStripMenuItem.Text = "Simulador";
-            this.simuladorToolStripMenuItem.Click += new System.EventHandler(this.simuladorToolStripMenuItem_Click);
+            this.lblBlink.AutoSize = true;
+            this.lblBlink.Location = new System.Drawing.Point(417, 91);
+            this.lblBlink.Name = "lblBlink";
+            this.lblBlink.Size = new System.Drawing.Size(86, 13);
+            this.lblBlink.TabIndex = 8;
+            this.lblBlink.Text = "Valor Parpadeo: ";
             // 
             // MainForm
             // 
@@ -588,5 +599,6 @@
         private System.Windows.Forms.Label lblRelaxation;
         private System.Windows.Forms.Label lblPacketsRead;
         private System.Windows.Forms.ToolStripMenuItem simuladorToolStripMenuItem;
+        private System.Windows.Forms.Label lblBlink;
     }
 }
