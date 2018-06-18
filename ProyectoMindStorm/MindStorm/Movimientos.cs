@@ -61,10 +61,11 @@ namespace ProyectoMindStorm.MindStorm
             switch (contador)
             {
                 case false:
-                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 30, 100, true);
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 80, 50, true);
+
                     break;
                 case true:
-                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -30, 100, true);
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -55, 45, true);
                     break;
             }
             revertir();
