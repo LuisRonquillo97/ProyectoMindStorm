@@ -11,6 +11,7 @@ namespace ProyectoMindStorm.MindStorm
     class Movimientos
     {
         //Intancia del Brick lego
+        int angulo = 0;
         public Brick _brick;
         public ColorSensorColor sensorcolor;
 
@@ -49,11 +50,12 @@ namespace ProyectoMindStorm.MindStorm
         }
 
         public void moverIzquierda(){
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 100, 150, true);
+            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 10, 150, true);
+            
         }
 
         public void moverDerecha(){
-            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -100, 150, true);
+            _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -10, 150, true);
         }
 
         public void abrirPinza() {

@@ -2,12 +2,15 @@
 using System.Threading;
 using System.Windows.Forms;
 using ThinkGearNET;
+using ProyectoMindStorm.MindStorm;
 namespace ProyectoMindStorm.GUI
 {
     public partial class MainForm : Form
     {
+        private Movimientos lego = new Movimientos();
         private ThinkGearWrapper _thinkGearWrapper = new ThinkGearWrapper();
-        
+        public bool abrir = false;
+        int blink=0;
         public MainForm()
         {
             InitializeComponent();
@@ -34,14 +37,29 @@ namespace ProyectoMindStorm.GUI
                 lblHighGammaValue.Text = e.ThinkGearState.Gamma2.ToString();
                 lblIntensity.Text = e.ThinkGearState.Raw.ToString();
                 lblBlink.Text = "Valor parpadeo: "+ e.ThinkGearState.BlinkStrength.ToString();
-                if (e.ThinkGearState.BlinkStrength > 100)
+                if (e.ThinkGearState.BlinkStrength > 200)
                 {
                     PBEye.Image = ProyectoMindStorm.Properties.Resources.open_eye;
                 }else
                 {
                     PBEye.Image = ProyectoMindStorm.Properties.Resources.closed_eye;
                 }
-
+                if (e.ThinkGearState.Attention>=90 && e.ThinkGearState.Meditation<=70)
+                {
+                    lego.moverDerecha();
+                }
+                if(e.ThinkGearState.Attention <= 70 && e.ThinkGearState.Meditation >= 90)
+                {
+                    lego.moverIzquierda();
+                }
+                if (e.ThinkGearState.BlinkStrength > 150 && e.ThinkGearState.BlinkStrength!=blink)
+                {
+                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
+                    lego.abrirPinza();
+                }else
+                {
+                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
+                }
             }));
             Thread.Sleep(10);
         }
@@ -49,20 +67,23 @@ namespace ProyectoMindStorm.GUI
         private void btnStartDemo_Click(object sender, EventArgs e)//acción al pulsar el botón de iniciar demo
         {
             _thinkGearWrapper = new ThinkGearWrapper();
-
-            // setup the event
-            _thinkGearWrapper.ThinkGearChanged += _thinkGearWrapper_ThinkGearChanged;
-            string comPortName = "\\\\.\\COM4";
-
-            // connect to the device on the specified COM port at 57600 baud
-            if (!_thinkGearWrapper.Connect(comPortName, 57600, true))
+            if (lego.establecerConexion()== "La conexión fue exitosa")
             {
-                MessageBox.Show("No se pudo conectar al neurosky.");
-            }else
-            {
-                _thinkGearWrapper.EnableBlinkDetection(true);
+                // setup the event
+                _thinkGearWrapper.ThinkGearChanged += _thinkGearWrapper_ThinkGearChanged;
+                string comPortName = "\\\\.\\COM4";
 
+                // connect to the device on the specified COM port at 57600 baud
+                if (!_thinkGearWrapper.Connect(comPortName, 57600, true))
+                {
+                    MessageBox.Show("No se pudo conectar al neurosky.");
+                }
+                else
+                {
+                    _thinkGearWrapper.EnableBlinkDetection(true);
+                }
             }
+           
                 
             
         }
