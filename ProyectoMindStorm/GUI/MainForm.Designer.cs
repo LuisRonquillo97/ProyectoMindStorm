@@ -35,13 +35,12 @@
             this.simuladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
+            this.lblBlink = new System.Windows.Forms.Label();
             this.lblPacketsRead = new System.Windows.Forms.Label();
             this.lblRelaxation = new System.Windows.Forms.Label();
             this.lblConcentration = new System.Windows.Forms.Label();
             this.btnStopDemo = new System.Windows.Forms.Button();
             this.btnStartDemo = new System.Windows.Forms.Button();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.lblSimulador = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -71,7 +70,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.lblBlink = new System.Windows.Forms.Label();
+            this.btnCalibrar = new System.Windows.Forms.Button();
+            this.lblAVGmeditacion = new System.Windows.Forms.Label();
+            this.lblAVGConcentracion = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -135,14 +136,15 @@
             // 
             // MainContainer.Panel1
             // 
+            this.MainContainer.Panel1.Controls.Add(this.lblAVGConcentracion);
+            this.MainContainer.Panel1.Controls.Add(this.lblAVGmeditacion);
+            this.MainContainer.Panel1.Controls.Add(this.btnCalibrar);
             this.MainContainer.Panel1.Controls.Add(this.lblBlink);
             this.MainContainer.Panel1.Controls.Add(this.lblPacketsRead);
             this.MainContainer.Panel1.Controls.Add(this.lblRelaxation);
             this.MainContainer.Panel1.Controls.Add(this.lblConcentration);
             this.MainContainer.Panel1.Controls.Add(this.btnStopDemo);
             this.MainContainer.Panel1.Controls.Add(this.btnStartDemo);
-            this.MainContainer.Panel1.Controls.Add(this.lblVersion);
-            this.MainContainer.Panel1.Controls.Add(this.label17);
             this.MainContainer.Panel1.Controls.Add(this.lblSimulador);
             // 
             // MainContainer.Panel2
@@ -178,6 +180,15 @@
             this.MainContainer.Size = new System.Drawing.Size(843, 494);
             this.MainContainer.SplitterDistance = 586;
             this.MainContainer.TabIndex = 1;
+            // 
+            // lblBlink
+            // 
+            this.lblBlink.AutoSize = true;
+            this.lblBlink.Location = new System.Drawing.Point(417, 91);
+            this.lblBlink.Name = "lblBlink";
+            this.lblBlink.Size = new System.Drawing.Size(86, 13);
+            this.lblBlink.TabIndex = 8;
+            this.lblBlink.Text = "Valor Parpadeo: ";
             // 
             // lblPacketsRead
             // 
@@ -225,24 +236,6 @@
             this.btnStartDemo.Text = "Iniciar Demo";
             this.btnStartDemo.UseVisualStyleBackColor = true;
             this.btnStartDemo.Click += new System.EventHandler(this.btnStartDemo_Click);
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(459, 4);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(42, 13);
-            this.lblVersion.TabIndex = 2;
-            this.lblVersion.Text = "Version";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(361, 4);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(91, 13);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Versión del driver:";
             // 
             // lblSimulador
             // 
@@ -521,14 +514,34 @@
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
             // 
-            // lblBlink
+            // btnCalibrar
             // 
-            this.lblBlink.AutoSize = true;
-            this.lblBlink.Location = new System.Drawing.Point(417, 91);
-            this.lblBlink.Name = "lblBlink";
-            this.lblBlink.Size = new System.Drawing.Size(86, 13);
-            this.lblBlink.TabIndex = 8;
-            this.lblBlink.Text = "Valor Parpadeo: ";
+            this.btnCalibrar.Location = new System.Drawing.Point(41, 118);
+            this.btnCalibrar.Name = "btnCalibrar";
+            this.btnCalibrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCalibrar.TabIndex = 9;
+            this.btnCalibrar.Text = "calibrar";
+            this.btnCalibrar.UseVisualStyleBackColor = true;
+            this.btnCalibrar.Visible = false;
+            this.btnCalibrar.Click += new System.EventHandler(this.btnCalibrar_Click);
+            // 
+            // lblAVGmeditacion
+            // 
+            this.lblAVGmeditacion.AutoSize = true;
+            this.lblAVGmeditacion.Location = new System.Drawing.Point(417, 118);
+            this.lblAVGmeditacion.Name = "lblAVGmeditacion";
+            this.lblAVGmeditacion.Size = new System.Drawing.Size(107, 13);
+            this.lblAVGmeditacion.TabIndex = 10;
+            this.lblAVGmeditacion.Text = "promedio meditación:";
+            // 
+            // lblAVGConcentracion
+            // 
+            this.lblAVGConcentracion.AutoSize = true;
+            this.lblAVGConcentracion.Location = new System.Drawing.Point(395, 131);
+            this.lblAVGConcentracion.Name = "lblAVGConcentracion";
+            this.lblAVGConcentracion.Size = new System.Drawing.Size(124, 13);
+            this.lblAVGConcentracion.TabIndex = 11;
+            this.lblAVGConcentracion.Text = "promedio concentración:";
             // 
             // MainForm
             // 
@@ -591,8 +604,6 @@
         private System.Windows.Forms.Label lblHighBetaValue;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblVersion;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnStopDemo;
         private System.Windows.Forms.Button btnStartDemo;
         private System.Windows.Forms.Label lblConcentration;
@@ -600,5 +611,8 @@
         private System.Windows.Forms.Label lblPacketsRead;
         private System.Windows.Forms.ToolStripMenuItem simuladorToolStripMenuItem;
         private System.Windows.Forms.Label lblBlink;
+        private System.Windows.Forms.Button btnCalibrar;
+        private System.Windows.Forms.Label lblAVGConcentracion;
+        private System.Windows.Forms.Label lblAVGmeditacion;
     }
 }
