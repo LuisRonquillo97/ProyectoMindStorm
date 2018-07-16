@@ -7,7 +7,7 @@ namespace ProyectoMindStorm.GUI
 {
     public partial class MainForm : Form
     {
-        //private Movimientos lego = new Movimientos();
+        private Movimientos lego = new Movimientos();
         private ThinkGearWrapper _thinkGearWrapper = new ThinkGearWrapper();
         public bool abrir = false;
         int blink=0, lastConcentracion=0,lastMeditacion=0;
@@ -120,19 +120,19 @@ namespace ProyectoMindStorm.GUI
 
                 }else
                 {
-                    if (e.ThinkGearState.Attention >= AVGConcentracion)
+                    if (e.ThinkGearState.Attention >= AVGConcentracion && calibrado)
                     {
-                        //lego.moverDerecha();
+                        lego.moverDerecha();
                     }
-                    if (e.ThinkGearState.Meditation >=AVGmeditacion)
+                    if (e.ThinkGearState.Meditation >=AVGmeditacion && calibrado)
                     {
-                        //lego.moverIzquierda();
+                        lego.moverIzquierda();
                     }
                 }
-                if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength!=blink)
+                if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength!=blink )
                 {
                     blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
-                    //lego.abrirPinza();
+                    lego.abrirPinza();
                 }else
                 {
                     blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
@@ -144,8 +144,8 @@ namespace ProyectoMindStorm.GUI
         private void btnStartDemo_Click(object sender, EventArgs e)//acción al pulsar el botón de iniciar demo
         {
             _thinkGearWrapper = new ThinkGearWrapper();
-            //if (lego.establecerConexion()== "La conexión fue exitosa")
-            //{
+            if (lego.establecerConexion()== "La conexión fue exitosa")
+            {
                 // setup the event
                 string comPortName = "\\\\.\\COM3";
 
@@ -159,7 +159,7 @@ namespace ProyectoMindStorm.GUI
                     _thinkGearWrapper.ThinkGearChanged += _thinkGearWrapper_ThinkGearChanged;
                     _thinkGearWrapper.EnableBlinkDetection(true);
                 }
-            //}
+            }
         }
 
         private void btnCalibrar_Click(object sender, EventArgs e)
