@@ -68,7 +68,7 @@
             this.panel2.Controls.Add(this.picbarraIniciar);
             this.panel2.Location = new System.Drawing.Point(0, 66);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 374);
+            this.panel2.Size = new System.Drawing.Size(210, 426);
             this.panel2.TabIndex = 1;
             // 
             // pnlContent
@@ -157,7 +157,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(0, 317);
+            this.panel3.Location = new System.Drawing.Point(0, 369);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(210, 57);
             this.panel3.TabIndex = 2;
@@ -198,7 +198,7 @@
             // 
             this.content.Location = new System.Drawing.Point(211, 66);
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(833, 368);
+            this.content.Size = new System.Drawing.Size(857, 426);
             this.content.TabIndex = 2;
             // 
             // panel1
@@ -207,7 +207,7 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(761, 66);
+            this.panel1.Size = new System.Drawing.Size(1068, 66);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -216,7 +216,7 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.btncerrar);
             this.panel4.Controls.Add(this.btnMinimizar);
-            this.panel4.Location = new System.Drawing.Point(683, 0);
+            this.panel4.Location = new System.Drawing.Point(990, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(78, 66);
             this.panel4.TabIndex = 0;
@@ -224,7 +224,7 @@
             // btncerrar
             // 
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
-            this.btncerrar.Location = new System.Drawing.Point(57, 5);
+            this.btncerrar.Location = new System.Drawing.Point(44, 5);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(18, 19);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -235,7 +235,7 @@
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(31, 5);
+            this.btnMinimizar.Location = new System.Drawing.Point(15, 5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(20, 21);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -248,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1068, 538);
+            this.ClientSize = new System.Drawing.Size(1068, 491);
             this.Controls.Add(this.content);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -179,7 +179,7 @@
             // lblLowGammaValue
             // 
             this.lblLowGammaValue.AutoSize = true;
-            this.lblLowGammaValue.Location = new System.Drawing.Point(244, 341);
+            this.lblLowGammaValue.Location = new System.Drawing.Point(244, 381);
             this.lblLowGammaValue.Name = "lblLowGammaValue";
             this.lblLowGammaValue.Size = new System.Drawing.Size(37, 13);
             this.lblLowGammaValue.TabIndex = 36;
@@ -188,7 +188,7 @@
             // lblHighGammaValue
             // 
             this.lblHighGammaValue.AutoSize = true;
-            this.lblHighGammaValue.Location = new System.Drawing.Point(244, 312);
+            this.lblHighGammaValue.Location = new System.Drawing.Point(244, 352);
             this.lblHighGammaValue.Name = "lblHighGammaValue";
             this.lblHighGammaValue.Size = new System.Drawing.Size(37, 13);
             this.lblHighGammaValue.TabIndex = 37;
@@ -197,7 +197,7 @@
             // lblLowBetaValue
             // 
             this.lblLowBetaValue.AutoSize = true;
-            this.lblLowBetaValue.Location = new System.Drawing.Point(244, 283);
+            this.lblLowBetaValue.Location = new System.Drawing.Point(244, 323);
             this.lblLowBetaValue.Name = "lblLowBetaValue";
             this.lblLowBetaValue.Size = new System.Drawing.Size(37, 13);
             this.lblLowBetaValue.TabIndex = 38;
@@ -206,7 +206,7 @@
             // lblHighBetaValue
             // 
             this.lblHighBetaValue.AutoSize = true;
-            this.lblHighBetaValue.Location = new System.Drawing.Point(244, 252);
+            this.lblHighBetaValue.Location = new System.Drawing.Point(244, 292);
             this.lblHighBetaValue.Name = "lblHighBetaValue";
             this.lblHighBetaValue.Size = new System.Drawing.Size(37, 13);
             this.lblHighBetaValue.TabIndex = 39;
@@ -215,7 +215,7 @@
             // lblLowAlphaValue
             // 
             this.lblLowAlphaValue.AutoSize = true;
-            this.lblLowAlphaValue.Location = new System.Drawing.Point(98, 341);
+            this.lblLowAlphaValue.Location = new System.Drawing.Point(98, 381);
             this.lblLowAlphaValue.Name = "lblLowAlphaValue";
             this.lblLowAlphaValue.Size = new System.Drawing.Size(34, 13);
             this.lblLowAlphaValue.TabIndex = 35;
@@ -224,7 +224,7 @@
             // lblHighAlphaValue
             // 
             this.lblHighAlphaValue.AutoSize = true;
-            this.lblHighAlphaValue.Location = new System.Drawing.Point(98, 312);
+            this.lblHighAlphaValue.Location = new System.Drawing.Point(98, 352);
             this.lblHighAlphaValue.Name = "lblHighAlphaValue";
             this.lblHighAlphaValue.Size = new System.Drawing.Size(34, 13);
             this.lblHighAlphaValue.TabIndex = 34;
@@ -233,7 +233,7 @@
             // lblThetaValue
             // 
             this.lblThetaValue.AutoSize = true;
-            this.lblThetaValue.Location = new System.Drawing.Point(98, 283);
+            this.lblThetaValue.Location = new System.Drawing.Point(98, 323);
             this.lblThetaValue.Name = "lblThetaValue";
             this.lblThetaValue.Size = new System.Drawing.Size(34, 13);
             this.lblThetaValue.TabIndex = 33;
@@ -242,7 +242,7 @@
             // lblDeltaValue
             // 
             this.lblDeltaValue.AutoSize = true;
-            this.lblDeltaValue.Location = new System.Drawing.Point(98, 252);
+            this.lblDeltaValue.Location = new System.Drawing.Point(98, 292);
             this.lblDeltaValue.Name = "lblDeltaValue";
             this.lblDeltaValue.Size = new System.Drawing.Size(34, 13);
             this.lblDeltaValue.TabIndex = 32;
@@ -251,7 +251,7 @@
             // lblLowGamma
             // 
             this.lblLowGamma.AutoSize = true;
-            this.lblLowGamma.Location = new System.Drawing.Point(154, 341);
+            this.lblLowGamma.Location = new System.Drawing.Point(154, 381);
             this.lblLowGamma.Name = "lblLowGamma";
             this.lblLowGamma.Size = new System.Drawing.Size(84, 13);
             this.lblLowGamma.TabIndex = 31;
@@ -260,7 +260,7 @@
             // lblHighGamma
             // 
             this.lblHighGamma.AutoSize = true;
-            this.lblHighGamma.Location = new System.Drawing.Point(157, 312);
+            this.lblHighGamma.Location = new System.Drawing.Point(157, 352);
             this.lblHighGamma.Name = "lblHighGamma";
             this.lblHighGamma.Size = new System.Drawing.Size(81, 13);
             this.lblHighGamma.TabIndex = 30;
@@ -269,7 +269,7 @@
             // lblHighBeta
             // 
             this.lblHighBeta.AutoSize = true;
-            this.lblHighBeta.Location = new System.Drawing.Point(171, 252);
+            this.lblHighBeta.Location = new System.Drawing.Point(171, 292);
             this.lblHighBeta.Name = "lblHighBeta";
             this.lblHighBeta.Size = new System.Drawing.Size(67, 13);
             this.lblHighBeta.TabIndex = 29;
@@ -278,7 +278,7 @@
             // lblHighAlpha
             // 
             this.lblHighAlpha.AutoSize = true;
-            this.lblHighAlpha.Location = new System.Drawing.Point(34, 312);
+            this.lblHighAlpha.Location = new System.Drawing.Point(34, 352);
             this.lblHighAlpha.Name = "lblHighAlpha";
             this.lblHighAlpha.Size = new System.Drawing.Size(64, 13);
             this.lblHighAlpha.TabIndex = 28;
@@ -287,7 +287,7 @@
             // lblLowBeta
             // 
             this.lblLowBeta.AutoSize = true;
-            this.lblLowBeta.Location = new System.Drawing.Point(168, 283);
+            this.lblLowBeta.Location = new System.Drawing.Point(168, 323);
             this.lblLowBeta.Name = "lblLowBeta";
             this.lblLowBeta.Size = new System.Drawing.Size(70, 13);
             this.lblLowBeta.TabIndex = 27;
@@ -296,7 +296,7 @@
             // lblLowAlpha
             // 
             this.lblLowAlpha.AutoSize = true;
-            this.lblLowAlpha.Location = new System.Drawing.Point(32, 341);
+            this.lblLowAlpha.Location = new System.Drawing.Point(32, 381);
             this.lblLowAlpha.Name = "lblLowAlpha";
             this.lblLowAlpha.Size = new System.Drawing.Size(67, 13);
             this.lblLowAlpha.TabIndex = 26;
@@ -305,7 +305,7 @@
             // lblTheta
             // 
             this.lblTheta.AutoSize = true;
-            this.lblTheta.Location = new System.Drawing.Point(35, 283);
+            this.lblTheta.Location = new System.Drawing.Point(35, 323);
             this.lblTheta.Name = "lblTheta";
             this.lblTheta.Size = new System.Drawing.Size(53, 13);
             this.lblTheta.TabIndex = 25;
@@ -315,7 +315,7 @@
             // 
             this.lblDelta.AutoSize = true;
             this.lblDelta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDelta.Location = new System.Drawing.Point(35, 252);
+            this.lblDelta.Location = new System.Drawing.Point(35, 292);
             this.lblDelta.Name = "lblDelta";
             this.lblDelta.Size = new System.Drawing.Size(51, 13);
             this.lblDelta.TabIndex = 24;
@@ -325,7 +325,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(343, 295);
+            this.label3.Location = new System.Drawing.Point(344, 358);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 43;
@@ -336,9 +336,9 @@
             this.PBRelaxation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBRelaxation.Location = new System.Drawing.Point(307, 320);
+            this.PBRelaxation.Location = new System.Drawing.Point(307, 381);
             this.PBRelaxation.Name = "PBRelaxation";
-            this.PBRelaxation.Size = new System.Drawing.Size(178, 10);
+            this.PBRelaxation.Size = new System.Drawing.Size(183, 29);
             this.PBRelaxation.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBRelaxation.TabIndex = 42;
             this.PBRelaxation.Value = 90;
@@ -347,7 +347,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(335, 230);
+            this.label4.Location = new System.Drawing.Point(336, 292);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 41;
@@ -358,9 +358,9 @@
             this.PBConcentration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBConcentration.Location = new System.Drawing.Point(307, 252);
+            this.PBConcentration.Location = new System.Drawing.Point(306, 323);
             this.PBConcentration.Name = "PBConcentration";
-            this.PBConcentration.Size = new System.Drawing.Size(179, 11);
+            this.PBConcentration.Size = new System.Drawing.Size(184, 30);
             this.PBConcentration.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBConcentration.TabIndex = 40;
             this.PBConcentration.Value = 90;
@@ -368,9 +368,9 @@
             // PBEye
             // 
             this.PBEye.Image = global::ProyectoMindStorm.Properties.Resources.closed_eye;
-            this.PBEye.Location = new System.Drawing.Point(35, 123);
+            this.PBEye.Location = new System.Drawing.Point(90, 134);
             this.PBEye.Name = "PBEye";
-            this.PBEye.Size = new System.Drawing.Size(92, 85);
+            this.PBEye.Size = new System.Drawing.Size(135, 128);
             this.PBEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBEye.TabIndex = 44;
             this.PBEye.TabStop = false;
@@ -378,7 +378,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(281, 9);
+            this.lblStatus.Location = new System.Drawing.Point(355, 9);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(77, 13);
             this.lblStatus.TabIndex = 49;
@@ -387,7 +387,7 @@
             // lblSenial
             // 
             this.lblSenial.AutoSize = true;
-            this.lblSenial.Location = new System.Drawing.Point(385, 9);
+            this.lblSenial.Location = new System.Drawing.Point(459, 9);
             this.lblSenial.Name = "lblSenial";
             this.lblSenial.Size = new System.Drawing.Size(37, 13);
             this.lblSenial.TabIndex = 46;
@@ -396,7 +396,7 @@
             // lblIntensity
             // 
             this.lblIntensity.AutoSize = true;
-            this.lblIntensity.Location = new System.Drawing.Point(428, 9);
+            this.lblIntensity.Location = new System.Drawing.Point(502, 9);
             this.lblIntensity.Name = "lblIntensity";
             this.lblIntensity.Size = new System.Drawing.Size(33, 13);
             this.lblIntensity.TabIndex = 47;
@@ -405,7 +405,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(239, 9);
+            this.lblEstado.Location = new System.Drawing.Point(313, 9);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(43, 13);
             this.lblEstado.TabIndex = 48;
@@ -429,7 +429,7 @@
             // zg1
             // 
             this.zg1.EditButtons = System.Windows.Forms.MouseButtons.Left;
-            this.zg1.Location = new System.Drawing.Point(492, 72);
+            this.zg1.Location = new System.Drawing.Point(492, 40);
             this.zg1.Name = "zg1";
             this.zg1.PanModifierKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.None)));
             this.zg1.ScrollGrace = 0D;
@@ -439,7 +439,7 @@
             this.zg1.ScrollMinX = 0D;
             this.zg1.ScrollMinY = 0D;
             this.zg1.ScrollMinY2 = 0D;
-            this.zg1.Size = new System.Drawing.Size(333, 224);
+            this.zg1.Size = new System.Drawing.Size(353, 265);
             this.zg1.TabIndex = 51;
             // 
             // frmIniciar
@@ -448,7 +448,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(852, 372);
+            this.ClientSize = new System.Drawing.Size(857, 426);
             this.Controls.Add(this.zg1);
             this.Controls.Add(this.btnCalibrar);
             this.Controls.Add(this.lblStatus);

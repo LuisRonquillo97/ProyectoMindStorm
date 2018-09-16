@@ -37,10 +37,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(550, 372);
+            this.ClientSize = new System.Drawing.Size(857, 426);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBienvenida";
-            this.Text = "frmBienvenida";
+            this.Text = " ";
             this.ResumeLayout(false);
 
         }
