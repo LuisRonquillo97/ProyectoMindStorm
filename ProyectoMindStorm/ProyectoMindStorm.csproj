@@ -67,6 +67,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\frmBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmBienvenida.Designer.cs">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmIniciar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmIniciar.Designer.cs">
+      <DependentUpon>frmIniciar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LegoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,19 +103,41 @@
     <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MindStorm\Movimientos.cs" />
+    <Compile Include="MindWave\BO\Preferencias.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmBienvenida.resx">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmIniciar.resx">
+      <DependentUpon>frmIniciar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\LegoForm.resx">
       <DependentUpon>LegoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -113,12 +159,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MindWave\BO\" />
     <Folder Include="MindWave\DAO\" />
     <Folder Include="Resources\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MindSetUWP.sln" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\background1.png" />
+    <None Include="Resources\background2.png" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\buton.jpg" />
+    <None Include="Resources\btn2.jpg" />
+    <None Include="Resources\btn3.jpg" />
+    <None Include="Resources\barnermenu.jpg" />
+    <None Include="Resources\barnermenu2.jpg" />
+    <None Include="Resources\barnermenu21.jpg" />
+    <None Include="Resources\barnermenu22.jpg" />
+    <None Include="Resources\barnermenu23.jpg" />
+    <None Include="Resources\btnMinimizar1.png" />
+    <Content Include="Resources\barnermenu.png" />
+    <Content Include="Resources\bienvenida.jpg" />
+    <Content Include="Resources\btnCerrar.png" />
+    <Content Include="Resources\btnMinimizar.png" />
+    <Content Include="Resources\ventanas19.png" />
     <Content Include="thinkgear.dll" />
     <None Include="Resources\Usblogo.png" />
     <None Include="Resources\abajo.png" />

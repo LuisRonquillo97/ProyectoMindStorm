@@ -35,6 +35,9 @@
             this.simuladorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.SplitContainer();
+            this.lblAVGConcentracion = new System.Windows.Forms.Label();
+            this.lblAVGmeditacion = new System.Windows.Forms.Label();
+            this.btnCalibrar = new System.Windows.Forms.Button();
             this.lblBlink = new System.Windows.Forms.Label();
             this.lblPacketsRead = new System.Windows.Forms.Label();
             this.lblRelaxation = new System.Windows.Forms.Label();
@@ -63,16 +66,13 @@
             this.lblIntensity = new System.Windows.Forms.Label();
             this.lblSenial = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.PBEye = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PBRelaxation = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.btnCalibrar = new System.Windows.Forms.Button();
-            this.lblAVGmeditacion = new System.Windows.Forms.Label();
-            this.lblAVGConcentracion = new System.Windows.Forms.Label();
+            this.PBEye = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
             this.MainContainer.Panel1.SuspendLayout();
@@ -180,6 +180,35 @@
             this.MainContainer.Size = new System.Drawing.Size(843, 494);
             this.MainContainer.SplitterDistance = 586;
             this.MainContainer.TabIndex = 1;
+            // 
+            // lblAVGConcentracion
+            // 
+            this.lblAVGConcentracion.AutoSize = true;
+            this.lblAVGConcentracion.Location = new System.Drawing.Point(395, 131);
+            this.lblAVGConcentracion.Name = "lblAVGConcentracion";
+            this.lblAVGConcentracion.Size = new System.Drawing.Size(124, 13);
+            this.lblAVGConcentracion.TabIndex = 11;
+            this.lblAVGConcentracion.Text = "promedio concentración:";
+            // 
+            // lblAVGmeditacion
+            // 
+            this.lblAVGmeditacion.AutoSize = true;
+            this.lblAVGmeditacion.Location = new System.Drawing.Point(417, 118);
+            this.lblAVGmeditacion.Name = "lblAVGmeditacion";
+            this.lblAVGmeditacion.Size = new System.Drawing.Size(107, 13);
+            this.lblAVGmeditacion.TabIndex = 10;
+            this.lblAVGmeditacion.Text = "promedio meditación:";
+            // 
+            // btnCalibrar
+            // 
+            this.btnCalibrar.Location = new System.Drawing.Point(41, 118);
+            this.btnCalibrar.Name = "btnCalibrar";
+            this.btnCalibrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCalibrar.TabIndex = 9;
+            this.btnCalibrar.Text = "calibrar";
+            this.btnCalibrar.UseVisualStyleBackColor = true;
+            this.btnCalibrar.Visible = false;
+            this.btnCalibrar.Click += new System.EventHandler(this.btnCalibrar_Click);
             // 
             // lblBlink
             // 
@@ -439,16 +468,6 @@
             this.label5.Text = "Zonas de la mente";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PBEye
-            // 
-            this.PBEye.Image = global::ProyectoMindStorm.Properties.Resources.closed_eye;
-            this.PBEye.Location = new System.Drawing.Point(41, 209);
-            this.PBEye.Name = "PBEye";
-            this.PBEye.Size = new System.Drawing.Size(128, 128);
-            this.PBEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBEye.TabIndex = 6;
-            this.PBEye.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -514,34 +533,14 @@
             this.PBConcentration.TabIndex = 0;
             this.PBConcentration.Value = 90;
             // 
-            // btnCalibrar
+            // PBEye
             // 
-            this.btnCalibrar.Location = new System.Drawing.Point(41, 118);
-            this.btnCalibrar.Name = "btnCalibrar";
-            this.btnCalibrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCalibrar.TabIndex = 9;
-            this.btnCalibrar.Text = "calibrar";
-            this.btnCalibrar.UseVisualStyleBackColor = true;
-            this.btnCalibrar.Visible = false;
-            this.btnCalibrar.Click += new System.EventHandler(this.btnCalibrar_Click);
-            // 
-            // lblAVGmeditacion
-            // 
-            this.lblAVGmeditacion.AutoSize = true;
-            this.lblAVGmeditacion.Location = new System.Drawing.Point(417, 118);
-            this.lblAVGmeditacion.Name = "lblAVGmeditacion";
-            this.lblAVGmeditacion.Size = new System.Drawing.Size(107, 13);
-            this.lblAVGmeditacion.TabIndex = 10;
-            this.lblAVGmeditacion.Text = "promedio meditación:";
-            // 
-            // lblAVGConcentracion
-            // 
-            this.lblAVGConcentracion.AutoSize = true;
-            this.lblAVGConcentracion.Location = new System.Drawing.Point(395, 131);
-            this.lblAVGConcentracion.Name = "lblAVGConcentracion";
-            this.lblAVGConcentracion.Size = new System.Drawing.Size(124, 13);
-            this.lblAVGConcentracion.TabIndex = 11;
-            this.lblAVGConcentracion.Text = "promedio concentración:";
+            this.PBEye.Location = new System.Drawing.Point(41, 209);
+            this.PBEye.Name = "PBEye";
+            this.PBEye.Size = new System.Drawing.Size(128, 128);
+            this.PBEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBEye.TabIndex = 6;
+            this.PBEye.TabStop = false;
             // 
             // MainForm
             // 

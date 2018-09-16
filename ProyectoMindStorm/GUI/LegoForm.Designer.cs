@@ -51,7 +51,7 @@
             // 
             // btnDerecha
             // 
-            this.btnDerecha.BackgroundImage = global::ProyectoMindStorm.Properties.Resources.Derecha;
+           
             this.btnDerecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDerecha.Location = new System.Drawing.Point(323, 242);
             this.btnDerecha.Name = "btnDerecha";
@@ -63,7 +63,7 @@
             // 
             // btnIzquierda
             // 
-            this.btnIzquierda.BackgroundImage = global::ProyectoMindStorm.Properties.Resources.izquierda;
+           
             this.btnIzquierda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIzquierda.Location = new System.Drawing.Point(89, 242);
             this.btnIzquierda.Name = "btnIzquierda";
@@ -75,7 +75,7 @@
             // 
             // btnGarra
             // 
-            this.btnGarra.BackgroundImage = global::ProyectoMindStorm.Properties.Resources.garra;
+          
             this.btnGarra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGarra.Location = new System.Drawing.Point(206, 242);
             this.btnGarra.Name = "btnGarra";
@@ -87,7 +87,7 @@
             // 
             // btnAbajo
             // 
-            this.btnAbajo.BackgroundImage = global::ProyectoMindStorm.Properties.Resources.abajo;
+        
             this.btnAbajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAbajo.Location = new System.Drawing.Point(206, 351);
             this.btnAbajo.Name = "btnAbajo";
@@ -99,7 +99,7 @@
             // 
             // btnArriba
             // 
-            this.btnArriba.BackgroundImage = global::ProyectoMindStorm.Properties.Resources.arriba;
+          
             this.btnArriba.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnArriba.Location = new System.Drawing.Point(206, 136);
             this.btnArriba.Name = "btnArriba";
