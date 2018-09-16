@@ -85,7 +85,7 @@
             this.bPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.bPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.bPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bPerfil.Font = new System.Drawing.Font("Renogare Soft", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPerfil.ForeColor = System.Drawing.Color.White;
             this.bPerfil.Location = new System.Drawing.Point(5, 132);
             this.bPerfil.Name = "bPerfil";
@@ -101,7 +101,7 @@
             this.bConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.bConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.bConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bConfig.Font = new System.Drawing.Font("Renogare Soft", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bConfig.ForeColor = System.Drawing.Color.White;
             this.bConfig.Location = new System.Drawing.Point(5, 69);
             this.bConfig.Name = "bConfig";
@@ -117,7 +117,7 @@
             this.bIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.bIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.bIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bIniciar.Font = new System.Drawing.Font("Renogare Soft", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bIniciar.ForeColor = System.Drawing.Color.White;
             this.bIniciar.Location = new System.Drawing.Point(5, 6);
             this.bIniciar.Name = "bIniciar";
@@ -166,22 +166,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Renogare Soft", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
             this.label2.Location = new System.Drawing.Point(49, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 29);
+            this.label2.Size = new System.Drawing.Size(134, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Mind Control";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Renogare Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(5, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 23);
+            this.label1.Size = new System.Drawing.Size(123, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "CopyRight 2018";
             // 
@@ -198,7 +198,7 @@
             // 
             this.content.Location = new System.Drawing.Point(211, 66);
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(550, 372);
+            this.content.Size = new System.Drawing.Size(833, 368);
             this.content.TabIndex = 2;
             // 
             // panel1
@@ -248,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(760, 437);
+            this.ClientSize = new System.Drawing.Size(1068, 538);
             this.Controls.Add(this.content);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

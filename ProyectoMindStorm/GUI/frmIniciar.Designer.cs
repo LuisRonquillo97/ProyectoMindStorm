@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciar));
             this.lblAVGConcentracion = new System.Windows.Forms.Label();
             this.lblAVGmeditacion = new System.Windows.Forms.Label();
@@ -64,13 +65,15 @@
             this.lblSenial = new System.Windows.Forms.Label();
             this.lblIntensity = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.btnCalibrar = new System.Windows.Forms.Button();
+            this.zg1 = new ZedGraph.ZedGraphControl();
             ((System.ComponentModel.ISupportInitialize)(this.PBEye)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAVGConcentracion
             // 
             this.lblAVGConcentracion.AutoSize = true;
-            this.lblAVGConcentracion.Location = new System.Drawing.Point(333, 195);
+            this.lblAVGConcentracion.Location = new System.Drawing.Point(341, 195);
             this.lblAVGConcentracion.Name = "lblAVGConcentracion";
             this.lblAVGConcentracion.Size = new System.Drawing.Size(124, 13);
             this.lblAVGConcentracion.TabIndex = 17;
@@ -79,7 +82,7 @@
             // lblAVGmeditacion
             // 
             this.lblAVGmeditacion.AutoSize = true;
-            this.lblAVGmeditacion.Location = new System.Drawing.Point(333, 173);
+            this.lblAVGmeditacion.Location = new System.Drawing.Point(341, 173);
             this.lblAVGmeditacion.Name = "lblAVGmeditacion";
             this.lblAVGmeditacion.Size = new System.Drawing.Size(107, 13);
             this.lblAVGmeditacion.TabIndex = 16;
@@ -88,7 +91,7 @@
             // lblBlink
             // 
             this.lblBlink.AutoSize = true;
-            this.lblBlink.Location = new System.Drawing.Point(333, 149);
+            this.lblBlink.Location = new System.Drawing.Point(341, 149);
             this.lblBlink.Name = "lblBlink";
             this.lblBlink.Size = new System.Drawing.Size(86, 13);
             this.lblBlink.TabIndex = 15;
@@ -97,7 +100,7 @@
             // lblPacketsRead
             // 
             this.lblPacketsRead.AutoSize = true;
-            this.lblPacketsRead.Location = new System.Drawing.Point(333, 75);
+            this.lblPacketsRead.Location = new System.Drawing.Point(341, 75);
             this.lblPacketsRead.Name = "lblPacketsRead";
             this.lblPacketsRead.Size = new System.Drawing.Size(110, 13);
             this.lblPacketsRead.TabIndex = 14;
@@ -106,7 +109,7 @@
             // lblRelaxation
             // 
             this.lblRelaxation.AutoSize = true;
-            this.lblRelaxation.Location = new System.Drawing.Point(333, 121);
+            this.lblRelaxation.Location = new System.Drawing.Point(341, 121);
             this.lblRelaxation.Name = "lblRelaxation";
             this.lblRelaxation.Size = new System.Drawing.Size(105, 13);
             this.lblRelaxation.TabIndex = 13;
@@ -115,7 +118,7 @@
             // lblConcentration
             // 
             this.lblConcentration.AutoSize = true;
-            this.lblConcentration.Location = new System.Drawing.Point(333, 98);
+            this.lblConcentration.Location = new System.Drawing.Point(341, 98);
             this.lblConcentration.Name = "lblConcentration";
             this.lblConcentration.Size = new System.Drawing.Size(128, 13);
             this.lblConcentration.TabIndex = 12;
@@ -124,20 +127,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Renogare Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(332, 40);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(340, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 23);
+            this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "Parametros:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Renogare Soft", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 23);
+            this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Simulador";
             // 
@@ -147,7 +150,7 @@
             this.btnIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciar.Font = new System.Drawing.Font("Renogare Soft", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
             this.btnIniciar.Location = new System.Drawing.Point(12, 75);
             this.btnIniciar.Name = "btnIniciar";
@@ -163,9 +166,9 @@
             this.btndetener.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.btndetener.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
             this.btndetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndetener.Font = new System.Drawing.Font("Renogare Soft", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndetener.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndetener.ForeColor = System.Drawing.Color.White;
-            this.btndetener.Location = new System.Drawing.Point(134, 75);
+            this.btndetener.Location = new System.Drawing.Point(118, 75);
             this.btndetener.Name = "btndetener";
             this.btndetener.Size = new System.Drawing.Size(107, 28);
             this.btndetener.TabIndex = 23;
@@ -176,7 +179,7 @@
             // lblLowGammaValue
             // 
             this.lblLowGammaValue.AutoSize = true;
-            this.lblLowGammaValue.Location = new System.Drawing.Point(223, 341);
+            this.lblLowGammaValue.Location = new System.Drawing.Point(244, 341);
             this.lblLowGammaValue.Name = "lblLowGammaValue";
             this.lblLowGammaValue.Size = new System.Drawing.Size(37, 13);
             this.lblLowGammaValue.TabIndex = 36;
@@ -185,7 +188,7 @@
             // lblHighGammaValue
             // 
             this.lblHighGammaValue.AutoSize = true;
-            this.lblHighGammaValue.Location = new System.Drawing.Point(223, 312);
+            this.lblHighGammaValue.Location = new System.Drawing.Point(244, 312);
             this.lblHighGammaValue.Name = "lblHighGammaValue";
             this.lblHighGammaValue.Size = new System.Drawing.Size(37, 13);
             this.lblHighGammaValue.TabIndex = 37;
@@ -194,7 +197,7 @@
             // lblLowBetaValue
             // 
             this.lblLowBetaValue.AutoSize = true;
-            this.lblLowBetaValue.Location = new System.Drawing.Point(223, 283);
+            this.lblLowBetaValue.Location = new System.Drawing.Point(244, 283);
             this.lblLowBetaValue.Name = "lblLowBetaValue";
             this.lblLowBetaValue.Size = new System.Drawing.Size(37, 13);
             this.lblLowBetaValue.TabIndex = 38;
@@ -203,7 +206,7 @@
             // lblHighBetaValue
             // 
             this.lblHighBetaValue.AutoSize = true;
-            this.lblHighBetaValue.Location = new System.Drawing.Point(223, 252);
+            this.lblHighBetaValue.Location = new System.Drawing.Point(244, 252);
             this.lblHighBetaValue.Name = "lblHighBetaValue";
             this.lblHighBetaValue.Size = new System.Drawing.Size(37, 13);
             this.lblHighBetaValue.TabIndex = 39;
@@ -248,7 +251,7 @@
             // lblLowGamma
             // 
             this.lblLowGamma.AutoSize = true;
-            this.lblLowGamma.Location = new System.Drawing.Point(133, 341);
+            this.lblLowGamma.Location = new System.Drawing.Point(154, 341);
             this.lblLowGamma.Name = "lblLowGamma";
             this.lblLowGamma.Size = new System.Drawing.Size(84, 13);
             this.lblLowGamma.TabIndex = 31;
@@ -257,7 +260,7 @@
             // lblHighGamma
             // 
             this.lblHighGamma.AutoSize = true;
-            this.lblHighGamma.Location = new System.Drawing.Point(136, 312);
+            this.lblHighGamma.Location = new System.Drawing.Point(157, 312);
             this.lblHighGamma.Name = "lblHighGamma";
             this.lblHighGamma.Size = new System.Drawing.Size(81, 13);
             this.lblHighGamma.TabIndex = 30;
@@ -266,7 +269,7 @@
             // lblHighBeta
             // 
             this.lblHighBeta.AutoSize = true;
-            this.lblHighBeta.Location = new System.Drawing.Point(150, 252);
+            this.lblHighBeta.Location = new System.Drawing.Point(171, 252);
             this.lblHighBeta.Name = "lblHighBeta";
             this.lblHighBeta.Size = new System.Drawing.Size(67, 13);
             this.lblHighBeta.TabIndex = 29;
@@ -284,7 +287,7 @@
             // lblLowBeta
             // 
             this.lblLowBeta.AutoSize = true;
-            this.lblLowBeta.Location = new System.Drawing.Point(147, 283);
+            this.lblLowBeta.Location = new System.Drawing.Point(168, 283);
             this.lblLowBeta.Name = "lblLowBeta";
             this.lblLowBeta.Size = new System.Drawing.Size(70, 13);
             this.lblLowBeta.TabIndex = 27;
@@ -322,7 +325,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(360, 295);
+            this.label3.Location = new System.Drawing.Point(343, 295);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 43;
@@ -333,9 +336,9 @@
             this.PBRelaxation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBRelaxation.Location = new System.Drawing.Point(307, 318);
+            this.PBRelaxation.Location = new System.Drawing.Point(307, 320);
             this.PBRelaxation.Name = "PBRelaxation";
-            this.PBRelaxation.Size = new System.Drawing.Size(188, 12);
+            this.PBRelaxation.Size = new System.Drawing.Size(178, 10);
             this.PBRelaxation.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBRelaxation.TabIndex = 42;
             this.PBRelaxation.Value = 90;
@@ -344,7 +347,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(349, 230);
+            this.label4.Location = new System.Drawing.Point(335, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 41;
@@ -355,16 +358,17 @@
             this.PBConcentration.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PBConcentration.Location = new System.Drawing.Point(307, 253);
+            this.PBConcentration.Location = new System.Drawing.Point(307, 252);
             this.PBConcentration.Name = "PBConcentration";
-            this.PBConcentration.Size = new System.Drawing.Size(188, 10);
+            this.PBConcentration.Size = new System.Drawing.Size(179, 11);
             this.PBConcentration.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PBConcentration.TabIndex = 40;
             this.PBConcentration.Value = 90;
             // 
             // PBEye
             // 
-            this.PBEye.Location = new System.Drawing.Point(83, 134);
+            this.PBEye.Image = global::ProyectoMindStorm.Properties.Resources.closed_eye;
+            this.PBEye.Location = new System.Drawing.Point(35, 123);
             this.PBEye.Name = "PBEye";
             this.PBEye.Size = new System.Drawing.Size(92, 85);
             this.PBEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -407,13 +411,46 @@
             this.lblEstado.TabIndex = 48;
             this.lblEstado.Text = "Estado:";
             // 
+            // btnCalibrar
+            // 
+            this.btnCalibrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnCalibrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.btnCalibrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.btnCalibrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalibrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalibrar.ForeColor = System.Drawing.Color.White;
+            this.btnCalibrar.Location = new System.Drawing.Point(231, 75);
+            this.btnCalibrar.Name = "btnCalibrar";
+            this.btnCalibrar.Size = new System.Drawing.Size(104, 28);
+            this.btnCalibrar.TabIndex = 50;
+            this.btnCalibrar.Text = "Calibrar";
+            this.btnCalibrar.UseVisualStyleBackColor = false;
+            // 
+            // zg1
+            // 
+            this.zg1.EditButtons = System.Windows.Forms.MouseButtons.Left;
+            this.zg1.Location = new System.Drawing.Point(492, 72);
+            this.zg1.Name = "zg1";
+            this.zg1.PanModifierKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.None)));
+            this.zg1.ScrollGrace = 0D;
+            this.zg1.ScrollMaxX = 0D;
+            this.zg1.ScrollMaxY = 0D;
+            this.zg1.ScrollMaxY2 = 0D;
+            this.zg1.ScrollMinX = 0D;
+            this.zg1.ScrollMinY = 0D;
+            this.zg1.ScrollMinY2 = 0D;
+            this.zg1.Size = new System.Drawing.Size(333, 224);
+            this.zg1.TabIndex = 51;
+            // 
             // frmIniciar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(550, 372);
+            this.ClientSize = new System.Drawing.Size(852, 372);
+            this.Controls.Add(this.zg1);
+            this.Controls.Add(this.btnCalibrar);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblIntensity);
@@ -496,5 +533,7 @@
         private System.Windows.Forms.Label lblSenial;
         private System.Windows.Forms.Label lblIntensity;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Button btnCalibrar;
+        private ZedGraph.ZedGraphControl zg1;
     }
 }
