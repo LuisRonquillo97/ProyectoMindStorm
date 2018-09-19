@@ -4,12 +4,13 @@ using ThinkGearNET;
 using System.Threading;
 using ZedGraph;
 using System.Drawing;
+using ProyectoMindStorm.MindStorm;
 
 namespace ProyectoMindStorm.GUI
 {
     public partial class frmIniciar : Form
     {
-        //private Movimientos lego = new Movimientos();
+        private Movimientos lego = new Movimientos();
         private ThinkGearWrapper _thinkGearWrapper = new ThinkGearWrapper();
         public PointPairList list = new PointPairList();
         public PointPairList list2 = new PointPairList();
@@ -19,6 +20,25 @@ namespace ProyectoMindStorm.GUI
 
 
         int AVGmeditacion = 0, AVGConcentracion = 0, iteracionM = 0, iteracionC = 0;
+
+        private void btnCalibrar_Click(object sender, EventArgs e)
+        {
+            iteracionM = 0;
+            iteracionC = 0;
+            meditacion = false;
+            concentracion = false;
+            calibrado = false;
+            lanzado = false;
+            lanzado2 = false;
+            AVGConcentracion = 0;
+            AVGmeditacion = 0;
+            var fase1 = MessageBox.Show("Se tomarán tus valores de meditación, para comenzar pulse OK.", "Calibración fase 1", MessageBoxButtons.OK);
+            if (fase1 == DialogResult.OK)
+            {
+                meditacion = true;
+            }
+        }
+
         int[] meditacionArray = new int[10], concentracionArray = new int[10];
 
         public frmIniciar()
@@ -85,8 +105,8 @@ namespace ProyectoMindStorm.GUI
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             _thinkGearWrapper = new ThinkGearWrapper();
-            //if (lego.establecerConexion() == "La conexión fue exitosa")
-            //{
+            if (lego.establecerConexion() == "La conexión fue exitosa")
+            {
                 // setup the event
                 string comPortName = "\\\\.\\COM3";
 
@@ -101,7 +121,7 @@ namespace ProyectoMindStorm.GUI
                     _thinkGearWrapper.EnableBlinkDetection(true);
                     lblStatus.Text = "Conectado";
                 }
-            //}
+            }
         }
 
         private void btndetener_Click(object sender, EventArgs e)
@@ -130,6 +150,8 @@ namespace ProyectoMindStorm.GUI
             lblHighGammaValue.Text = "Value";
             lblIntensity.Text = "Value";
             lblBlink.Text = "Valor parpadeo: N/A";
+            lblAVGConcentracion.Text = "Promedio concentración:";
+            lblAVGmeditacion.Text = "Promedio meditación:";
             iteracionM = 0;
             iteracionC = 0;
             for (int i = 0; i < 9; i++)
@@ -230,7 +252,7 @@ namespace ProyectoMindStorm.GUI
                 UpdateGraph(zg1, e.ThinkGearState.Attention, e.ThinkGearState.Meditation);
                 if (e.ThinkGearState.Meditation != 0)
                 {
-                    //btnCalibrar.Visible = true;
+                    btnCalibrar.Visible = true;
                 }
                 if (e.ThinkGearState.BlinkStrength > 120)
                 {
@@ -246,19 +268,19 @@ namespace ProyectoMindStorm.GUI
                 }
                 else
                 {
-                    /*if (e.ThinkGearState.Attention >= AVGConcentracion && calibrado)
+                    if (e.ThinkGearState.Attention >= AVGConcentracion && calibrado)
                     {
                         lego.moverDerecha();
                     }
                     if (e.ThinkGearState.Meditation >= AVGmeditacion && calibrado)
                     {
                         lego.moverIzquierda();
-                    }*/
+                    }
                 }
                 if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength != blink)
                 {
-                    /*blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
-                    lego.abrirPinza();*/
+                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
+                    lego.abrirPinza();
                 }
                 else
                 {

@@ -425,6 +425,7 @@
             this.btnCalibrar.TabIndex = 50;
             this.btnCalibrar.Text = "Calibrar";
             this.btnCalibrar.UseVisualStyleBackColor = false;
+            this.btnCalibrar.Click += new System.EventHandler(this.btnCalibrar_Click);
             // 
             // zg1
             // 
