@@ -5,6 +5,7 @@ using System.Threading;
 using ZedGraph;
 using System.Drawing;
 using ProyectoMindStorm.MindStorm;
+using System.Linq;
 
 namespace ProyectoMindStorm.GUI
 {
@@ -14,38 +15,15 @@ namespace ProyectoMindStorm.GUI
         private ThinkGearWrapper _thinkGearWrapper = new ThinkGearWrapper();
         public PointPairList list = new PointPairList();
         public PointPairList list2 = new PointPairList();
-        public bool abrir = false;
-        int blink = 0, lastConcentracion = 0, lastMeditacion = 0, tiempo = 0;
-        bool meditacion = false, concentracion = false, lanzado = false, lanzado2 = false, calibrado = false;
-
-
-        int AVGmeditacion = 0, AVGConcentracion = 0, iteracionM = 0, iteracionC = 0;
-
-        private void btnCalibrar_Click(object sender, EventArgs e)
-        {
-            iteracionM = 0;
-            iteracionC = 0;
-            meditacion = false;
-            concentracion = false;
-            calibrado = false;
-            lanzado = false;
-            lanzado2 = false;
-            AVGConcentracion = 0;
-            AVGmeditacion = 0;
-            var fase1 = MessageBox.Show("Se tomarán tus valores de meditación, para comenzar pulse OK.", "Calibración fase 1", MessageBoxButtons.OK);
-            if (fase1 == DialogResult.OK)
-            {
-                meditacion = true;
-            }
-        }
-
-        int[] meditacionArray = new int[10], concentracionArray = new int[10];
+        public bool abrir = false, legoUse=false;
+        int blink = 0, tiempo = 0, modo=-1, AVGconcentracion = 70;
+        int sum = 0, divisible=0;
 
         public frmIniciar()
         {
             InitializeComponent();
         }
-
+        
         private void frmIniciar_Load(object sender, EventArgs e)
         {
             CreateGraph(zg1);
@@ -101,6 +79,13 @@ namespace ProyectoMindStorm.GUI
                 }
             }
             tiempo++;
+            if (attention > 0)
+            {
+                divisible++;
+                sum = sum + Convert.ToInt32(attention);
+                AVGconcentracion = sum / divisible;
+            }
+            
         }
         private void btnIniciar_Click(object sender, EventArgs e)
         {
@@ -121,6 +106,20 @@ namespace ProyectoMindStorm.GUI
                     _thinkGearWrapper.EnableBlinkDetection(true);
                     lblStatus.Text = "Conectado";
                 }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (legoUse)
+            {
+                legoUse = false;
+                lblActivacionLego.Text = "Lego desactivado";
+            }
+            else
+            {
+                legoUse = true;
+                lblActivacionLego.Text = "Lego activado";
             }
         }
 
@@ -150,17 +149,7 @@ namespace ProyectoMindStorm.GUI
             lblHighGammaValue.Text = "Value";
             lblIntensity.Text = "Value";
             lblBlink.Text = "Valor parpadeo: N/A";
-            lblAVGConcentracion.Text = "Promedio concentración:";
-            lblAVGmeditacion.Text = "Promedio meditación:";
-            iteracionM = 0;
-            iteracionC = 0;
-            for (int i = 0; i < 9; i++)
-            {
-                concentracionArray[i] = 0;
-                meditacionArray[i] = 0;
-                AVGConcentracion = 0;
-                AVGmeditacion = 0;
-            }
+            lblAVGConcentracion.Text = "Promedio concentración: ";
 
         }
 
@@ -169,71 +158,6 @@ namespace ProyectoMindStorm.GUI
             // update the textbox and sleep for a tiny bit
             BeginInvoke(new MethodInvoker(delegate
             {
-                if (meditacion)
-                {
-
-                    if (iteracionM <= meditacionArray.Length - 1)
-                    {
-                        if (e.ThinkGearState.Meditation != lastMeditacion)
-                        {
-                            lastMeditacion = Convert.ToInt32(e.ThinkGearState.Meditation);
-                            meditacionArray[iteracionM] = Convert.ToInt32(e.ThinkGearState.Meditation);
-                            iteracionM++;
-                        }
-                    }
-                    else
-                    {
-                        meditacion = false;
-                        int suma = 0;
-                        for (int l = 0; l < meditacionArray.Length - 1; l++)
-                        {
-                            suma = suma + meditacionArray[l];
-                        }
-                        AVGmeditacion = suma / meditacionArray.Length;
-                        lblAVGmeditacion.Text = "promedio meditación:" + AVGmeditacion.ToString();
-                        if (!lanzado)
-                        {
-                            lanzado = true;
-                            var fase2 = MessageBox.Show("Se tomarán tus valores de concentración, para comenzar pulse OK.", "Calibración fase 2", MessageBoxButtons.OK);
-                            if (fase2 == DialogResult.OK)
-                            {
-                                concentracion = true;
-                            }
-                        }
-                    }
-
-                }
-                if (concentracion)
-                {
-                    if (iteracionC <= concentracionArray.Length - 1)
-                    {
-                        if (e.ThinkGearState.Attention != lastConcentracion)
-                        {
-                            lastConcentracion = Convert.ToInt32(e.ThinkGearState.Attention);
-                            concentracionArray[iteracionC] = Convert.ToInt32(e.ThinkGearState.Attention);
-                            iteracionC++;
-                        }
-
-                    }
-                    else
-                    {
-                        concentracion = false;
-                        int suma = 0;
-                        for (int k = 0; k < concentracionArray.Length - 1; k++)
-                        {
-                            suma = suma + concentracionArray[k];
-                        }
-                        AVGConcentracion = suma / concentracionArray.Length;
-                        lblAVGmeditacion.Text = "promedio meditación:" + AVGmeditacion.ToString();
-                        if (!lanzado2)
-                        {
-                            lanzado2 = true;
-                            var fase2 = MessageBox.Show("Calibración completa", "Tu calibración se ha completado", MessageBoxButtons.OK);
-                            calibrado = true;
-                        }
-                        lblAVGConcentracion.Text = "promedio concentracion:" + AVGConcentracion.ToString();
-                    }
-                }
                 PBConcentration.Value = Convert.ToInt32(e.ThinkGearState.Attention);
                 PBRelaxation.Value = Convert.ToInt32(e.ThinkGearState.Meditation);
                 lblConcentration.Text = "Valor concentración: " + e.ThinkGearState.Attention.ToString();
@@ -249,42 +173,88 @@ namespace ProyectoMindStorm.GUI
                 lblHighGammaValue.Text = e.ThinkGearState.Gamma2.ToString();
                 lblIntensity.Text = e.ThinkGearState.Raw.ToString();
                 lblBlink.Text = "Valor parpadeo: " + e.ThinkGearState.BlinkStrength.ToString();
+                lblAVGConcentracion.Text = "Promedio concentración: " + AVGconcentracion;
                 UpdateGraph(zg1, e.ThinkGearState.Attention, e.ThinkGearState.Meditation);
-                if (e.ThinkGearState.Meditation != 0)
+                
+                if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength != blink)
                 {
-                    btnCalibrar.Visible = true;
-                }
-                if (e.ThinkGearState.BlinkStrength > 120)
-                {
-                    //PBEye.Image = Properties.Resources.open_eye;
+                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
+                    if (modo == 3)
+                    {
+                        modo = 0;
+                    }
+                    else
+                    {
+                        modo++;
+                    }
                 }
                 else
                 {
-                    //PBEye.Image = Properties.Resources.closed_eye;
+                    if(e.ThinkGearState.BlinkStrength != blink)
+                    {
+                        if (legoUse)
+                        {
+                            lego.abrirPinza();
+                        }
+                    }
+                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
+                    
+                    
                 }
-                if (e.ThinkGearState.Attention >= AVGConcentracion && e.ThinkGearState.Meditation >= AVGmeditacion && calibrado)
+                if (e.ThinkGearState.Attention >= 70 && e.ThinkGearState.Meditation >= 70)
                 {
 
                 }
                 else
                 {
-                    if (e.ThinkGearState.Attention >= AVGConcentracion && calibrado)
-                    {
-                        lego.moverDerecha();
-                    }
-                    if (e.ThinkGearState.Meditation >= AVGmeditacion && calibrado)
-                    {
-                        lego.moverIzquierda();
-                    }
+                    
                 }
-                if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength != blink)
+                switch (modo)
                 {
-                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
-                    lego.abrirPinza();
-                }
-                else
-                {
-                    blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
+                    case 0:
+                        lblMode.Text = "Mover derecha";
+                        if (e.ThinkGearState.Attention >= 70)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverDerecha();
+                            }
+                            
+                        }
+                        break;
+                    case 1:
+                        lblMode.Text = "Mover izquierda";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverIzquierda();
+                            }
+                            
+                        }
+                        break;
+                    case 2:
+                        lblMode.Text = "Mover arriba";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverArriba();
+                            }
+                            
+                        }
+                        break;
+                    case 3:
+                        lblMode.Text = "Mover abajo";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverAbajo();
+                            }
+                            
+                        }
+                        break;
                 }
             }));
             Thread.Sleep(10);

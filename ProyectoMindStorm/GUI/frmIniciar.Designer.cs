@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIniciar));
             this.lblAVGConcentracion = new System.Windows.Forms.Label();
-            this.lblAVGmeditacion = new System.Windows.Forms.Label();
             this.lblBlink = new System.Windows.Forms.Label();
             this.lblPacketsRead = new System.Windows.Forms.Label();
             this.lblRelaxation = new System.Windows.Forms.Label();
@@ -60,33 +59,25 @@
             this.PBRelaxation = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
             this.PBConcentration = new System.Windows.Forms.ProgressBar();
-            this.PBEye = new System.Windows.Forms.PictureBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblSenial = new System.Windows.Forms.Label();
             this.lblIntensity = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.btnCalibrar = new System.Windows.Forms.Button();
             this.zg1 = new ZedGraph.ZedGraphControl();
-            ((System.ComponentModel.ISupportInitialize)(this.PBEye)).BeginInit();
+            this.lblModeText = new System.Windows.Forms.Label();
+            this.lblMode = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblActivacionLego = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAVGConcentracion
             // 
             this.lblAVGConcentracion.AutoSize = true;
-            this.lblAVGConcentracion.Location = new System.Drawing.Point(341, 195);
+            this.lblAVGConcentracion.Location = new System.Drawing.Point(337, 173);
             this.lblAVGConcentracion.Name = "lblAVGConcentracion";
             this.lblAVGConcentracion.Size = new System.Drawing.Size(124, 13);
             this.lblAVGConcentracion.TabIndex = 17;
             this.lblAVGConcentracion.Text = "promedio concentración:";
-            // 
-            // lblAVGmeditacion
-            // 
-            this.lblAVGmeditacion.AutoSize = true;
-            this.lblAVGmeditacion.Location = new System.Drawing.Point(341, 173);
-            this.lblAVGmeditacion.Name = "lblAVGmeditacion";
-            this.lblAVGmeditacion.Size = new System.Drawing.Size(107, 13);
-            this.lblAVGmeditacion.TabIndex = 16;
-            this.lblAVGmeditacion.Text = "promedio meditación:";
             // 
             // lblBlink
             // 
@@ -152,7 +143,7 @@
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.Color.White;
-            this.btnIniciar.Location = new System.Drawing.Point(12, 75);
+            this.btnIniciar.Location = new System.Drawing.Point(5, 75);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(100, 28);
             this.btnIniciar.TabIndex = 22;
@@ -168,7 +159,7 @@
             this.btndetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndetener.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndetener.ForeColor = System.Drawing.Color.White;
-            this.btndetener.Location = new System.Drawing.Point(118, 75);
+            this.btndetener.Location = new System.Drawing.Point(108, 75);
             this.btndetener.Name = "btndetener";
             this.btndetener.Size = new System.Drawing.Size(107, 28);
             this.btndetener.TabIndex = 23;
@@ -365,16 +356,6 @@
             this.PBConcentration.TabIndex = 40;
             this.PBConcentration.Value = 90;
             // 
-            // PBEye
-            // 
-            this.PBEye.Image = global::ProyectoMindStorm.Properties.Resources.closed_eye;
-            this.PBEye.Location = new System.Drawing.Point(90, 134);
-            this.PBEye.Name = "PBEye";
-            this.PBEye.Size = new System.Drawing.Size(135, 128);
-            this.PBEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBEye.TabIndex = 44;
-            this.PBEye.TabStop = false;
-            // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
@@ -411,22 +392,6 @@
             this.lblEstado.TabIndex = 48;
             this.lblEstado.Text = "Estado:";
             // 
-            // btnCalibrar
-            // 
-            this.btnCalibrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnCalibrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.btnCalibrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.btnCalibrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalibrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalibrar.ForeColor = System.Drawing.Color.White;
-            this.btnCalibrar.Location = new System.Drawing.Point(231, 75);
-            this.btnCalibrar.Name = "btnCalibrar";
-            this.btnCalibrar.Size = new System.Drawing.Size(104, 28);
-            this.btnCalibrar.TabIndex = 50;
-            this.btnCalibrar.Text = "Calibrar";
-            this.btnCalibrar.UseVisualStyleBackColor = false;
-            this.btnCalibrar.Click += new System.EventHandler(this.btnCalibrar_Click);
-            // 
             // zg1
             // 
             this.zg1.EditButtons = System.Windows.Forms.MouseButtons.Left;
@@ -443,6 +408,49 @@
             this.zg1.Size = new System.Drawing.Size(353, 265);
             this.zg1.TabIndex = 51;
             // 
+            // lblModeText
+            // 
+            this.lblModeText.AutoSize = true;
+            this.lblModeText.Location = new System.Drawing.Point(35, 149);
+            this.lblModeText.Name = "lblModeText";
+            this.lblModeText.Size = new System.Drawing.Size(37, 13);
+            this.lblModeText.TabIndex = 52;
+            this.lblModeText.Text = "Modo:";
+            // 
+            // lblMode
+            // 
+            this.lblMode.AutoSize = true;
+            this.lblMode.Location = new System.Drawing.Point(78, 149);
+            this.lblMode.Name = "lblMode";
+            this.lblMode.Size = new System.Drawing.Size(142, 13);
+            this.lblMode.TabIndex = 53;
+            this.lblMode.Text = "Inicie para seleccionar modo";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(217, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 36);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Habilitar/deshabilitar lego";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblActivacionLego
+            // 
+            this.lblActivacionLego.AutoSize = true;
+            this.lblActivacionLego.Location = new System.Drawing.Point(46, 187);
+            this.lblActivacionLego.Name = "lblActivacionLego";
+            this.lblActivacionLego.Size = new System.Drawing.Size(92, 13);
+            this.lblActivacionLego.TabIndex = 55;
+            this.lblActivacionLego.Text = "Lego desactivado";
+            // 
             // frmIniciar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,13 +458,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(857, 426);
+            this.Controls.Add(this.lblActivacionLego);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblMode);
+            this.Controls.Add(this.lblModeText);
             this.Controls.Add(this.zg1);
-            this.Controls.Add(this.btnCalibrar);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblIntensity);
             this.Controls.Add(this.lblSenial);
-            this.Controls.Add(this.PBEye);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PBRelaxation);
             this.Controls.Add(this.label4);
@@ -482,7 +492,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAVGConcentracion);
-            this.Controls.Add(this.lblAVGmeditacion);
             this.Controls.Add(this.lblBlink);
             this.Controls.Add(this.lblPacketsRead);
             this.Controls.Add(this.lblRelaxation);
@@ -491,7 +500,6 @@
             this.Name = "frmIniciar";
             this.Text = "frmIniciar";
             this.Load += new System.EventHandler(this.frmIniciar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PBEye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,7 +508,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblAVGConcentracion;
-        private System.Windows.Forms.Label lblAVGmeditacion;
         private System.Windows.Forms.Label lblBlink;
         private System.Windows.Forms.Label lblPacketsRead;
         private System.Windows.Forms.Label lblRelaxation;
@@ -529,12 +536,14 @@
         private System.Windows.Forms.ProgressBar PBRelaxation;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ProgressBar PBConcentration;
-        private System.Windows.Forms.PictureBox PBEye;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblSenial;
         private System.Windows.Forms.Label lblIntensity;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Button btnCalibrar;
         private ZedGraph.ZedGraphControl zg1;
+        private System.Windows.Forms.Label lblModeText;
+        private System.Windows.Forms.Label lblMode;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblActivacionLego;
     }
 }

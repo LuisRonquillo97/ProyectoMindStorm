@@ -42,11 +42,11 @@ namespace ProyectoMindStorm.MindStorm
         }
 
         public void moverArriba() {
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -100, 100, true);
+            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -20, 100, true);
         }
 
         public void moverAbajo(){
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 100, 100, true);
+            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 10, 100, true);
         }
 
         public void moverIzquierda(){
