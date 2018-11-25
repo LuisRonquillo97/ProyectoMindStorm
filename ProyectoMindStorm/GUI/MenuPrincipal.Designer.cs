@@ -31,12 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.bPerfil = new System.Windows.Forms.Button();
-            this.bConfig = new System.Windows.Forms.Button();
             this.bIniciar = new System.Windows.Forms.Button();
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.picbarraPerfil = new System.Windows.Forms.Panel();
-            this.picbarraConfig = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,12 +54,8 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.Controls.Add(this.pnlContent);
-            this.panel2.Controls.Add(this.bPerfil);
-            this.panel2.Controls.Add(this.bConfig);
             this.panel2.Controls.Add(this.bIniciar);
             this.panel2.Controls.Add(this.pnlContenedor);
-            this.panel2.Controls.Add(this.picbarraPerfil);
-            this.panel2.Controls.Add(this.picbarraConfig);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.picbarraIniciar);
             this.panel2.Location = new System.Drawing.Point(0, 66);
@@ -78,38 +70,6 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(550, 374);
             this.pnlContent.TabIndex = 2;
-            // 
-            // bPerfil
-            // 
-            this.bPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.bPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.bPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.bPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bPerfil.ForeColor = System.Drawing.Color.White;
-            this.bPerfil.Location = new System.Drawing.Point(5, 132);
-            this.bPerfil.Name = "bPerfil";
-            this.bPerfil.Size = new System.Drawing.Size(203, 57);
-            this.bPerfil.TabIndex = 11;
-            this.bPerfil.Text = "Cargar Perfil";
-            this.bPerfil.UseVisualStyleBackColor = false;
-            this.bPerfil.Click += new System.EventHandler(this.bPerfil_Click);
-            // 
-            // bConfig
-            // 
-            this.bConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.bConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.bConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.bConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bConfig.ForeColor = System.Drawing.Color.White;
-            this.bConfig.Location = new System.Drawing.Point(5, 69);
-            this.bConfig.Name = "bConfig";
-            this.bConfig.Size = new System.Drawing.Size(203, 57);
-            this.bConfig.TabIndex = 10;
-            this.bConfig.Text = "Configurar";
-            this.bConfig.UseVisualStyleBackColor = false;
-            this.bConfig.Click += new System.EventHandler(this.bConfig_Click);
             // 
             // bIniciar
             // 
@@ -133,24 +93,6 @@
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(550, 372);
             this.pnlContenedor.TabIndex = 2;
-            // 
-            // picbarraPerfil
-            // 
-            this.picbarraPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
-            this.picbarraPerfil.Location = new System.Drawing.Point(0, 133);
-            this.picbarraPerfil.Name = "picbarraPerfil";
-            this.picbarraPerfil.Size = new System.Drawing.Size(10, 56);
-            this.picbarraPerfil.TabIndex = 9;
-            this.picbarraPerfil.Visible = false;
-            // 
-            // picbarraConfig
-            // 
-            this.picbarraConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
-            this.picbarraConfig.Location = new System.Drawing.Point(0, 69);
-            this.picbarraConfig.Name = "picbarraConfig";
-            this.picbarraConfig.Size = new System.Drawing.Size(10, 56);
-            this.picbarraConfig.TabIndex = 8;
-            this.picbarraConfig.Visible = false;
             // 
             // panel3
             // 
@@ -276,12 +218,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel picbarraPerfil;
-        private System.Windows.Forms.Panel picbarraConfig;
         private System.Windows.Forms.Panel picbarraIniciar;
         private System.Windows.Forms.Panel pnlContenedor;
-        private System.Windows.Forms.Button bPerfil;
-        private System.Windows.Forms.Button bConfig;
         private System.Windows.Forms.Button bIniciar;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel content;

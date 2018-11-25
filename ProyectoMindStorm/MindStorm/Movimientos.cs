@@ -46,7 +46,7 @@ namespace ProyectoMindStorm.MindStorm
         }
 
         public void moverAbajo(){
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 10, 100, true);
+            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 20, 10, true);
         }
 
         public void moverIzquierda(){
@@ -63,11 +63,11 @@ namespace ProyectoMindStorm.MindStorm
             switch (contador)
             {
                 case false:
-                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 80, 50, true);
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, 70, 100, true);
 
                     break;
                 case true:
-                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -55, 45, true);
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.A, -70, 100, true);
                     break;
             }
             revertir();

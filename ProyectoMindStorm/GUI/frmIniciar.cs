@@ -16,7 +16,7 @@ namespace ProyectoMindStorm.GUI
         public PointPairList list = new PointPairList();
         public PointPairList list2 = new PointPairList();
         public bool abrir = false, legoUse=false;
-        int blink = 0, tiempo = 0, modo=-1, AVGconcentracion = 70;
+        int blink = 0, tiempo = 0, modo=-1, AVGconcentracion = 50;
         int sum = 0, divisible=0;
 
         public frmIniciar()
@@ -150,7 +150,10 @@ namespace ProyectoMindStorm.GUI
             lblIntensity.Text = "Value";
             lblBlink.Text = "Valor parpadeo: N/A";
             lblAVGConcentracion.Text = "Promedio concentración: ";
-
+            sum = 0;
+            AVGconcentracion = 0;
+            divisible = 0;
+            modo = -1;
         }
 
         void _thinkGearWrapper_ThinkGearChanged(object sender, ThinkGearChangedEventArgs e)
@@ -179,9 +182,9 @@ namespace ProyectoMindStorm.GUI
                 if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength != blink)
                 {
                     blink = Convert.ToInt32(e.ThinkGearState.BlinkStrength);
-                    if (modo == 3)
+                    if (modo == 6)
                     {
-                        modo = 0;
+                        modo = -1;
                     }
                     else
                     {
@@ -201,39 +204,9 @@ namespace ProyectoMindStorm.GUI
                     
                     
                 }
-                if (e.ThinkGearState.Attention >= 70 && e.ThinkGearState.Meditation >= 70)
-                {
-
-                }
-                else
-                {
-                    
-                }
                 switch (modo)
                 {
                     case 0:
-                        lblMode.Text = "Mover derecha";
-                        if (e.ThinkGearState.Attention >= 70)
-                        {
-                            if (legoUse)
-                            {
-                                lego.moverDerecha();
-                            }
-                            
-                        }
-                        break;
-                    case 1:
-                        lblMode.Text = "Mover izquierda";
-                        if (e.ThinkGearState.Attention >= AVGconcentracion)
-                        {
-                            if (legoUse)
-                            {
-                                lego.moverIzquierda();
-                            }
-                            
-                        }
-                        break;
-                    case 2:
                         lblMode.Text = "Mover arriba";
                         if (e.ThinkGearState.Attention >= AVGconcentracion)
                         {
@@ -241,10 +214,21 @@ namespace ProyectoMindStorm.GUI
                             {
                                 lego.moverArriba();
                             }
-                            
+
                         }
                         break;
-                    case 3:
+                    case 1:
+                        lblMode.Text = "Mover derecha";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverDerecha();
+                            }
+
+                        }
+                        break;
+                    case 2:
                         lblMode.Text = "Mover abajo";
                         if (e.ThinkGearState.Attention >= AVGconcentracion)
                         {
@@ -252,8 +236,44 @@ namespace ProyectoMindStorm.GUI
                             {
                                 lego.moverAbajo();
                             }
-                            
+
                         }
+                        break;
+                    case 3:
+                        lblMode.Text = "Mover arriba";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverArriba();
+                            }
+
+                        }
+                        break;
+                    case 4:
+                        lblMode.Text = "Mover izquierda";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverIzquierda();
+                            }
+
+                        }
+                        break;
+                    case 5:
+                        lblMode.Text = "Mover abajo";
+                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        {
+                            if (legoUse)
+                            {
+                                lego.moverAbajo();
+                            }
+
+                        }
+                        break;
+                    case -1:
+                        lblMode.Text = "Detenido";
                         break;
                 }
             }));
