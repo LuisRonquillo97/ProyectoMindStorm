@@ -52,6 +52,7 @@
             this.lblMode = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblActivacionLego = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAVGConcentracion
@@ -290,6 +291,22 @@
             this.lblActivacionLego.TabIndex = 55;
             this.lblActivacionLego.Text = "Lego desactivado";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(235, 117);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.TabIndex = 56;
+            this.button2.Text = "Cambiar modo";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmIniciar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +314,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(857, 426);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.lblActivacionLego);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMode);
@@ -352,5 +370,6 @@
         private System.Windows.Forms.Label lblMode;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblActivacionLego;
+        private System.Windows.Forms.Button button2;
     }
 }

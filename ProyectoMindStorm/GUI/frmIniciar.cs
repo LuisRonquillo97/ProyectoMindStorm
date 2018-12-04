@@ -87,6 +87,50 @@ namespace ProyectoMindStorm.GUI
             }
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (modo == 7)
+            {
+                modo = 0;
+            }
+            else
+            {
+                modo++;
+            }
+            switch (modo)
+            {
+                case 0:
+                    lblMode.Text = "Detenido";
+                    break;
+                case 1:
+                    lblMode.Text = "Mover arriba";
+                    
+                    break;
+                case 2:
+                    lblMode.Text = "Detenido";
+                    break;
+                case 3:
+                    lblMode.Text = "Mover derecha";
+                    
+                    break;
+                case 4:
+                    lblMode.Text = "Detenido";
+                    break;
+                case 5:
+                    lblMode.Text = "Mover abajo";
+                    
+                    break;
+                case 6:
+                    lblMode.Text = "Detenido";
+                    break;
+                case 7:
+                    lblMode.Text = "Mover izquierda";
+                    
+                    break;
+            }
+        }
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             _thinkGearWrapper = new ThinkGearWrapper();
