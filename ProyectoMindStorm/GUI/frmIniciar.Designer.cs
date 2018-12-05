@@ -53,6 +53,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblActivacionLego = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.flechaArriba = new System.Windows.Forms.Button();
+            this.flechaAbajo = new System.Windows.Forms.Button();
+            this.flechaIzquierda = new System.Windows.Forms.Button();
+            this.flechaDerecha = new System.Windows.Forms.Button();
+            this.picArriba = new System.Windows.Forms.Panel();
+            this.picDerecha = new System.Windows.Forms.Panel();
+            this.picAbajo = new System.Windows.Forms.Panel();
+            this.picIzquierda = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.picStop1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.picStop2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.picStop3 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.picStop4 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblAVGConcentracion
@@ -285,7 +301,7 @@
             // lblActivacionLego
             // 
             this.lblActivacionLego.AutoSize = true;
-            this.lblActivacionLego.Location = new System.Drawing.Point(24, 159);
+            this.lblActivacionLego.Location = new System.Drawing.Point(24, 146);
             this.lblActivacionLego.Name = "lblActivacionLego";
             this.lblActivacionLego.Size = new System.Drawing.Size(92, 13);
             this.lblActivacionLego.TabIndex = 55;
@@ -307,6 +323,198 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // flechaArriba
+            // 
+            this.flechaArriba.BackColor = System.Drawing.Color.Transparent;
+            this.flechaArriba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.flechaArriba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.flechaArriba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flechaArriba.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flechaArriba.ForeColor = System.Drawing.Color.White;
+            this.flechaArriba.Image = ((System.Drawing.Image)(resources.GetObject("flechaArriba.Image")));
+            this.flechaArriba.Location = new System.Drawing.Point(155, 193);
+            this.flechaArriba.Name = "flechaArriba";
+            this.flechaArriba.Size = new System.Drawing.Size(63, 57);
+            this.flechaArriba.TabIndex = 57;
+            this.flechaArriba.UseVisualStyleBackColor = false;
+            // 
+            // flechaAbajo
+            // 
+            this.flechaAbajo.BackColor = System.Drawing.Color.Transparent;
+            this.flechaAbajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaAbajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaAbajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flechaAbajo.ForeColor = System.Drawing.Color.White;
+            this.flechaAbajo.Image = ((System.Drawing.Image)(resources.GetObject("flechaAbajo.Image")));
+            this.flechaAbajo.Location = new System.Drawing.Point(155, 341);
+            this.flechaAbajo.Name = "flechaAbajo";
+            this.flechaAbajo.Size = new System.Drawing.Size(63, 57);
+            this.flechaAbajo.TabIndex = 58;
+            this.flechaAbajo.UseVisualStyleBackColor = false;
+            // 
+            // flechaIzquierda
+            // 
+            this.flechaIzquierda.BackColor = System.Drawing.Color.Transparent;
+            this.flechaIzquierda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaIzquierda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flechaIzquierda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flechaIzquierda.ForeColor = System.Drawing.Color.White;
+            this.flechaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("flechaIzquierda.Image")));
+            this.flechaIzquierda.Location = new System.Drawing.Point(73, 264);
+            this.flechaIzquierda.Name = "flechaIzquierda";
+            this.flechaIzquierda.Size = new System.Drawing.Size(63, 57);
+            this.flechaIzquierda.TabIndex = 59;
+            this.flechaIzquierda.UseVisualStyleBackColor = false;
+            // 
+            // flechaDerecha
+            // 
+            this.flechaDerecha.BackColor = System.Drawing.Color.Transparent;
+            this.flechaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flechaDerecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flechaDerecha.ForeColor = System.Drawing.Color.White;
+            this.flechaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("flechaDerecha.Image")));
+            this.flechaDerecha.Location = new System.Drawing.Point(235, 264);
+            this.flechaDerecha.Name = "flechaDerecha";
+            this.flechaDerecha.Size = new System.Drawing.Size(63, 57);
+            this.flechaDerecha.TabIndex = 60;
+            this.flechaDerecha.UseVisualStyleBackColor = false;
+            // 
+            // picArriba
+            // 
+            this.picArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picArriba.Location = new System.Drawing.Point(150, 185);
+            this.picArriba.Name = "picArriba";
+            this.picArriba.Size = new System.Drawing.Size(73, 73);
+            this.picArriba.TabIndex = 61;
+            this.picArriba.Visible = false;
+            // 
+            // picDerecha
+            // 
+            this.picDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picDerecha.Location = new System.Drawing.Point(231, 256);
+            this.picDerecha.Name = "picDerecha";
+            this.picDerecha.Size = new System.Drawing.Size(73, 73);
+            this.picDerecha.TabIndex = 62;
+            this.picDerecha.Visible = false;
+            // 
+            // picAbajo
+            // 
+            this.picAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picAbajo.Location = new System.Drawing.Point(150, 333);
+            this.picAbajo.Name = "picAbajo";
+            this.picAbajo.Size = new System.Drawing.Size(73, 73);
+            this.picAbajo.TabIndex = 63;
+            this.picAbajo.Visible = false;
+            // 
+            // picIzquierda
+            // 
+            this.picIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picIzquierda.Location = new System.Drawing.Point(68, 256);
+            this.picIzquierda.Name = "picIzquierda";
+            this.picIzquierda.Size = new System.Drawing.Size(73, 73);
+            this.picIzquierda.TabIndex = 63;
+            this.picIzquierda.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(86, 193);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(39, 39);
+            this.button3.TabIndex = 64;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // picStop1
+            // 
+            this.picStop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop1.Location = new System.Drawing.Point(82, 189);
+            this.picStop1.Name = "picStop1";
+            this.picStop1.Size = new System.Drawing.Size(47, 47);
+            this.picStop1.TabIndex = 65;
+            this.picStop1.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(246, 193);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(39, 39);
+            this.button4.TabIndex = 66;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // picStop2
+            // 
+            this.picStop2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop2.Location = new System.Drawing.Point(242, 189);
+            this.picStop2.Name = "picStop2";
+            this.picStop2.Size = new System.Drawing.Size(47, 47);
+            this.picStop2.TabIndex = 67;
+            this.picStop2.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(242, 348);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(39, 39);
+            this.button5.TabIndex = 68;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // picStop3
+            // 
+            this.picStop3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop3.Location = new System.Drawing.Point(238, 344);
+            this.picStop3.Name = "picStop3";
+            this.picStop3.Size = new System.Drawing.Size(47, 47);
+            this.picStop3.TabIndex = 69;
+            this.picStop3.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(90, 350);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(39, 39);
+            this.button6.TabIndex = 70;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // picStop4
+            // 
+            this.picStop4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop4.Location = new System.Drawing.Point(86, 346);
+            this.picStop4.Name = "picStop4";
+            this.picStop4.Size = new System.Drawing.Size(47, 47);
+            this.picStop4.TabIndex = 71;
+            this.picStop4.Visible = false;
+            // 
             // frmIniciar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +522,18 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(857, 426);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.picStop4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.picStop3);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.picStop2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.picStop1);
+            this.Controls.Add(this.flechaDerecha);
+            this.Controls.Add(this.flechaIzquierda);
+            this.Controls.Add(this.flechaAbajo);
+            this.Controls.Add(this.flechaArriba);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblActivacionLego);
             this.Controls.Add(this.button1);
@@ -337,6 +557,10 @@
             this.Controls.Add(this.lblPacketsRead);
             this.Controls.Add(this.lblRelaxation);
             this.Controls.Add(this.lblConcentration);
+            this.Controls.Add(this.picArriba);
+            this.Controls.Add(this.picDerecha);
+            this.Controls.Add(this.picAbajo);
+            this.Controls.Add(this.picIzquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIniciar";
             this.Text = "frmIniciar";
@@ -371,5 +595,21 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblActivacionLego;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button flechaArriba;
+        private System.Windows.Forms.Button flechaAbajo;
+        private System.Windows.Forms.Button flechaIzquierda;
+        private System.Windows.Forms.Button flechaDerecha;
+        private System.Windows.Forms.Panel picArriba;
+        private System.Windows.Forms.Panel picDerecha;
+        private System.Windows.Forms.Panel picAbajo;
+        private System.Windows.Forms.Panel picIzquierda;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel picStop1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel picStop2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel picStop3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel picStop4;
     }
 }

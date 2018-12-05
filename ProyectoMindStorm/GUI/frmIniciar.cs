@@ -102,31 +102,95 @@ namespace ProyectoMindStorm.GUI
             {
                 case 0:
                     lblMode.Text = "Detenido";
+                    picIzquierda.Visible = false;
+                    picArriba.Visible = false;
+                    picAbajo.Visible = false;
+                    picDerecha.Visible = false;
+                    picStop1.Visible = true;
+                    picStop2.Visible = false;
+                    picStop3.Visible = false;
+                    picStop4.Visible = false;
                     break;
                 case 1:
                     lblMode.Text = "Mover arriba";
-                    
+                    picAbajo.Visible = false;
+                    picIzquierda.Visible = false;
+                    picDerecha.Visible = false;
+                    picArriba.Visible = true;
+                    picDerecha.Visible = false;
+                    picStop1.Visible = false;
+                    picStop2.Visible = false;
+                    picStop3.Visible = false;
+                    picStop4.Visible = false;
                     break;
                 case 2:
                     lblMode.Text = "Detenido";
+                    picArriba.Visible = false;
+                    picAbajo.Visible = false;
+                    picIzquierda.Visible = false;
+                    picDerecha.Visible = false;
+                    picDerecha.Visible = false;
+                    picStop1.Visible = false;
+                    picStop2.Visible = true;
+                    picStop3.Visible = false;
+                    picStop4.Visible = false;
                     break;
                 case 3:
                     lblMode.Text = "Mover derecha";
-                    
+                    picArriba.Visible = false;
+                    picAbajo.Visible = false;
+                    picIzquierda.Visible = false;
+                    picDerecha.Visible = true;
+                    picStop1.Visible = false;
+                    picStop2.Visible = false;
+                    picStop3.Visible = false;
+                    picStop4.Visible = false;
                     break;
                 case 4:
                     lblMode.Text = "Detenido";
+                    picDerecha.Visible = false;
+                    picArriba.Visible = false;
+                    picAbajo.Visible = false;
+                    picIzquierda.Visible = false;
+                    picDerecha.Visible = false;
+                    picStop1.Visible = false;
+                    picStop2.Visible = false;
+                    picStop3.Visible = true;
+                    picStop4.Visible = false;
                     break;
                 case 5:
                     lblMode.Text = "Mover abajo";
-                    
+                    picArriba.Visible = false;
+                    picIzquierda.Visible = false;
+                    picDerecha.Visible = false;
+                    picAbajo.Visible = true;
+                    picStop1.Visible = false;
+                    picStop2.Visible = false;
+                    picStop3.Visible = false;
+                    picStop4.Visible = false;
                     break;
                 case 6:
                     lblMode.Text = "Detenido";
+                    picAbajo.Visible = false;
+                    picArriba.Visible = false;
+                    picIzquierda.Visible = false;
+                    picDerecha.Visible = false;
+                    picDerecha.Visible = false;
+                    picStop1.Visible = false;
+                    picStop2.Visible = false;
+                    picStop3.Visible = false;
+                    picStop4.Visible = true;
                     break;
                 case 7:
                     lblMode.Text = "Mover izquierda";
-                    
+                    picArriba.Visible = false;
+                    picAbajo.Visible = false;
+                    picDerecha.Visible = false;
+                    picIzquierda.Visible = true;
+                    picStop1.Visible = false;
+                    picStop2.Visible = false;
+                    picStop3.Visible = false;
+                    picStop4.Visible = false;
                     break;
             }
         }
