@@ -69,6 +69,18 @@
             this.picStop3 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.picStop4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picStop1.SuspendLayout();
+            this.picStop2.SuspendLayout();
+            this.picStop3.SuspendLayout();
+            this.picStop4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAVGConcentracion
@@ -437,6 +449,7 @@
             // picStop1
             // 
             this.picStop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop1.Controls.Add(this.pictureBox4);
             this.picStop1.Location = new System.Drawing.Point(82, 189);
             this.picStop1.Name = "picStop1";
             this.picStop1.Size = new System.Drawing.Size(47, 47);
@@ -461,6 +474,7 @@
             // picStop2
             // 
             this.picStop2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop2.Controls.Add(this.pictureBox1);
             this.picStop2.Location = new System.Drawing.Point(242, 189);
             this.picStop2.Name = "picStop2";
             this.picStop2.Size = new System.Drawing.Size(47, 47);
@@ -485,6 +499,7 @@
             // picStop3
             // 
             this.picStop3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop3.Controls.Add(this.pictureBox2);
             this.picStop3.Location = new System.Drawing.Point(238, 344);
             this.picStop3.Name = "picStop3";
             this.picStop3.Size = new System.Drawing.Size(47, 47);
@@ -509,11 +524,52 @@
             // picStop4
             // 
             this.picStop4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picStop4.Controls.Add(this.pictureBox3);
             this.picStop4.Location = new System.Drawing.Point(86, 346);
             this.picStop4.Name = "picStop4";
             this.picStop4.Size = new System.Drawing.Size(47, 47);
             this.picStop4.TabIndex = 71;
             this.picStop4.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(7, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 72;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(7, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 73;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(7, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 74;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 75;
+            this.pictureBox4.TabStop = false;
             // 
             // frmIniciar
             // 
@@ -522,13 +578,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(857, 426);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.picStop4);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.picStop3);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.picStop2);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.picStop1);
             this.Controls.Add(this.flechaDerecha);
             this.Controls.Add(this.flechaIzquierda);
@@ -561,10 +613,22 @@
             this.Controls.Add(this.picDerecha);
             this.Controls.Add(this.picAbajo);
             this.Controls.Add(this.picIzquierda);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIniciar";
             this.Text = "frmIniciar";
             this.Load += new System.EventHandler(this.frmIniciar_Load);
+            this.picStop1.ResumeLayout(false);
+            this.picStop2.ResumeLayout(false);
+            this.picStop3.ResumeLayout(false);
+            this.picStop4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,5 +675,9 @@
         private System.Windows.Forms.Panel picStop3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel picStop4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
