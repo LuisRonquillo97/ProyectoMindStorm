@@ -6,6 +6,9 @@ using ZedGraph;
 using System.Drawing;
 using ProyectoMindStorm.MindStorm;
 using System.Linq;
+using Newtonsoft.Json;
+using System.IO;
+using ProyectoMindStorm.MindWave.BO;
 
 namespace ProyectoMindStorm.GUI
 {
@@ -88,6 +91,7 @@ namespace ProyectoMindStorm.GUI
             
         }
 
+        //PARTE DE PETITE PARA EL CAMBIO DE LAS FLECHAS
         private void button2_Click(object sender, EventArgs e)
         {
             if (modo == 7)
@@ -258,6 +262,13 @@ namespace ProyectoMindStorm.GUI
 
         void _thinkGearWrapper_ThinkGearChanged(object sender, ThinkGearChangedEventArgs e)
         {
+            //Deserealiza el JSON y lo asigno a variables usar estas variables para inicio de movimiento
+            ConfiguracionBO config = JsonConvert.DeserializeObject<ConfiguracionBO>(System.IO.File.ReadAllText(@"C:\9no Cuatrimestre\Proyecto\ProyectoMindStorm\json.txt"));
+            string move1 = config.movimiento1;
+            string move2 = config.movimiento2;
+            string move3 = config.movimiento3;
+            string move4 = config.movimiento4;
+           
             // update the textbox and sleep for a tiny bit
             BeginInvoke(new MethodInvoker(delegate
             {
@@ -297,58 +308,396 @@ namespace ProyectoMindStorm.GUI
                 {
                     case 0:
                         lblMode.Text = "Detenido";
+                        picIzquierda.Visible = false;
+                        picArriba.Visible = false;
+                        picAbajo.Visible = false;
+                        picDerecha.Visible = false;
+                        picStop1.Visible = true;
+                        picStop2.Visible = false;
+                        picStop3.Visible = false;
+                        picStop4.Visible = false;
                         break;
                     case 1:
-                        lblMode.Text = "Mover arriba";
-                        if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        lblMode.Text = move1; //Antes estaba arriba
+                        //if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        //{
+                        //    if (legoUse)
+                        //    {
+                        //        lego.moverDerecha();
+                        //    }
+                        //}
+                        switch (move1)
                         {
-                            if (legoUse)
-                            {
-                                lego.moverArriba();
-                            }
-
+                            case "Arriba":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverArriba();
+                                        lblMode.Text = "Mover arriba";
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picArriba.Visible = true;
+                                        picDerecha.Visible = false;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Derecha":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverDerecha();
+                                        lblMode.Text = "Mover derecha";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Izquierda":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverIzquierda();
+                                        lblMode.Text = "Mover izquierda";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picIzquierda.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Abajo":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverAbajo();
+                                        lblMode.Text = "Mover abajo";
+                                        picArriba.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picAbajo.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
                         }
                         break;
                     case 2:
                         lblMode.Text = "Detenido";
+                        picArriba.Visible = false;
+                        picAbajo.Visible = false;
+                        picIzquierda.Visible = false;
+                        picDerecha.Visible = false;
+                        picDerecha.Visible = false;
+                        picStop1.Visible = false;
+                        picStop2.Visible = true;
+                        picStop3.Visible = false;
+                        picStop4.Visible = false;
                         break;
                     case 3:
-                        lblMode.Text = "Mover derecha";
-                        if (e.ThinkGearState.Attention >= AVGconcentracion)
-                        {
-                            if (legoUse)
-                            {
-                                lego.moverDerecha();
-                            }
+                        lblMode.Text = move2; // Antes estaba Derecha
+                        //if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        //{
+                        //    if (legoUse)
+                        //    {
+                        //        lego.moverDerecha();
+                        //    }
 
+                        //}
+                        switch (move2)
+                        {
+                            case "Arriba":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverArriba();
+                                        lblMode.Text = "Mover arriba";
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picArriba.Visible = true;
+                                        picDerecha.Visible = false;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Derecha":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverDerecha();
+                                        lblMode.Text = "Mover derecha";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Izquierda":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverIzquierda();
+                                        lblMode.Text = "Mover izquierda";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picIzquierda.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Abajo":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverAbajo();
+                                        lblMode.Text = "Mover abajo";
+                                        picArriba.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picAbajo.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
                         }
                         break;
                     case 4:
                         lblMode.Text = "Detenido";
+                        picDerecha.Visible = false;
+                        picArriba.Visible = false;
+                        picAbajo.Visible = false;
+                        picIzquierda.Visible = false;
+                        picDerecha.Visible = false;
+                        picStop1.Visible = false;
+                        picStop2.Visible = false;
+                        picStop3.Visible = true;
+                        picStop4.Visible = false;
                         break;
                     case 5:
-                        lblMode.Text = "Mover abajo";
-                        if (e.ThinkGearState.Attention >= AVGconcentracion)
-                        {
-                            if (legoUse)
-                            {
-                                lego.moverAbajo();
-                            }
+                        lblMode.Text = move3; // Antes estaba Abajo
+                        //if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        //{
+                        //    if (legoUse)
+                        //    {
+                        //        lego.moverAbajo();
+                        //    }
 
+                        //}
+                        switch (move3)
+                        {
+                            case "Arriba":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverArriba();
+                                        lblMode.Text = "Mover arriba";
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picArriba.Visible = true;
+                                        picDerecha.Visible = false;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Derecha":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverDerecha();
+                                        lblMode.Text = "Mover derecha";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Izquierda":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverIzquierda();
+                                        lblMode.Text = "Mover izquierda";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picIzquierda.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Abajo":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverAbajo();
+                                        lblMode.Text = "Mover abajo";
+                                        picArriba.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picAbajo.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
                         }
                         break;
                     case 6:
                         lblMode.Text = "Detenido";
+                        picAbajo.Visible = false;
+                        picArriba.Visible = false;
+                        picIzquierda.Visible = false;
+                        picDerecha.Visible = false;
+                        picDerecha.Visible = false;
+                        picStop1.Visible = false;
+                        picStop2.Visible = false;
+                        picStop3.Visible = false;
+                        picStop4.Visible = true;
                         break;
                     case 7:
-                        lblMode.Text = "Mover izquierda";
-                        if (e.ThinkGearState.Attention >= AVGconcentracion)
-                        {
-                            if (legoUse)
-                            {
-                                lego.moverIzquierda();
-                            }
+                        lblMode.Text = move4; //Antes estaba Izquierda
+                        //if (e.ThinkGearState.Attention >= AVGconcentracion)
+                        //{
+                        //    if (legoUse)
+                        //    {
+                        //        lego.moverIzquierda();
+                        //    }
 
+                        //}
+                        switch (move4)
+                        {
+                            case "Arriba":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverArriba();
+                                        lblMode.Text = "Mover arriba";
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picArriba.Visible = true;
+                                        picDerecha.Visible = false;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Derecha":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverDerecha();
+                                        lblMode.Text = "Mover derecha";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Izquierda":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverIzquierda();
+                                        lblMode.Text = "Mover izquierda";
+                                        picArriba.Visible = false;
+                                        picAbajo.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picIzquierda.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
+                            case "Abajo":
+                                if (e.ThinkGearState.Attention >= AVGconcentracion)
+                                {
+                                    if (legoUse)
+                                    {
+                                        lego.moverAbajo();
+                                        lblMode.Text = "Mover abajo";
+                                        picArriba.Visible = false;
+                                        picIzquierda.Visible = false;
+                                        picDerecha.Visible = false;
+                                        picAbajo.Visible = true;
+                                        picStop1.Visible = false;
+                                        picStop2.Visible = false;
+                                        picStop3.Visible = false;
+                                        picStop4.Visible = false;
+                                    }
+                                }
+                                break;
                         }
                         break;
                 }

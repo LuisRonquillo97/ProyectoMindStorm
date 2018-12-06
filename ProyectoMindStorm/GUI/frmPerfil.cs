@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using ProyectoMindStorm.MindWave.BO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +19,14 @@ namespace ProyectoMindStorm.GUI
         public frmPerfil()
         {
             InitializeComponent();
+            oPreferencias = new Preferencias();
+            if (cmbMov1.Text == "" || cmbMov2.Text == "" || cmbMov3.Text == "" || cmbMov3.Text == "")
+            {
+                btnGuardarConfig.Enabled = false;
+            }
            
         }
-
+        Preferencias oPreferencias;
         private void cmbMov1_SelectedValueChanged(object sender, EventArgs e)
         {
            
@@ -93,6 +101,7 @@ namespace ProyectoMindStorm.GUI
                 default:
                     break;
             }
+
         }
 
         private void cmbMov3_SelectedValueChanged(object sender, EventArgs e)
@@ -167,6 +176,7 @@ namespace ProyectoMindStorm.GUI
                 default:
                     break;
             }
+
         }
 
         private void cmbMov1_SelectedIndexChanged(object sender, EventArgs e)
@@ -188,6 +198,15 @@ namespace ProyectoMindStorm.GUI
                         thisCB.SelectedIndex = 0;
                         break;
                     }
+                }
+
+                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
+                {
+                    btnGuardarConfig.Enabled = true;
+                }
+                else
+                {
+                    btnGuardarConfig.Enabled = false;
                 }
             }
         }
@@ -211,6 +230,15 @@ namespace ProyectoMindStorm.GUI
                         thisCB.SelectedIndex = 0;
                         break;
                     }
+                }
+
+                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
+                {
+                    btnGuardarConfig.Enabled = true;
+                }
+                else
+                {
+                    btnGuardarConfig.Enabled = false;
                 }
             }
         }
@@ -244,6 +272,14 @@ namespace ProyectoMindStorm.GUI
                         break;
                     }
                 }
+                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
+                {
+                    btnGuardarConfig.Enabled = true;
+                }
+                else
+                {
+                    btnGuardarConfig.Enabled = false;
+                }
             }
         }
 
@@ -267,7 +303,34 @@ namespace ProyectoMindStorm.GUI
                         break;
                     }
                 }
+
+                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
+                {
+                    btnGuardarConfig.Enabled = true;
+                }
+                else
+                {
+                    btnGuardarConfig.Enabled = false;
+                }
             }
         }
+
+        private void btnGuardarConfig_Click(object sender, EventArgs e)
+        {
+            ConfiguracionBO config = new ConfiguracionBO();
+            config.movimiento1 = cmbMov1.Text;
+            config.movimiento2 = cmbMov2.Text;
+            config.movimiento3 = cmbMov3.Text;
+            config.movimiento4 = cmbMov4.Text;
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.NullValueHandling = NullValueHandling.Ignore;
+            using (StreamWriter sw = new StreamWriter(@"C:\9no Cuatrimestre\Proyecto\ProyectoMindStorm\json.txt"))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, config);
+                MessageBox.Show("Configuración Guardada con Exito.", "Configuración");
+            }
+        }
+
     }
 }

@@ -34,6 +34,8 @@ namespace ProyectoMindStorm.GUI
             picbarraPerfil.Visible = false;
             frmIniciar frm = new frmIniciar();
             oPreferencias.cambiarVentana(frm);
+            bIniciar.Visible = false;
+            bPerfil.Visible = false;
         }
 
         private void bConfig_Click(object sender, EventArgs e)
@@ -79,7 +81,8 @@ namespace ProyectoMindStorm.GUI
             picbarraPerfil.Visible = true;
             frmPerfil frm = new frmPerfil();
             oPreferencias.cambiarVentana(frm);
-
+            bPerfil.Visible = false;
+            bIniciar.Visible = false;
         }
     }
 

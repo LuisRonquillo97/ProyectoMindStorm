@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Arriba1 = new System.Windows.Forms.Button();
             this.picArriba = new System.Windows.Forms.Panel();
+            this.sin1 = new System.Windows.Forms.Label();
             this.abajo1 = new System.Windows.Forms.Button();
             this.izquierda1 = new System.Windows.Forms.Button();
             this.derecha1 = new System.Windows.Forms.Button();
@@ -44,24 +45,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.sin2 = new System.Windows.Forms.Label();
             this.arriba2 = new System.Windows.Forms.Button();
             this.abajo2 = new System.Windows.Forms.Button();
             this.izquierda2 = new System.Windows.Forms.Button();
             this.derecha2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sin3 = new System.Windows.Forms.Label();
             this.arriba3 = new System.Windows.Forms.Button();
             this.abajo3 = new System.Windows.Forms.Button();
             this.izquierda3 = new System.Windows.Forms.Button();
             this.derecha3 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.sin4 = new System.Windows.Forms.Label();
             this.arriba4 = new System.Windows.Forms.Button();
             this.abajo4 = new System.Windows.Forms.Button();
             this.izquierda4 = new System.Windows.Forms.Button();
             this.derecha4 = new System.Windows.Forms.Button();
-            this.sin1 = new System.Windows.Forms.Label();
-            this.sin2 = new System.Windows.Forms.Label();
-            this.sin3 = new System.Windows.Forms.Label();
-            this.sin4 = new System.Windows.Forms.Label();
+            this.btnGuardarConfig = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.picArriba.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,9 +145,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 20);
+            this.label2.Size = new System.Drawing.Size(221, 20);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Establecer movimientos";
+            this.label2.Text = "Configuración de movimientos";
             // 
             // Arriba1
             // 
@@ -175,6 +177,15 @@
             this.picArriba.Name = "picArriba";
             this.picArriba.Size = new System.Drawing.Size(110, 108);
             this.picArriba.TabIndex = 63;
+            // 
+            // sin1
+            // 
+            this.sin1.AutoSize = true;
+            this.sin1.Location = new System.Drawing.Point(21, 49);
+            this.sin1.Name = "sin1";
+            this.sin1.Size = new System.Drawing.Size(78, 13);
+            this.sin1.TabIndex = 69;
+            this.sin1.Text = "Sin movimiento";
             // 
             // abajo1
             // 
@@ -273,6 +284,15 @@
             this.panel1.Size = new System.Drawing.Size(110, 108);
             this.panel1.TabIndex = 67;
             // 
+            // sin2
+            // 
+            this.sin2.AutoSize = true;
+            this.sin2.Location = new System.Drawing.Point(16, 49);
+            this.sin2.Name = "sin2";
+            this.sin2.Size = new System.Drawing.Size(78, 13);
+            this.sin2.TabIndex = 70;
+            this.sin2.Text = "Sin movimiento";
+            // 
             // arriba2
             // 
             this.arriba2.BackColor = System.Drawing.Color.Transparent;
@@ -349,6 +369,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 108);
             this.panel2.TabIndex = 68;
+            // 
+            // sin3
+            // 
+            this.sin3.AutoSize = true;
+            this.sin3.Location = new System.Drawing.Point(17, 49);
+            this.sin3.Name = "sin3";
+            this.sin3.Size = new System.Drawing.Size(78, 13);
+            this.sin3.TabIndex = 71;
+            this.sin3.Text = "Sin movimiento";
             // 
             // arriba3
             // 
@@ -427,6 +456,15 @@
             this.panel3.Size = new System.Drawing.Size(110, 108);
             this.panel3.TabIndex = 67;
             // 
+            // sin4
+            // 
+            this.sin4.AutoSize = true;
+            this.sin4.Location = new System.Drawing.Point(15, 49);
+            this.sin4.Name = "sin4";
+            this.sin4.Size = new System.Drawing.Size(78, 13);
+            this.sin4.TabIndex = 72;
+            this.sin4.Text = "Sin movimiento";
+            // 
             // arriba4
             // 
             this.arriba4.BackColor = System.Drawing.Color.Transparent;
@@ -491,41 +529,36 @@
             this.derecha4.UseVisualStyleBackColor = false;
             this.derecha4.Visible = false;
             // 
-            // sin1
+            // btnGuardarConfig
             // 
-            this.sin1.AutoSize = true;
-            this.sin1.Location = new System.Drawing.Point(21, 49);
-            this.sin1.Name = "sin1";
-            this.sin1.Size = new System.Drawing.Size(78, 13);
-            this.sin1.TabIndex = 69;
-            this.sin1.Text = "Sin movimiento";
+            this.btnGuardarConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnGuardarConfig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.btnGuardarConfig.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.btnGuardarConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarConfig.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarConfig.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarConfig.Location = new System.Drawing.Point(227, 342);
+            this.btnGuardarConfig.Name = "btnGuardarConfig";
+            this.btnGuardarConfig.Size = new System.Drawing.Size(126, 53);
+            this.btnGuardarConfig.TabIndex = 69;
+            this.btnGuardarConfig.Text = "Guardar Configuración";
+            this.btnGuardarConfig.UseVisualStyleBackColor = false;
+            this.btnGuardarConfig.Click += new System.EventHandler(this.btnGuardarConfig_Click);
             // 
-            // sin2
+            // button1
             // 
-            this.sin2.AutoSize = true;
-            this.sin2.Location = new System.Drawing.Point(16, 49);
-            this.sin2.Name = "sin2";
-            this.sin2.Size = new System.Drawing.Size(78, 13);
-            this.sin2.TabIndex = 70;
-            this.sin2.Text = "Sin movimiento";
-            // 
-            // sin3
-            // 
-            this.sin3.AutoSize = true;
-            this.sin3.Location = new System.Drawing.Point(17, 49);
-            this.sin3.Name = "sin3";
-            this.sin3.Size = new System.Drawing.Size(78, 13);
-            this.sin3.TabIndex = 71;
-            this.sin3.Text = "Sin movimiento";
-            // 
-            // sin4
-            // 
-            this.sin4.AutoSize = true;
-            this.sin4.Location = new System.Drawing.Point(15, 49);
-            this.sin4.Name = "sin4";
-            this.sin4.Size = new System.Drawing.Size(78, 13);
-            this.sin4.TabIndex = 72;
-            this.sin4.Text = "Sin movimiento";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(404, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 53);
+            this.button1.TabIndex = 70;
+            this.button1.Text = " Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmPerfil
             // 
@@ -533,6 +566,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(857, 426);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGuardarConfig);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -599,5 +634,7 @@
         private System.Windows.Forms.Label sin2;
         private System.Windows.Forms.Label sin3;
         private System.Windows.Forms.Label sin4;
+        private System.Windows.Forms.Button btnGuardarConfig;
+        private System.Windows.Forms.Button button1;
     }
 }
