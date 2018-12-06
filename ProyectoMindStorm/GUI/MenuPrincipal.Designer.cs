@@ -42,6 +42,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.bPerfil = new System.Windows.Forms.Button();
+            this.picbarraPerfil = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,6 +55,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.bPerfil);
+            this.panel2.Controls.Add(this.picbarraPerfil);
             this.panel2.Controls.Add(this.pnlContent);
             this.panel2.Controls.Add(this.bIniciar);
             this.panel2.Controls.Add(this.pnlContenedor);
@@ -185,6 +189,31 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
+            // bPerfil
+            // 
+            this.bPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.bPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.bPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.bPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bPerfil.ForeColor = System.Drawing.Color.White;
+            this.bPerfil.Location = new System.Drawing.Point(5, 86);
+            this.bPerfil.Name = "bPerfil";
+            this.bPerfil.Size = new System.Drawing.Size(203, 57);
+            this.bPerfil.TabIndex = 8;
+            this.bPerfil.Text = "Perfil";
+            this.bPerfil.UseVisualStyleBackColor = false;
+            this.bPerfil.Click += new System.EventHandler(this.bPerfil_Click_1);
+            // 
+            // picbarraPerfil
+            // 
+            this.picbarraPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
+            this.picbarraPerfil.Location = new System.Drawing.Point(0, 86);
+            this.picbarraPerfil.Name = "picbarraPerfil";
+            this.picbarraPerfil.Size = new System.Drawing.Size(10, 56);
+            this.picbarraPerfil.TabIndex = 8;
+            this.picbarraPerfil.Visible = false;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,5 +255,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox btncerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Button bPerfil;
+        private System.Windows.Forms.Panel picbarraPerfil;
     }
 }

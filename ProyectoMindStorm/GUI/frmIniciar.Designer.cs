@@ -344,7 +344,7 @@
             this.flechaArriba.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaArriba.ForeColor = System.Drawing.Color.White;
             this.flechaArriba.Image = ((System.Drawing.Image)(resources.GetObject("flechaArriba.Image")));
-            this.flechaArriba.Location = new System.Drawing.Point(184, 198);
+            this.flechaArriba.Location = new System.Drawing.Point(144, 198);
             this.flechaArriba.Name = "flechaArriba";
             this.flechaArriba.Size = new System.Drawing.Size(63, 57);
             this.flechaArriba.TabIndex = 57;
@@ -359,7 +359,7 @@
             this.flechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaAbajo.ForeColor = System.Drawing.Color.White;
             this.flechaAbajo.Image = ((System.Drawing.Image)(resources.GetObject("flechaAbajo.Image")));
-            this.flechaAbajo.Location = new System.Drawing.Point(184, 346);
+            this.flechaAbajo.Location = new System.Drawing.Point(144, 346);
             this.flechaAbajo.Name = "flechaAbajo";
             this.flechaAbajo.Size = new System.Drawing.Size(63, 57);
             this.flechaAbajo.TabIndex = 58;
@@ -374,7 +374,7 @@
             this.flechaIzquierda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaIzquierda.ForeColor = System.Drawing.Color.White;
             this.flechaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("flechaIzquierda.Image")));
-            this.flechaIzquierda.Location = new System.Drawing.Point(102, 269);
+            this.flechaIzquierda.Location = new System.Drawing.Point(62, 269);
             this.flechaIzquierda.Name = "flechaIzquierda";
             this.flechaIzquierda.Size = new System.Drawing.Size(63, 57);
             this.flechaIzquierda.TabIndex = 59;
@@ -389,7 +389,7 @@
             this.flechaDerecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaDerecha.ForeColor = System.Drawing.Color.White;
             this.flechaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("flechaDerecha.Image")));
-            this.flechaDerecha.Location = new System.Drawing.Point(264, 269);
+            this.flechaDerecha.Location = new System.Drawing.Point(224, 269);
             this.flechaDerecha.Name = "flechaDerecha";
             this.flechaDerecha.Size = new System.Drawing.Size(63, 57);
             this.flechaDerecha.TabIndex = 60;
@@ -398,7 +398,7 @@
             // picArriba
             // 
             this.picArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
-            this.picArriba.Location = new System.Drawing.Point(179, 190);
+            this.picArriba.Location = new System.Drawing.Point(139, 190);
             this.picArriba.Name = "picArriba";
             this.picArriba.Size = new System.Drawing.Size(73, 73);
             this.picArriba.TabIndex = 61;
@@ -407,7 +407,7 @@
             // picDerecha
             // 
             this.picDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
-            this.picDerecha.Location = new System.Drawing.Point(260, 261);
+            this.picDerecha.Location = new System.Drawing.Point(220, 261);
             this.picDerecha.Name = "picDerecha";
             this.picDerecha.Size = new System.Drawing.Size(73, 73);
             this.picDerecha.TabIndex = 62;
@@ -416,7 +416,7 @@
             // picAbajo
             // 
             this.picAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
-            this.picAbajo.Location = new System.Drawing.Point(179, 338);
+            this.picAbajo.Location = new System.Drawing.Point(139, 338);
             this.picAbajo.Name = "picAbajo";
             this.picAbajo.Size = new System.Drawing.Size(73, 73);
             this.picAbajo.TabIndex = 63;
@@ -425,7 +425,7 @@
             // picIzquierda
             // 
             this.picIzquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
-            this.picIzquierda.Location = new System.Drawing.Point(97, 261);
+            this.picIzquierda.Location = new System.Drawing.Point(57, 261);
             this.picIzquierda.Name = "picIzquierda";
             this.picIzquierda.Size = new System.Drawing.Size(73, 73);
             this.picIzquierda.TabIndex = 63;
@@ -440,7 +440,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(115, 198);
+            this.button3.Location = new System.Drawing.Point(75, 198);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(39, 39);
             this.button3.TabIndex = 64;
@@ -450,7 +450,7 @@
             // 
             this.picStop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
             this.picStop1.Controls.Add(this.pictureBox4);
-            this.picStop1.Location = new System.Drawing.Point(111, 194);
+            this.picStop1.Location = new System.Drawing.Point(71, 194);
             this.picStop1.Name = "picStop1";
             this.picStop1.Size = new System.Drawing.Size(47, 47);
             this.picStop1.TabIndex = 65;
@@ -475,7 +475,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(275, 198);
+            this.button4.Location = new System.Drawing.Point(235, 198);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(39, 39);
             this.button4.TabIndex = 66;
@@ -485,7 +485,7 @@
             // 
             this.picStop2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
             this.picStop2.Controls.Add(this.pictureBox1);
-            this.picStop2.Location = new System.Drawing.Point(271, 194);
+            this.picStop2.Location = new System.Drawing.Point(231, 194);
             this.picStop2.Name = "picStop2";
             this.picStop2.Size = new System.Drawing.Size(47, 47);
             this.picStop2.TabIndex = 67;
@@ -510,7 +510,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(271, 353);
+            this.button5.Location = new System.Drawing.Point(231, 353);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(39, 39);
             this.button5.TabIndex = 68;
@@ -520,7 +520,7 @@
             // 
             this.picStop3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
             this.picStop3.Controls.Add(this.pictureBox2);
-            this.picStop3.Location = new System.Drawing.Point(267, 349);
+            this.picStop3.Location = new System.Drawing.Point(227, 349);
             this.picStop3.Name = "picStop3";
             this.picStop3.Size = new System.Drawing.Size(47, 47);
             this.picStop3.TabIndex = 69;
@@ -545,7 +545,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(119, 355);
+            this.button6.Location = new System.Drawing.Point(79, 355);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(39, 39);
             this.button6.TabIndex = 70;
@@ -555,7 +555,7 @@
             // 
             this.picStop4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(113)))), ((int)(((byte)(25)))));
             this.picStop4.Controls.Add(this.pictureBox3);
-            this.picStop4.Location = new System.Drawing.Point(115, 351);
+            this.picStop4.Location = new System.Drawing.Point(75, 351);
             this.picStop4.Name = "picStop4";
             this.picStop4.Size = new System.Drawing.Size(47, 47);
             this.picStop4.TabIndex = 71;
