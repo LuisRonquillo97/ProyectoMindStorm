@@ -142,7 +142,7 @@ namespace ThinkGearNET
 				_tgState.Beta2		        = GetValue(ThinkGear.DATA_BETA2) ?? _tgState.Beta2;
 				_tgState.Gamma1		        = GetValue(ThinkGear.DATA_GAMMA1) ?? _tgState.Gamma1;
 				_tgState.Gamma2		        = GetValue(ThinkGear.DATA_GAMMA2) ?? _tgState.Gamma2;
-				_tgState.BlinkStrength		= GetValue(ThinkGear.DATA_BLINK_STRENGTH) ?? _tgState.BlinkStrength;
+				_tgState.BlinkStrength		= GetValues(ThinkGear.DATA_BLINK_STRENGTH);
 			}
 		}
 
@@ -154,8 +154,16 @@ namespace ThinkGearNET
 
 			return null;
 		}
+        private float GetValues(int type)
+        {
+            // if the value has been updated, get the value and return it
+            if (ThinkGear.TG_GetValueStatus(_connectionId, type) != 0)
+                return ThinkGear.TG_GetValue(_connectionId, type);
 
-		private void LogText(string text)
+            return 0;
+        }
+
+        private void LogText(string text)
 		{
 			Debug.WriteLine(text);
 		}

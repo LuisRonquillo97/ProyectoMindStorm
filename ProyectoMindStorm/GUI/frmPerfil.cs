@@ -324,7 +324,7 @@ namespace ProyectoMindStorm.GUI
             config.movimiento4 = cmbMov4.Text;
             JsonSerializer serializer = new JsonSerializer();
             serializer.NullValueHandling = NullValueHandling.Ignore;
-            using (StreamWriter sw = new StreamWriter(@"C:\9no Cuatrimestre\Proyecto\ProyectoMindStorm\json.txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\pc\Documents\Visual Studio 2015\Projects\ProyectoMindStorm\json.txt"))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
                 serializer.Serialize(writer, config);

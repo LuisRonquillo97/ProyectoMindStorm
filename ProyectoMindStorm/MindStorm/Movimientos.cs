@@ -42,7 +42,7 @@ namespace ProyectoMindStorm.MindStorm
         }
 
         public void moverArriba() {
-            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -20, 10, true);
+            _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -20, 90, true);
         }
 
         public void moverAbajo(){

@@ -91,113 +91,6 @@ namespace ProyectoMindStorm.GUI
             
         }
 
-        //PARTE DE PETITE PARA EL CAMBIO DE LAS FLECHAS
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (modo == 7)
-            {
-                modo = 0;
-            }
-            else
-            {
-                modo++;
-            }
-            switch (modo)
-            {
-                case 0:
-                    lblMode.Text = "Detenido";
-                    picIzquierda.Visible = false;
-                    picArriba.Visible = false;
-                    picAbajo.Visible = false;
-                    picDerecha.Visible = false;
-                    picStop1.Visible = true;
-                    picStop2.Visible = false;
-                    picStop3.Visible = false;
-                    picStop4.Visible = false;
-                    break;
-                case 1:
-                    lblMode.Text = "Mover arriba";
-                    picAbajo.Visible = false;
-                    picIzquierda.Visible = false;
-                    picDerecha.Visible = false;
-                    picArriba.Visible = true;
-                    picDerecha.Visible = false;
-                    picStop1.Visible = false;
-                    picStop2.Visible = false;
-                    picStop3.Visible = false;
-                    picStop4.Visible = false;
-                    break;
-                case 2:
-                    lblMode.Text = "Detenido";
-                    picArriba.Visible = false;
-                    picAbajo.Visible = false;
-                    picIzquierda.Visible = false;
-                    picDerecha.Visible = false;
-                    picDerecha.Visible = false;
-                    picStop1.Visible = false;
-                    picStop2.Visible = true;
-                    picStop3.Visible = false;
-                    picStop4.Visible = false;
-                    break;
-                case 3:
-                    lblMode.Text = "Mover derecha";
-                    picArriba.Visible = false;
-                    picAbajo.Visible = false;
-                    picIzquierda.Visible = false;
-                    picDerecha.Visible = true;
-                    picStop1.Visible = false;
-                    picStop2.Visible = false;
-                    picStop3.Visible = false;
-                    picStop4.Visible = false;
-                    break;
-                case 4:
-                    lblMode.Text = "Detenido";
-                    picDerecha.Visible = false;
-                    picArriba.Visible = false;
-                    picAbajo.Visible = false;
-                    picIzquierda.Visible = false;
-                    picDerecha.Visible = false;
-                    picStop1.Visible = false;
-                    picStop2.Visible = false;
-                    picStop3.Visible = true;
-                    picStop4.Visible = false;
-                    break;
-                case 5:
-                    lblMode.Text = "Mover abajo";
-                    picArriba.Visible = false;
-                    picIzquierda.Visible = false;
-                    picDerecha.Visible = false;
-                    picAbajo.Visible = true;
-                    picStop1.Visible = false;
-                    picStop2.Visible = false;
-                    picStop3.Visible = false;
-                    picStop4.Visible = false;
-                    break;
-                case 6:
-                    lblMode.Text = "Detenido";
-                    picAbajo.Visible = false;
-                    picArriba.Visible = false;
-                    picIzquierda.Visible = false;
-                    picDerecha.Visible = false;
-                    picDerecha.Visible = false;
-                    picStop1.Visible = false;
-                    picStop2.Visible = false;
-                    picStop3.Visible = false;
-                    picStop4.Visible = true;
-                    break;
-                case 7:
-                    lblMode.Text = "Mover izquierda";
-                    picArriba.Visible = false;
-                    picAbajo.Visible = false;
-                    picDerecha.Visible = false;
-                    picIzquierda.Visible = true;
-                    picStop1.Visible = false;
-                    picStop2.Visible = false;
-                    picStop3.Visible = false;
-                    picStop4.Visible = false;
-                    break;
-            }
-        }
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
@@ -263,7 +156,7 @@ namespace ProyectoMindStorm.GUI
         void _thinkGearWrapper_ThinkGearChanged(object sender, ThinkGearChangedEventArgs e)
         {
             //Deserealiza el JSON y lo asigno a variables usar estas variables para inicio de movimiento
-            ConfiguracionBO config = JsonConvert.DeserializeObject<ConfiguracionBO>(System.IO.File.ReadAllText(@"C:\9no Cuatrimestre\Proyecto\ProyectoMindStorm\json.txt"));
+            ConfiguracionBO config = JsonConvert.DeserializeObject<ConfiguracionBO>(System.IO.File.ReadAllText(@"C:\Users\pc\Documents\Visual Studio 2015\Projects\ProyectoMindStorm\json.txt"));
             string move1 = config.movimiento1;
             string move2 = config.movimiento2;
             string move3 = config.movimiento3;
@@ -297,7 +190,7 @@ namespace ProyectoMindStorm.GUI
                 {
                     if(e.ThinkGearState.BlinkStrength != blink)
                     {
-                        if (legoUse)
+                        if (legoUse && e.ThinkGearState.BlinkStrength!=0)
                         {
                             lego.abrirPinza();
                         }
@@ -334,7 +227,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverArriba();
-                                        lblMode.Text = "Mover arriba";
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -353,7 +245,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverDerecha();
-                                        lblMode.Text = "Mover derecha";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
@@ -371,7 +262,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverIzquierda();
-                                        lblMode.Text = "Mover izquierda";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picDerecha.Visible = false;
@@ -389,7 +279,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverAbajo();
-                                        lblMode.Text = "Mover abajo";
                                         picArriba.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -433,7 +322,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverArriba();
-                                        lblMode.Text = "Mover arriba";
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -452,7 +340,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverDerecha();
-                                        lblMode.Text = "Mover derecha";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
@@ -470,7 +357,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverIzquierda();
-                                        lblMode.Text = "Mover izquierda";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picDerecha.Visible = false;
@@ -488,7 +374,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverAbajo();
-                                        lblMode.Text = "Mover abajo";
                                         picArriba.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -532,7 +417,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverArriba();
-                                        lblMode.Text = "Mover arriba";
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -551,7 +435,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverDerecha();
-                                        lblMode.Text = "Mover derecha";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
@@ -569,7 +452,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverIzquierda();
-                                        lblMode.Text = "Mover izquierda";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picDerecha.Visible = false;
@@ -587,7 +469,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverAbajo();
-                                        lblMode.Text = "Mover abajo";
                                         picArriba.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -631,7 +512,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverArriba();
-                                        lblMode.Text = "Mover arriba";
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -650,7 +530,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverDerecha();
-                                        lblMode.Text = "Mover derecha";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picIzquierda.Visible = false;
@@ -668,7 +547,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverIzquierda();
-                                        lblMode.Text = "Mover izquierda";
                                         picArriba.Visible = false;
                                         picAbajo.Visible = false;
                                         picDerecha.Visible = false;
@@ -686,7 +564,6 @@ namespace ProyectoMindStorm.GUI
                                     if (legoUse)
                                     {
                                         lego.moverAbajo();
-                                        lblMode.Text = "Mover abajo";
                                         picArriba.Visible = false;
                                         picIzquierda.Visible = false;
                                         picDerecha.Visible = false;
@@ -702,7 +579,7 @@ namespace ProyectoMindStorm.GUI
                         break;
                 }
             }));
-            Thread.Sleep(10);
+            Thread.Sleep(100);
         }
     }
 }

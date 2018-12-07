@@ -1,1 +1,1 @@
-{"movimiento1":"Derecha","movimiento2":"Arriba","movimiento3":"Izquierda","movimiento4":"Abajo"}
+{"movimiento1":"Arriba","movimiento2":"Derecha","movimiento3":"Abajo","movimiento4":"Izquierda"}
