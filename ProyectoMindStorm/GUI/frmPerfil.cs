@@ -15,7 +15,7 @@ namespace ProyectoMindStorm.GUI
 {
     public partial class frmPerfil : Form
     {
-        List<ComboBox> toolParameterComboBoxes = null;
+      
         public frmPerfil()
         {
             InitializeComponent();
@@ -181,138 +181,63 @@ namespace ProyectoMindStorm.GUI
 
         private void cmbMov1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox thisCB = sender as ComboBox;
-            if (thisCB.Text != "")
+            
+            if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
             {
-                foreach (ComboBox cb in toolParameterComboBoxes)
-                {
-                    if (thisCB.Name != cb.Name && thisCB.Text == cb.Text && thisCB.Text != "" && cb.Text != "")
-                    {
-                        Arriba1.Visible = false;
-                        abajo1.Visible = false;
-                        derecha1.Visible = false;
-                        izquierda1.Visible = false;
-                        sin1.Visible = true;
-                        MessageBox.Show("No puedes seleccionar el mismo movimiento" + "\r\n" + "\r\n"
-                                     + "La opcion ya ha sido seleccionada en: " + cb.Name.Replace("comboBox", ""), "Error");
-                        thisCB.SelectedIndex = 0;
-                        break;
-                    }
-                }
-
-                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
-                {
-                    btnGuardarConfig.Enabled = true;
-                }
-                else
-                {
-                    btnGuardarConfig.Enabled = false;
-                }
+                btnGuardarConfig.Enabled = true;
             }
+            else
+            {
+                btnGuardarConfig.Enabled = false;
+            }
+            
         }
 
         private void cmbMov2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox thisCB = sender as ComboBox;
-            if (thisCB.Text != "")
+           
+            if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
             {
-                foreach (ComboBox cb in toolParameterComboBoxes)
-                {
-                    if (thisCB.Name != cb.Name && thisCB.Text == cb.Text && thisCB.Text != "" && cb.Text != "")
-                    {
-                        arriba2.Visible = false;
-                        abajo2.Visible = false;
-                        derecha2.Visible = false;
-                        izquierda2.Visible = false;
-                        sin2.Visible = true;
-                        MessageBox.Show("No puedes seleccionar el mismo movimiento." + "\r\n" + "\r\n"
-                                     + "La opcion ya ha sido seleccionada en:  " + cb.Name.Replace("comboBox", ""), "Error");
-                        thisCB.SelectedIndex = 0;
-                        break;
-                    }
-                }
-
-                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
-                {
-                    btnGuardarConfig.Enabled = true;
-                }
-                else
-                {
-                    btnGuardarConfig.Enabled = false;
-                }
+                btnGuardarConfig.Enabled = true;
             }
+            else
+            {
+                btnGuardarConfig.Enabled = false;
+            }
+            
         }
 
         private void frmPerfil_Load(object sender, EventArgs e)
         {
-            toolParameterComboBoxes = new List<ComboBox>();
-            toolParameterComboBoxes.Add(cmbMov1);
-            toolParameterComboBoxes.Add(cmbMov2);
-            toolParameterComboBoxes.Add(cmbMov3);
-            toolParameterComboBoxes.Add(cmbMov4);
+           
         }
 
         private void cmbMov3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox thisCB = sender as ComboBox;
-            if (thisCB.Text != "")
+            
+            if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
             {
-                foreach (ComboBox cb in toolParameterComboBoxes)
-                {
-                    if (thisCB.Name != cb.Name && thisCB.Text == cb.Text && thisCB.Text != "" && cb.Text != "")
-                    {
-                        arriba3.Visible = false;
-                        abajo3.Visible = false;
-                        derecha3.Visible = false;
-                        izquierda3.Visible = false;
-                        sin3.Visible = true;
-                        MessageBox.Show("No puedes seleccionar el mismo movimiento." + "\r\n" + "\r\n"
-                                     + "La opcion ya ha sido seleccionada en:  " + cb.Name.Replace("comboBox", ""), "Error");
-                        thisCB.SelectedIndex = 0;
-                        break;
-                    }
-                }
-                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
-                {
-                    btnGuardarConfig.Enabled = true;
-                }
-                else
-                {
-                    btnGuardarConfig.Enabled = false;
-                }
+                btnGuardarConfig.Enabled = true;
             }
+            else
+            {
+                btnGuardarConfig.Enabled = false;
+            }
+            
         }
 
         private void cmbMov4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox thisCB = sender as ComboBox;
-            if (thisCB.Text != "")
+        
+            if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
             {
-                foreach (ComboBox cb in toolParameterComboBoxes)
-                {
-                    if (thisCB.Name != cb.Name && thisCB.Text == cb.Text && thisCB.Text != "" && cb.Text != "")
-                    {
-                        arriba4.Visible = false;
-                        abajo4.Visible = false;
-                        derecha4.Visible = false;
-                        izquierda4.Visible = false;
-                        sin4.Visible = true;
-                        MessageBox.Show("No puedes seleccionar el mismo movimiento." + "\r\n" + "\r\n"
-                                     + "La opcion ya ha sido seleccionada en:  " + cb.Name.Replace("comboBox", ""), "Error");
-                        thisCB.SelectedIndex = 0;
-                        break;
-                    }
-                }
-
-                if (cmbMov1.Text != "" && cmbMov2.Text != "" && cmbMov3.Text != "" && cmbMov4.Text != "")
-                {
-                    btnGuardarConfig.Enabled = true;
-                }
-                else
-                {
-                    btnGuardarConfig.Enabled = false;
-                }
+                btnGuardarConfig.Enabled = true;
             }
+            else
+            {
+                btnGuardarConfig.Enabled = false;
+            }
+            
         }
 
         private void btnGuardarConfig_Click(object sender, EventArgs e)

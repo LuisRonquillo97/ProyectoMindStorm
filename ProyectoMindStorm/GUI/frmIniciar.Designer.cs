@@ -336,8 +336,8 @@
             // flechaAbajo
             // 
             this.flechaAbajo.BackColor = System.Drawing.Color.Transparent;
-            this.flechaAbajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.flechaAbajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaAbajo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.flechaAbajo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.flechaAbajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaAbajo.ForeColor = System.Drawing.Color.White;
@@ -351,8 +351,8 @@
             // flechaIzquierda
             // 
             this.flechaIzquierda.BackColor = System.Drawing.Color.Transparent;
-            this.flechaIzquierda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.flechaIzquierda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaIzquierda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.flechaIzquierda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.flechaIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flechaIzquierda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaIzquierda.ForeColor = System.Drawing.Color.White;
@@ -366,8 +366,8 @@
             // flechaDerecha
             // 
             this.flechaDerecha.BackColor = System.Drawing.Color.Transparent;
-            this.flechaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
-            this.flechaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(113)))), ((int)(((byte)(22)))));
+            this.flechaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.flechaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.flechaDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.flechaDerecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flechaDerecha.ForeColor = System.Drawing.Color.White;
