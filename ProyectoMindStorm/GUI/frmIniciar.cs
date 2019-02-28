@@ -94,6 +94,7 @@ namespace ProyectoMindStorm.GUI
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            limpiarValores();
             _thinkGearWrapper = new ThinkGearWrapper();
             if (lego.establecerConexion() == "La conexión fue exitosa")
             {
@@ -111,56 +112,44 @@ namespace ProyectoMindStorm.GUI
                     _thinkGearWrapper.EnableBlinkDetection(true);
                     lblStatus.Text = "Conectado";
                     legoUse = true;
-                    lblActivacionLego.Text = "Lego activado";
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*if (legoUse)
-            {
-                legoUse = false;
-                lblActivacionLego.Text = "Lego desactivado";
-            }
-            else
-            {
-                legoUse = true;
-                lblActivacionLego.Text = "Lego activado";
-            }*/
-        }
 
         private void btndetener_Click(object sender, EventArgs e)
         {
-            _thinkGearWrapper.Disconnect();
-            legoUse = false;
-            lblActivacionLego.Text = "Lego desactivado";
             limpiarValores();
+            legoUse = false;
+            _thinkGearWrapper.Disconnect();
+            
         }
 
         private void limpiarValores()//método que limpia los campos del formulario al parar la demo.
         {
-            tiempo = 0;
-            list.Clear();
-            list2.Clear();
             lblStatus.Text = "Desconectado";
             lblIntensity.Text = "N/A";
             lblConcentration.Text = "Valor concentración: N/A";
             lblRelaxation.Text = "Valor relajación: N/A";
-            lblPacketsRead.Text = "Paquetes leídos: N/A";
+            lblPacketsRead.Text = "Cantidad de datos obtenidos: N/A";
             lblIntensity.Text = "Value";
             lblBlink.Text = "Valor parpadeo: N/A";
             lblAVGConcentracion.Text = "Promedio concentración: ";
+            tiempo = 0;
             sum = 0;
             AVGconcentracion = 0;
             divisible = 0;
             modo = 0;
+            list.Clear();
+            list2.Clear();
+            
         }
 
         void _thinkGearWrapper_ThinkGearChanged(object sender, ThinkGearChangedEventArgs e)
         {
             //Deserealiza el JSON y lo asigno a variables usar estas variables para inicio de movimiento
             ConfiguracionBO config = JsonConvert.DeserializeObject<ConfiguracionBO>(System.IO.File.ReadAllText(@"C:\9no Cuatrimestre\Proyecto\ProyectoMindStorm\json.txt"));
+
             string move1 = config.movimiento1;
             string move2 = config.movimiento2;
             string move3 = config.movimiento3;
@@ -190,13 +179,15 @@ namespace ProyectoMindStorm.GUI
                         modo++;
                     }
                 }
-                else if (e.ThinkGearState.BlinkStrength <= 70 && e.ThinkGearState.BlinkStrength != 0)
+                else if (e.ThinkGearState.BlinkStrength >=40  && e.ThinkGearState.BlinkStrength <= 80)
                 {
                     if(e.ThinkGearState.BlinkStrength != blink)
                     {
-                        if (legoUse && e.ThinkGearState.BlinkStrength!=0)
+                        if (legoUse && modo == 0 || modo == 2 || modo == 4 || modo == 6)
                         {
                             lego.abrirPinza();
+                            MessageBox.Show("Estoy abriendo pinza"); 
+
                         }
                     }  
                 }

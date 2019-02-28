@@ -83,6 +83,12 @@ namespace ProyectoMindStorm.GUI
             frmPerfil frm = new frmPerfil();
             oPreferencias.cambiarVentana(frm);
         }
+
+        private void pcbHome_Click(object sender, EventArgs e)
+        {
+            frmBienvenida frm = new frmBienvenida();
+            oPreferencias.cambiarVentana(frm);
+        }
     }
 
 }

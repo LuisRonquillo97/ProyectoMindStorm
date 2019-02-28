@@ -44,12 +44,14 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.pcbHome = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -175,6 +177,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.pcbHome);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -214,6 +217,18 @@
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
+            // pcbHome
+            // 
+            this.pcbHome.BackColor = System.Drawing.Color.Transparent;
+            this.pcbHome.Image = ((System.Drawing.Image)(resources.GetObject("pcbHome.Image")));
+            this.pcbHome.Location = new System.Drawing.Point(150, 12);
+            this.pcbHome.Name = "pcbHome";
+            this.pcbHome.Size = new System.Drawing.Size(48, 43);
+            this.pcbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbHome.TabIndex = 1;
+            this.pcbHome.TabStop = false;
+            this.pcbHome.Click += new System.EventHandler(this.pcbHome_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +251,7 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +273,6 @@
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Button bPerfil;
         private System.Windows.Forms.Panel picbarraPerfil;
+        private System.Windows.Forms.PictureBox pcbHome;
     }
 }
