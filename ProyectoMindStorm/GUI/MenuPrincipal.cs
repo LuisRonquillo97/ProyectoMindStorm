@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoMindStorm.MindWave.BO;
 using System.Runtime.InteropServices;
+using ThinkGearNET;
 
 namespace ProyectoMindStorm.GUI
 {
     public partial class MenuPrincipal : Form
     {
         Preferencias oPreferencias;
+        private ThinkGearWrapper _thinkGearWrapper = new ThinkGearWrapper();
 
         public MenuPrincipal()
         {
@@ -75,6 +77,7 @@ namespace ProyectoMindStorm.GUI
 
         private void bPerfil_Click_1(object sender, EventArgs e)
         {
+            _thinkGearWrapper.Disconnect();
             picbarraIniciar.Visible = false;
             picbarraPerfil.Visible = true;
             frmPerfil frm = new frmPerfil();

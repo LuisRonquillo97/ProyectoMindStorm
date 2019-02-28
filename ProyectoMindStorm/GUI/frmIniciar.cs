@@ -98,7 +98,7 @@ namespace ProyectoMindStorm.GUI
             if (lego.establecerConexion() == "La conexión fue exitosa")
             {
                 // setup the event
-                string comPortName = "\\\\.\\COM3";
+                string comPortName = "\\\\.\\COM16";
 
                 //connect to the device on the specified COM port at 57600 baud
                 if (!_thinkGearWrapper.Connect(comPortName, 57600, true))
@@ -110,13 +110,15 @@ namespace ProyectoMindStorm.GUI
                     _thinkGearWrapper.ThinkGearChanged += _thinkGearWrapper_ThinkGearChanged;
                     _thinkGearWrapper.EnableBlinkDetection(true);
                     lblStatus.Text = "Conectado";
+                    legoUse = true;
+                    lblActivacionLego.Text = "Lego activado";
                 }
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (legoUse)
+            /*if (legoUse)
             {
                 legoUse = false;
                 lblActivacionLego.Text = "Lego desactivado";
@@ -125,12 +127,14 @@ namespace ProyectoMindStorm.GUI
             {
                 legoUse = true;
                 lblActivacionLego.Text = "Lego activado";
-            }
+            }*/
         }
 
         private void btndetener_Click(object sender, EventArgs e)
         {
             _thinkGearWrapper.Disconnect();
+            legoUse = false;
+            lblActivacionLego.Text = "Lego desactivado";
             limpiarValores();
         }
 
@@ -156,7 +160,7 @@ namespace ProyectoMindStorm.GUI
         void _thinkGearWrapper_ThinkGearChanged(object sender, ThinkGearChangedEventArgs e)
         {
             //Deserealiza el JSON y lo asigno a variables usar estas variables para inicio de movimiento
-            ConfiguracionBO config = JsonConvert.DeserializeObject<ConfiguracionBO>(System.IO.File.ReadAllText(@"C:\Users\pc\Documents\Visual Studio 2015\Projects\ProyectoMindStorm\json.txt"));
+            ConfiguracionBO config = JsonConvert.DeserializeObject<ConfiguracionBO>(System.IO.File.ReadAllText(@"C:\9no Cuatrimestre\Proyecto\ProyectoMindStorm\json.txt"));
             string move1 = config.movimiento1;
             string move2 = config.movimiento2;
             string move3 = config.movimiento3;
@@ -175,7 +179,7 @@ namespace ProyectoMindStorm.GUI
                 lblAVGConcentracion.Text = "Promedio concentración: " + AVGconcentracion;
                 UpdateGraph(zg1, e.ThinkGearState.Attention, e.ThinkGearState.Meditation);
                 
-                if (e.ThinkGearState.BlinkStrength > 120 && e.ThinkGearState.BlinkStrength != blink)
+                if (e.ThinkGearState.BlinkStrength >= 125  && e.ThinkGearState.BlinkStrength != blink)
                 {
                     if (modo == 7)
                     {
@@ -186,7 +190,7 @@ namespace ProyectoMindStorm.GUI
                         modo++;
                     }
                 }
-                else
+                else if (e.ThinkGearState.BlinkStrength <= 70 && e.ThinkGearState.BlinkStrength != 0)
                 {
                     if(e.ThinkGearState.BlinkStrength != blink)
                     {
@@ -579,7 +583,7 @@ namespace ProyectoMindStorm.GUI
                         break;
                 }
             }));
-            Thread.Sleep(100);
+            Thread.Sleep(150);
         }
     }
 }
