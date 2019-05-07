@@ -7,38 +7,116 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LegoEv3Clases.UsbConexion;
-using LegoEv3Clases.Core;
+using ProyectoMindStorm.MindStorm;
+
 
 namespace ProyectoMindStorm.GUI
 {
     public partial class LegoForm : Form
     {
-        public Brick _brick;
+
+        Movimientos oMovimientos = new Movimientos();
         public LegoForm()
         {
             InitializeComponent();
+            oMovimientos.establecerConexion();
+            
         }
 
-        public async Task Test()
-        {
-            _brick = new Brick(new UsbCommunication());
-            //_brick = new Brick(new BluetoothCommunication("COM5"));
-            //_brick = new Brick(new NetworkCommunication("192.168.2.237"));
-
-            //_brick.BrickChanged += _brick_BrickChanged;
-
-            await _brick.ConnectAsync();
-           
-            await _brick.DirectCommand.TurnMotorAtSpeedForTimeAsync(OutputPort.B, 50, 100, false);
-
-            await _brick.DirectCommand.PlayToneAsync(0x50, 100, 1000);
-
-            System.Console.WriteLine("Beeped...done!");
-        }
         private void btnArriba_Click(object sender, EventArgs e)
         {
+            oMovimientos.moverArriba();
+        }
 
+        private void LegoForm_Load(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+            oMovimientos.establecerConexion();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAbajo_Click(object sender, EventArgs e)
+        {
+
+            oMovimientos.moverAbajo();
+        }
+
+        private void btnIzquierda_Click(object sender, EventArgs e)
+        {
+            oMovimientos.moverIzquierda();
+        }
+
+        private void btnDerecha_Click(object sender, EventArgs e)
+        {
+            oMovimientos.moverDerecha();
+
+        }
+
+        private void LegoForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void LegoForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyValue == Convert.ToChar('\r'))
+            //{
+            //    //Codigo a ejecutar cuando se pulsa enter
+            //    MessageBox.Show("ARRIBA");
+            //}
+            //else if (e.KeyValue == (char)Keys.Down)
+            //{
+            //    //Codigo a ejecutar cuando se pulsa Escape
+            //    MessageBox.Show("ABAJO");
+            //}
+            //else if (e.KeyValue == (char)Keys.Left)
+            //{
+            //    //Codigo a ejecutar cuando se pulsa F1
+            //    MessageBox.Show("Izquiera");
+            //}
+            //else if (e.KeyValue == (char)Keys.Right)
+            //{
+            //    //Codigo a ejecutar cuando se pulsa Suprimir
+            //    MessageBox.Show("derecha");
+            //}
+        }
+
+        private void LegoForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            /*switch (e.KeyValue)
+            {
+               case (char)Keys.Up:
+                    //_brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, -35, 800, true);
+                    MessageBox.Show("arriba");
+                    break;
+                case (char)Keys.Down:
+                    _brick.DirectCommand.StepMotorAtPowerAsync(OutputPort.B, 35, 800, true);
+                    break;
+                case (char)Keys.Left:
+                    _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, 50, 1500, true);
+                    break;
+                case (char)Keys.Right:
+                    _brick.DirectCommand.TurnMotorAtPowerForTimeAsync(OutputPort.C, -50, 1500, true);
+                    break;*/
+        }
+
+        private void btnDesconectar_Click(object sender, EventArgs e)
+        {
+            
+        }
+ 
+        private void btnGarra_Click(object sender, EventArgs e)
+        {
+            oMovimientos.abrirPinza();
         }
     }
 }
